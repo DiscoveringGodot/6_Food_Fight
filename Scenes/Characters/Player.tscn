@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Characters/Player.gd" type="Script" id=2]
+[ext_resource path="res://Models/Character/PlayerModel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Characters/AnimationTreePlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Models/TestChar/animations/idle.anim" type="Animation" id=5]
+[ext_resource path="res://Models/TestChar/animations/run.anim" type="Animation" id=6]
+
+[node name="Player" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+_sections_unfolded = [ "Axis Lock", "Collision", "Transform" ]
+
+[node name="PlayerModel" parent="." index="0" instance=ExtResource( 3 )]
+
+transform = Transform( 0.4, 0, 0, 0, -1.74846e-008, -0.4, 0, 0.4, -1.74846e-008, 0, -1.5, 0 )
+
+[node name="MeshInstance" parent="." index="5"]
+
+visible = false
+
+[node name="AnimationTreePlayer" parent="." index="6" instance=ExtResource( 4 )]
+
+master_player = NodePath("")
+data = {
+"active": true,
+"connections": [ "anim 3", "scale", 0, "State", "out", 0, "anim", "Move", 0, "anim 2", "Move", 1, "scale", "State", 0, "Move", "State", 1, "anim 4", "State", 2 ],
+"master": NodePath(""),
+"nodes": [ {
+"id": "scale",
+"position": Vector2( 773, 112 ),
+"scale": 1.5,
+"type": "timescale"
+}, {
+"animation": ExtResource( 5 ),
+"filter": [  ],
+"id": "anim",
+"position": Vector2( 120, 127 ),
+"type": "animation"
+}, {
+"id": "out",
+"position": Vector2( 1136, 307 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 449, 231 ),
+"type": "blend2"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 3",
+"position": Vector2( 617, 53 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "anim 4",
+"position": Vector2( 148, 376 ),
+"type": "animation"
+}, {
+"animation": ExtResource( 6 ),
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 150, 233 ),
+"type": "animation"
+}, {
+"blend": -0.07,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
+} ]
+}
+
+

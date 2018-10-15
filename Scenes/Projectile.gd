@@ -12,3 +12,7 @@ func _on_Projectile_body_shape_entered(body_id, body, body_shape, local_shape):
 	if body.has_method("despawn"):
 		body.despawn(fired_by)
 
+
+
+func _enter_tree(player_id):
+	fired_by = player_id

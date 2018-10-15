@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Characters/Game.gd" type="Script" id=1]
 [ext_resource path="res://blue.material" type="Material" id=2]
@@ -44,7 +44,7 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[sub_resource type="BoxShape" id=12]
+[sub_resource type="BoxShape" id=6]
 
 extents = Vector3( 3.94729, 0.278848, 1 )
 
@@ -71,7 +71,59 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="SpatialMaterial" id=11]
+
+render_priority = 0
+flags_transparent = true
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 1, 0.207031, 0.207031, 0.491726 )
+metallic = 0.0
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.0
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
+
+[sub_resource type="Animation" id=12]
 
 length = 3.0
 loop = true
@@ -97,6 +149,8 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Scenary" type="Node" parent="." index="0"]
+
+editor/display_folded = true
 
 [node name="Floor" type="StaticBody" parent="Scenary" index="0"]
 
@@ -276,7 +330,7 @@ disabled = false
 
 [node name="StaticBody" type="StaticBody" parent="Scenary/Floor" index="6"]
 
-transform = Transform( 0.983297, -0.182006, 0, 0.182006, 0.983297, 0, 0, 0, 1, 5.50513, 0.648814, 0.0341578 )
+transform = Transform( 0.983297, -0.182006, 0, 0.182006, 0.983297, 0, 0, 0, 1, 5.50513, 0.622776, 0.0341578 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -305,7 +359,41 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody" index="1"]
 
 transform = Transform( 0.999788, 0.0206012, 0, -0.0206012, 0.999788, 0, 0, 0, 1, -0.0598183, -0.323172, 0 )
-shape = SubResource( 12 )
+shape = SubResource( 6 )
+disabled = false
+
+[node name="StaticBody2" type="StaticBody" parent="Scenary/Floor" index="7"]
+
+transform = Transform( -0.983296, 0.182005, 0.00159708, 0.182006, 0.983297, 0, -0.0015704, 0.000290677, -0.999999, 12.9198, 0.622776, 0.0341578 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor/StaticBody2" index="0"]
+
+transform = Transform( 3.89192, 0.0270853, 0, -0.0577046, 0.263718, 0, 0, 0, 1, -0.0522346, -0.282202, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody2" index="1"]
+
+transform = Transform( 0.999788, 0.0206012, 0, -0.0206012, 0.999788, 0, 0, 0, 1, -0.0598183, -0.323172, 0 )
+shape = SubResource( 6 )
 disabled = false
 
 [node name="Floor2" type="StaticBody" parent="Scenary" index="1"]
@@ -572,7 +660,6 @@ _sections_unfolded = [ "Transform", "material" ]
 
 [node name="Area" type="Area" parent="." index="1"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92489, 0.405229, 2.23795 )
 input_ray_pickable = false
 input_capture_on_drag = false
@@ -586,15 +673,15 @@ angular_damp = 1.0
 priority = 0.0
 monitoring = true
 monitorable = true
-collision_layer = 1
-collision_mask = 8
+collision_layer = 0
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
 reverb_bus_enable = false
 reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 
@@ -614,7 +701,8 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 10 )
 skeleton = NodePath("..")
-material/0 = null
+material/0 = SubResource( 11 )
+_sections_unfolded = [ "material" ]
 
 [node name="Gui" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -647,10 +735,10 @@ speed = 10
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="5"]
 
-transform = Transform( 0.0763077, 0.994485, -0.071953, 0.0995549, 0.0642036, 0.992959, 0.992102, -0.0829337, -0.0941065, -49.2239, 40.9166, -15.2741 )
+transform = Transform( 0.922851, 0.24589, -0.296454, 0.198043, 0.357215, 0.912786, 0.330342, -0.901075, 0.280959, -49.2239, 40.9166, 4.40157 )
 layers = 1
-light_color = Color( 1, 1, 1, 1 )
-light_energy = 1.0
+light_color = Color( 1, 0.922455, 0.871094, 1 )
+light_energy = 2.0
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -659,7 +747,7 @@ light_cull_mask = -1
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 1 )
 shadow_bias = 0.1
-shadow_contact = 0.0
+shadow_contact = 1.0
 shadow_reverse_cull_face = false
 editor_only = false
 directional_shadow_mode = 2
@@ -671,7 +759,7 @@ directional_shadow_normal_bias = 0.8
 directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
-_sections_unfolded = [ "Shadow" ]
+_sections_unfolded = [ "Light", "Shadow" ]
 
 [node name="Houses" type="Node" parent="." index="6"]
 
@@ -688,7 +776,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Player" parent="." index="7" instance=ExtResource( 9 )]
 
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 1.6, 0 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 1.6, 0 )
 player_id = 1
 
 [node name="Camera" type="Camera" parent="Player" index="6"]
@@ -708,6 +796,7 @@ near = 0.05
 far = 100.0
 script = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
+mouse_sensitivity = 1200
 
 [node name="NPC" parent="." index="8" instance=ExtResource( 11 )]
 
@@ -723,7 +812,7 @@ transform = Transform( 0.972341, -0.233565, -1.43504e-008, 0.233565, 0.972341, -
 [node name="AnimationPlayer" parent="NPC" index="6"]
 
 autoplay = "Move"
-anims/Move = SubResource( 11 )
+anims/Move = SubResource( 12 )
 
 [connection signal="body_entered" from="Area" to="Player" method="_on_Area_body_entered"]
 

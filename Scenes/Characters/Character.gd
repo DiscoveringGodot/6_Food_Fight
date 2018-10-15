@@ -1,11 +1,14 @@
 extends KinematicBody
 
 const UP = Vector3(0,1,0)
+const GRAVITY = .98
+const JUMP_VELOCITY = 9.8
+const MAX_SPEED = 10
 
 export var player_id = 0
 
 var motion = Vector3()
-var speed = 10
+var speed = 20
 
 var lives = 3
 
@@ -13,11 +16,12 @@ var projectile_speed = 50
 
 var ammo_collection_speed = 1
 var ammo = 0
-var max_ammo = 3
+var max_ammo = 5
 var ammo_types
 
 
 func _ready():
+	randomize()
 	ammo_types = get_parent().ammo_types
 	$Timer.wait_time = ammo_collection_speed
 	
@@ -26,15 +30,16 @@ func hurt(hurt_by):
 	get_parent().update_score(hurt_by, true)
 
 func fire():
-	randomize()
+
 	var bullet = ammo_types[randi() %ammo_types.size()-1].instance()
+#	var bullet = load("res://Scenes/Ammo/Doughnut.tscn").instance()
 	var forward = $Forward
 	
 	get_parent().add_child(bullet)
 	bullet.set_transform(forward.get_global_transform())
 	bullet.set_linear_velocity(forward.get_global_transform().basis[2].normalized() * projectile_speed)
 	bullet.add_collision_exception_with(self) 
-	bullet.fired_by = player_id
+	bullet._enter_tree(player_id)
 
 
 func check_lives():

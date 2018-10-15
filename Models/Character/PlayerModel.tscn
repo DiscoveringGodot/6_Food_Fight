@@ -1736,7 +1736,7 @@ tracks/33/imported = false
 tracks/33/enabled = true
 tracks/33/keys = PoolRealArray( 0, 1, 1.85333e-007, 0, 2.98023e-008, 0.0409781, -0.00313212, -0.000852907, 0.999155, 1, 0.999999, 1, 0.4, 1, 1.85333e-007, 0, 2.98023e-008, 0.0406866, -0.00310984, -0.00084689, 0.999167, 1, 0.999999, 0.999999, 0.533333, 1, 1.85333e-007, 0, 2.98023e-008, 0.040305, -0.00308073, -0.000838937, 0.999182, 1, 1, 1, 5.93333, 1, 1.85333e-007, 0, 2.98023e-008, 0.0407482, -0.00311448, -0.000848146, 0.999164, 1, 1, 1, 6.13333, 1, 1.85333e-007, 0, 2.98023e-008, 0.0410453, -0.00313719, -0.000854022, 0.999152, 1, 0.999999, 0.999999, 6.2, 1, 1.85333e-007, 0, 2.98023e-008, 0.0410597, -0.00313838, -0.000854665, 0.999151, 1, 0.999999, 0.999999, 6.39167, 1, 1.85333e-007, 0, 2.98023e-008, 0.0409699, -0.00313157, -0.000852782, 0.999155, 1, 0.999999, 0.999999 )
 
-[node name="PlayerModelM" type="Spatial" index="0"]
+[node name="PlayerModelM" type="Spatial"]
 
 transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
@@ -1950,11 +1950,11 @@ bones/40/enabled = true
 bones/40/bound_children = [  ]
 _sections_unfolded = [ "Transform", "bones" ]
 
-[node name="Human Armature" type="Spatial" parent="." index="1"]
+[node name="Armature" type="Spatial" parent="." index="1"]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="Human_Mesh" type="MeshInstance" parent="Human Armature" index="0"]
+[node name="Human_Mesh" type="MeshInstance" parent="Armature" index="0"]
 
 layers = 1
 material_override = null
@@ -2019,6 +2019,12 @@ data = {
 "position": Vector2( 449, 231 ),
 "type": "blend2"
 }, {
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 150, 233 ),
+"type": "animation"
+}, {
 "filter": [  ],
 "from": "Punch",
 "id": "anim 3",
@@ -2034,12 +2040,6 @@ data = {
 "from": "Working",
 "id": "anim 4",
 "position": Vector2( 148, 376 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 150, 233 ),
 "type": "animation"
 } ]
 }

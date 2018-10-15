@@ -2025,6 +2025,11 @@ data = {
 "position": Vector2( 617, 53 ),
 "type": "animation"
 }, {
+"blend": -0.07,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
+}, {
 "filter": [  ],
 "from": "Working",
 "id": "anim 4",
@@ -2036,11 +2041,6 @@ data = {
 "id": "anim 2",
 "position": Vector2( 150, 233 ),
 "type": "animation"
-}, {
-"blend": -0.07,
-"id": "State",
-"position": Vector2( 934, 288 ),
-"type": "blend3"
 } ]
 }
 _sections_unfolded = [ "Playback" ]

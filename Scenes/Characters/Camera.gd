@@ -2,9 +2,6 @@ extends Camera
 
 onready var Yaw = get_parent()
 
-#func _ready():
-	## Tell Godot that we want to handle input
-#	set_process_input(true)
 
 func look_updown_rotation(rotation = 0):
 	"""

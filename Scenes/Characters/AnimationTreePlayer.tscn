@@ -6,13 +6,13 @@
 [node name="AnimationTreePlayer" type="AnimationTreePlayer"]
 
 playback_process_mode = 0
-master_player = NodePath("../AnimationPlayer")
+master_player = NodePath("")
 base_path = NodePath("..")
 active = true
 data = {
 "active": true,
 "connections": [ "anim 3", "scale", 0, "State", "out", 0, "anim", "Move", 0, "anim 2", "Move", 1, "scale", "State", 0, "Move", "State", 1, "anim 4", "State", 2 ],
-"master": NodePath("../AnimationPlayer"),
+"master": NodePath(""),
 "nodes": [ {
 "id": "scale",
 "position": Vector2( 773, 112 ),
@@ -35,14 +35,19 @@ data = {
 "position": Vector2( 449, 231 ),
 "type": "blend2"
 }, {
+"animation": null,
 "filter": [  ],
-"from": "Punch",
 "id": "anim 3",
 "position": Vector2( 617, 53 ),
 "type": "animation"
 }, {
+"blend": -0.07,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
+}, {
+"animation": null,
 "filter": [  ],
-"from": "Working",
 "id": "anim 4",
 "position": Vector2( 148, 376 ),
 "type": "animation"
@@ -52,11 +57,6 @@ data = {
 "id": "anim 2",
 "position": Vector2( 150, 233 ),
 "type": "animation"
-}, {
-"blend": -0.07,
-"id": "State",
-"position": Vector2( 934, 288 ),
-"type": "blend3"
 } ]
 }
 _sections_unfolded = [ "Playback" ]

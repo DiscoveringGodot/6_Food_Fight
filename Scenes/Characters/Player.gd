@@ -22,23 +22,28 @@ func _physics_process(delta):
 
 
 func move():
+	var cam_xform =$Camera.global_transform
+	
 	if Input.is_action_pressed("up"):
-		motion.z = -1
+		motion += -cam_xform.basis[2]
 		facing_direction = 0
 	elif Input.is_action_pressed("down"):
-		motion.z = 1
+		motion += cam_xform.basis[2]
 		facing_direction = PI
 	else:
 		motion.z = lerp(motion.z, 0, 0.25)
 
 	if Input.is_action_pressed("left"):
-		motion.x = -1
+		motion -= cam_xform.basis[0]
 		facing_direction = PI *0.5
 	elif Input.is_action_pressed("right"):
-		motion.x = 1
+		motion += cam_xform.basis[0]
 		facing_direction = PI *1.5
 	else:
 		motion.x = lerp(motion.x, 0, 0.25)
+	
+	motion.z = clamp(motion.z,-speed, speed)
+	motion.x = clamp(motion.x,-speed, speed)
 
 	if motion.length() > 0.25:
 		movement_rate += 0.1
@@ -48,7 +53,7 @@ func move():
 	movement_rate = clamp(movement_rate, 0, 1)
 	$PlayerModel.rotation.y = facing_direction
 
-	move_and_slide(motion * speed, UP)
+	move_and_slide(motion, UP)
 
 
 func fall():

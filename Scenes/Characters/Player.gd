@@ -74,7 +74,6 @@ func _input(event):
 		try_to_fire()
 
 
-
 func try_to_fire():
 	if ammo > 0:
 		fire()

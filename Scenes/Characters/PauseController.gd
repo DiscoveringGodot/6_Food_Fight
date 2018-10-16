@@ -10,3 +10,6 @@ func _input(event):
 		else:
 			$Popup.hide()
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _on_Button1_pressed():
+	 OS.window_fullscreen = !OS.window_fullscreen

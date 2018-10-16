@@ -2,8 +2,9 @@ extends RigidBody
 
 var fired_by = 0
 
-func _enter_tree(player_id):
-	fired_by = player_id
+func _enter_tree():
+#	fired_by = player_id
+#	fired_by = 1
 	$Timer.start()
 
 

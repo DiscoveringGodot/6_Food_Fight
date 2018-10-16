@@ -2,7 +2,7 @@ extends "res://Scenes/Characters/Character.gd"
 
 export var fire_delay = 0.1
 
-func _ready():
+func _enter_tree():
 	$Timer.wait_time = fire_delay
 
 func _process(delta):

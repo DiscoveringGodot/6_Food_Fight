@@ -1,10 +1,10 @@
 extends Spatial
 
-var ammo_types = [load("res://Scenes/Ammo/Burger.tscn"), 
-		load("res://Scenes/Ammo/Doughnut.tscn"), 
-		load("res://Scenes/Ammo/Soda.tscn"), 
-		load("res://Scenes/Ammo/Hotdog.tscn"), 
-		load("res://Scenes/Ammo/IceCream.tscn")]
+var ammo_types = [preload("res://Scenes/Ammo/Burger.tscn"), 
+		preload("res://Scenes/Ammo/Doughnut.tscn"), 
+		preload("res://Scenes/Ammo/Soda.tscn"), 
+		preload("res://Scenes/Ammo/Hotdog.tscn"), 
+		preload("res://Scenes/Ammo/IceCream.tscn")]
 
 var score = {1:0, 2:0}
 

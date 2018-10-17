@@ -1,0 +1,164 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Customisation/CharacterCustomiser.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Customisation/MaterialsList.gd" type="Script" id=2]
+[ext_resource path="res://Models/Character/PlayerModel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MyTheme.tres" type="Theme" id=4]
+
+[sub_resource type="CylinderMesh" id=1]
+
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+top_radius = 1.0
+bottom_radius = 1.0
+height = 2.0
+radial_segments = 64
+rings = 4
+
+[node name="CharacterCustomiser" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="MaterialsList" type="Node" parent="." index="0"]
+
+script = ExtResource( 2 )
+
+[node name="PlayerModelM" parent="." index="1" instance=ExtResource( 3 )]
+
+transform = Transform( 0.4, 0, 0, 0, -1.74846e-008, -0.4, 0, 0.4, -1.74846e-008, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="." index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72892, 4.87771 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Scenery" type="Node" parent="." index="3"]
+
+[node name="Podium" type="MeshInstance" parent="Scenery" index="0"]
+
+transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, 0, -0.25, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="ChargenGUI" type="CanvasLayer" parent="." index="4"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ChargenGUI" index="0"]
+
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -61.5
+margin_top = -40.0
+margin_right = 61.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="ButtonLeft" type="Button" parent="ChargenGUI/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 12.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Label" type="Label" parent="ChargenGUI/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 5.0
+margin_right = 123.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 4 )
+text = "Placeholder"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="ButtonRight" type="Button" parent="ChargenGUI/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 127.0
+margin_right = 139.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonLeft" to="." method="change_material" binds= [ "Left" ]]
+
+[connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonRight" to="." method="change_material" binds= [ "Right" ]]
+
+

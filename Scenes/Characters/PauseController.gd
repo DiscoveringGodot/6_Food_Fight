@@ -11,5 +11,10 @@ func _input(event):
 			$Popup.hide()
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+
 func _on_Button1_pressed():
 	 OS.window_fullscreen = !OS.window_fullscreen
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit()

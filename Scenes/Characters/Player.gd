@@ -13,6 +13,7 @@ var cam_xform = Vector3(0,0,0)
 func _ready():
 	facing_direction = 0
 	can_refill = false
+#	$PlayerModel/Armature/Human_Mesh.set_surface_material(0, load(Customisations.Player_materials))
 
 
 func _physics_process(delta):
@@ -27,24 +28,26 @@ func _physics_process(delta):
 
 
 func move():
+	var camera_forward = cam_xform.basis[2]
 	if Input.is_action_pressed("up") and not Input.is_action_pressed("down"):
-		motion = -cam_xform.basis[2]
+		motion = -camera_forward
 		facing_direction = 0
 	elif Input.is_action_pressed("down") and not Input.is_action_pressed("up"):
-		motion = cam_xform.basis[2]
+		motion = camera_forward
 		facing_direction = PI
 	else:
-		motion.z = lerp(motion.z, 0, 0.25)
-
+		motion = Vector3(0,0,0)
+	
+	var camera_right = cam_xform.basis[0]
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
-		motion = -cam_xform.basis[0] 
+		motion -= cam_xform.basis[0]
 		facing_direction = PI *0.5
 	elif Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
-		motion = cam_xform.basis[0]
+		motion += cam_xform.basis[0]
 		facing_direction = PI *1.5
-	else:
-		motion.x = lerp(motion.x, 0, 0.25)
+		
 	
+	motion = motion.normalized()
 
 	if motion.length() > 0.25:
 		movement_rate += 0.1

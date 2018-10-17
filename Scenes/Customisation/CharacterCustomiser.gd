@@ -26,8 +26,11 @@ func change_material(direction):
 		else:
 			current_material -= 1
 	
-	print("Material " + str(current_material) + " of " + str(materials_count))
-	
 	var Player = $PlayerModelM/Armature/Human_Mesh
 	
 	Player.set_surface_material(0, load($MaterialsList.materials[current_material]))
+
+
+func _on_ButtonBegin_pressed():
+	Customisations.Player_materials = $MaterialsList.materials[current_material]
+	get_tree().change_scene("res://Scenes/Characters/Game.tscn")

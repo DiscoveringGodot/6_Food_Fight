@@ -1,18 +1,211 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Customisation/CharacterCustomiser.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Customisation/MaterialsList.gd" type="Script" id=2]
 [ext_resource path="res://Models/Character/PlayerModel.tscn" type="PackedScene" id=3]
-[ext_resource path="res://MyTheme.tres" type="Theme" id=4]
+[ext_resource path="res://Scenes/GUI/ChargenGUI.tscn" type="PackedScene" id=4]
 
-[sub_resource type="CylinderMesh" id=1]
+[sub_resource type="SpatialMaterial" id=1]
 
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.964844, 0.698045, 0.131912, 1 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.0
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo", "Metallic" ]
+
+[sub_resource type="CylinderMesh" id=2]
+
+material = SubResource( 1 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 top_radius = 1.0
 bottom_radius = 1.0
 height = 2.0
 radial_segments = 64
 rings = 4
+
+[sub_resource type="SpatialMaterial" id=3]
+
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.03125, 0.03125, 0.03125, 1 )
+metallic = 0.0
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 1.0
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
+
+[sub_resource type="PlaneMesh" id=4]
+
+material = SubResource( 3 )
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+size = Vector2( 20, 20 )
+subdivide_width = 0
+subdivide_depth = 0
+
+[sub_resource type="SpatialMaterial" id=5]
+
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 1
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.371094, 0.252081, 0.236282, 1 )
+metallic = 0.0
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 1.0
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo", "Flags", "Metallic", "Parameters", "Roughness" ]
+
+[sub_resource type="CylinderMesh" id=6]
+
+material = SubResource( 5 )
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+top_radius = 8.0
+bottom_radius = 8.0
+height = 10.0
+radial_segments = 64
+rings = 4
+
+[sub_resource type="Animation" id=7]
+
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerModelM:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 90, 0, 0 ), Vector3( 90, 180, 0 ), Vector3( 90, 359, 0 ) ]
+}
 
 [node name="CharacterCustomiser" type="Spatial" index="0"]
 
@@ -24,11 +217,11 @@ script = ExtResource( 2 )
 
 [node name="PlayerModelM" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 0.4, 0, 0, 0, -1.74846e-008, -0.4, 0, 0.4, -1.74846e-008, 0, 0, 0 )
+transform = Transform( 0.0354166, 0.398429, -1.74159e-008, 0, -1.74846e-008, -0.4, -0.398429, 0.0354166, -1.54811e-009, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="." index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72892, 4.87771 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72892, 5.87771 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -57,108 +250,179 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 1 )
+mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform" ]
 
-[node name="ChargenGUI" type="CanvasLayer" parent="." index="4"]
+[node name="Floor" type="MeshInstance" parent="Scenery" index="1"]
 
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00114954, -0.424267, -0.145122 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "material" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ChargenGUI" index="0"]
+[node name="Wall" type="MeshInstance" parent="Scenery" index="2"]
 
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -61.5
-margin_top = -40.0
-margin_right = 61.5
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.166593, 4.46779, -0.712126 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 6 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Geometry", "material" ]
 
-[node name="ButtonLeft" type="Button" parent="ChargenGUI/HBoxContainer" index="0"]
+[node name="Lighting" type="Node" parent="Scenery" index="3"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 12.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = false
-align = 1
+[node name="KeyLight" type="SpotLight" parent="Scenery/Lighting" index="0"]
 
-[node name="Label" type="Label" parent="ChargenGUI/HBoxContainer" index="1"]
+transform = Transform( 0.916795, 0, -0.399357, 0, 1, 0, 0.399357, 0, 0.916795, -2.22089, 2.49099, 4.93336 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 2.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 7.9779
+spot_attenuation = 1.0
+spot_angle = 45.0
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Light" ]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 16.0
-margin_top = 5.0
-margin_right = 123.0
-margin_bottom = 34.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-theme = ExtResource( 4 )
-text = "Placeholder"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Theme" ]
+[node name="FillLight" type="SpotLight" parent="Scenery/Lighting" index="1"]
 
-[node name="ButtonRight" type="Button" parent="ChargenGUI/HBoxContainer" index="2"]
+transform = Transform( 0.536087, 0, 0.844163, 0, 1, 0, -0.844163, 0, 0.536087, 4.19498, 1.94105, 2.03851 )
+layers = 1
+light_color = Color( 0.416031, 0.638465, 0.800781, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 6.85287
+spot_attenuation = 1.0
+spot_angle = 45.0
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Light", "Spot" ]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 127.0
-margin_right = 139.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = false
-align = 1
+[node name="BackLight" type="SpotLight" parent="Scenery/Lighting" index="2"]
+
+transform = Transform( -0.999745, 0, -0.0225748, -0.00896761, 0.917715, 0.397139, 0.0207172, 0.39724, -0.917481, 0, 5.06032, -5.50302 )
+layers = 1
+light_color = Color( 0.168915, 0.283314, 0.480469, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 7.99993
+spot_attenuation = 1.0
+spot_angle = 45.0
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Light" ]
+
+[node name="Birdie" type="SpotLight" parent="Scenery/Lighting" index="3"]
+
+transform = Transform( 0.999571, -6.31871e-010, -0.0292754, -0.0292754, -4.31584e-008, -0.999571, -6.31871e-010, 1, -4.31584e-008, -2.05737, -0.16099, -8.01469 )
+layers = 1
+light_color = Color( 1, 0.918823, 0.703125, 1 )
+light_energy = 3.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 10.0
+spot_attenuation = 1.0
+spot_angle = 40.0
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Light", "Transform" ]
+
+[node name="Birdie2" type="SpotLight" parent="Scenery/Lighting" index="4"]
+
+transform = Transform( 0.999571, -6.31871e-010, -0.0292754, -0.0292754, -4.31584e-008, -0.999571, -6.31871e-010, 1, -4.31584e-008, 1.94091, -0.278092, -8.01469 )
+layers = 1
+light_color = Color( 1, 0.918823, 0.703125, 1 )
+light_energy = 3.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 10.0
+spot_attenuation = 1.0
+spot_angle = 40.0
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Light", "Transform" ]
+
+[node name="ChargenGUI" parent="." index="4" instance=ExtResource( 4 )]
+
+[node name="Rotator" type="AnimationPlayer" parent="." index="5"]
+
+root_node = NodePath("..")
+autoplay = "Rotation"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Rotation = SubResource( 7 )
+blend_times = [  ]
 
 [connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonLeft" to="." method="change_material" binds= [ "Left" ]]
+
+[connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonBegin" to="." method="_on_ButtonBegin_pressed"]
 
 [connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonRight" to="." method="change_material" binds= [ "Right" ]]
 
 
+[editable path="ChargenGUI"]

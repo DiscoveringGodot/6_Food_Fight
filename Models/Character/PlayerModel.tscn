@@ -2031,15 +2031,15 @@ data = {
 "type": "animation"
 }, {
 "filter": [  ],
-"from": "Working",
-"id": "anim 4",
-"position": Vector2( 148, 376 ),
-"type": "animation"
-}, {
-"filter": [  ],
 "from": "Punch",
 "id": "anim 3",
 "position": Vector2( 617, 53 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Working",
+"id": "anim 4",
+"position": Vector2( 148, 376 ),
 "type": "animation"
 } ]
 }

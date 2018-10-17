@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Street_Empty_Water.obj-b5ed6f8a7cecf61f046ce74c8f1066b1.mesh"
+
+[deps]
+
+files=[ "res://.import/Street_Empty_Water.obj-b5ed6f8a7cecf61f046ce74c8f1066b1.mesh" ]
+
+source_file="res://Models/Buildings/Street/Street_Empty_Water.obj"
+dest_files=[ "res://.import/Street_Empty_Water.obj-b5ed6f8a7cecf61f046ce74c8f1066b1.mesh", "res://.import/Street_Empty_Water.obj-b5ed6f8a7cecf61f046ce74c8f1066b1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

@@ -1,11 +1,25 @@
-[gd_resource type="Environment" load_steps=3 format=2]
+[gd_resource type="Environment" load_steps=2 format=2]
 
-[ext_resource path="res://Sky/noon_grass_2k.hdr" type="Texture" id=1]
+[sub_resource type="ProceduralSky" id=1]
 
-[sub_resource type="PanoramaSky" id=1]
-
-radiance_size = 6
-panorama = ExtResource( 1 )
+radiance_size = 4
+sky_top_color = Color( 0.000549316, 0.0311627, 0.0703125, 1 )
+sky_horizon_color = Color( 0.0377655, 0.301419, 0.386719, 1 )
+sky_curve = 0.25
+sky_energy = 0.0
+ground_bottom_color = Color( 0, 0, 0, 1 )
+ground_horizon_color = Color( 0.207764, 0.260608, 0.289063, 1 )
+ground_curve = 0.01
+ground_energy = 1.0
+sun_color = Color( 0.419769, 0.820313, 0.810925, 1 )
+sun_latitude = 35.0
+sun_longitude = 0.0
+sun_angle_min = 1.0
+sun_angle_max = 100.0
+sun_curve = 0.05
+sun_energy = 0.0
+texture_size = 2
+_sections_unfolded = [ "Ground", "Sky", "Sun", "Texture" ]
 
 [resource]
 
@@ -15,7 +29,7 @@ background_sky_custom_fov = 0.0
 background_color = Color( 0, 0, 0, 1 )
 background_energy = 1.0
 background_canvas_max_layer = 0
-ambient_light_color = Color( 0.324585, 0.31601, 0.425781, 1 )
+ambient_light_color = Color( 0.398438, 0.382266, 0.25058, 1 )
 ambient_light_energy = 1.0
 ambient_light_sky_contribution = 0.0
 fog_enabled = false

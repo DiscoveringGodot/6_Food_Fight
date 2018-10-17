@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Streetlight_Triple.obj-17f7b6e127f9f2498732f869f597a91e.mesh"
+
+[deps]
+
+files=[ "res://.import/Streetlight_Triple.obj-17f7b6e127f9f2498732f869f597a91e.mesh" ]
+
+source_file="res://Models/Buildings/Street/Streetlight_Triple.obj"
+dest_files=[ "res://.import/Streetlight_Triple.obj-17f7b6e127f9f2498732f869f597a91e.mesh", "res://.import/Streetlight_Triple.obj-17f7b6e127f9f2498732f869f597a91e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

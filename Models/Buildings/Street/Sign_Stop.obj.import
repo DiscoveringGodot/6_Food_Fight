@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Sign_Stop.obj-0e83078d48606d385ecca938570a4916.mesh"
+
+[deps]
+
+files=[ "res://.import/Sign_Stop.obj-0e83078d48606d385ecca938570a4916.mesh" ]
+
+source_file="res://Models/Buildings/Street/Sign_Stop.obj"
+dest_files=[ "res://.import/Sign_Stop.obj-0e83078d48606d385ecca938570a4916.mesh", "res://.import/Sign_Stop.obj-0e83078d48606d385ecca938570a4916.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

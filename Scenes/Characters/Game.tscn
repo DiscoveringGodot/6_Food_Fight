@@ -1,49 +1,27 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Characters/Game.gd" type="Script" id=1]
-[ext_resource path="res://blue.material" type="Material" id=2]
-[ext_resource path="res://Models/Buildings/Street/Street_Straight.mesh" type="ArrayMesh" id=3]
-[ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Characters/Bystanders.gd" type="Script" id=5]
-[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Buildings/Shop.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Buildings/BurgerShop.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Characters/Camera.gd" type="Script" id=10]
-[ext_resource path="res://Scenes/Characters/NPC.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=12]
-
-[sub_resource type="PlaneMesh" id=1]
-
-material = ExtResource( 2 )
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-size = Vector2( 20, 10 )
-subdivide_width = 0
-subdivide_depth = 0
+[ext_resource path="res://MeshLibs/Street.meshlib" type="MeshLibrary" id=2]
+[ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Characters/Bystanders.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Buildings/Shop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Buildings/BurgerShop.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Characters/Camera.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Characters/NPC.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Models/Buildings/Houses/House.mesh" type="ArrayMesh" id=12]
+[ext_resource path="res://Models/Buildings/Houses/House1.material" type="Material" id=13]
+[ext_resource path="res://Models/Buildings/Houses/House2.material" type="Material" id=14]
 
 [sub_resource type="BoxShape" id=2]
 
 extents = Vector3( 10, 0.1, 5 )
 
-[sub_resource type="CubeMesh" id=3]
-
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-size = Vector3( 20, 1.5, 1 )
-subdivide_width = 0
-subdivide_height = 0
-subdivide_depth = 0
-
 [sub_resource type="ConvexPolygonShape" id=4]
 
 points = PoolVector3Array( -10, 0.75, 0.5, 10, 0.75, -0.5, 10, 0.75, 0.5, -10, 0.75, -0.5, -10, -0.75, 0.5, 10, -0.75, -0.5, 10, -0.75, 0.5, -10, -0.75, -0.5, 10, 0.75, 0.5, -10, 0.75, -0.5, 10, 0.75, -0.5, -10, 0.75, 0.5, 10, -0.75, 0.5, -10, -0.75, -0.5, 10, -0.75, -0.5, -10, -0.75, 0.5, 10, 0.75, 0.5, -10, -0.75, 0.5, -10, 0.75, 0.5, 10, -0.75, 0.5, 10, 0.75, -0.5, -10, -0.75, -0.5, -10, 0.75, -0.5, 10, -0.75, -0.5 )
-
-[sub_resource type="CubeMesh" id=5]
-
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-size = Vector3( 2, 2, 2 )
-subdivide_width = 0
-subdivide_height = 0
-subdivide_depth = 0
 
 [sub_resource type="BoxShape" id=6]
 
@@ -146,6 +124,7 @@ tracks/0/keys = {
 "gamestate",
 ]]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00156856, 0, -0.0134392 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -153,8 +132,30 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 
-[node name="Floor" type="StaticBody" parent="Scenary" index="0"]
+[node name="GridMap" type="GridMap" parent="Scenary" index="0"]
 
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0 )
+theme = ExtResource( 2 )
+cell_size = Vector3( 1, 1, 1 )
+cell_octant_size = 8
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+cell_scale = 1.0
+collision_layer = 1
+collision_mask = 1
+data = {
+"cells": PoolIntArray( 0, 1, 537919488, 2, 1, 1048590, 4, 1, -1609564146, 6, 1, 1048590, 65532, 1, 1048590, 65534, 1, 1048587, 0, 3, 1048576, 2, 3, 1048590, 4, 3, 536870922, 6, 3, 1441802, 65532, 3, 537919502, 65534, 3, 537919488, 0, 5, 4, 2, 5, 0, 4, 5, 1, 6, 5, 1048576, 65534, 5, 537919498, 0, 7, 13, 2, 7, 537919502, 4, 7, 1048586, 6, 7, 655370, 0, 9, 1441804, 0, 65533, 14, 2, 65533, 14, 4, 65533, 537919499, 65534, 65533, 14, 0, 65535, 1048578, 2, 65535, 0, 4, 65535, 1441793, 65532, 65535, 3, 65534, 65535, 0 )
+}
+_sections_unfolded = [ "Cell", "Pause", "Transform" ]
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Floor" type="StaticBody" parent="Scenary" index="1"]
+
+editor/display_folded = true
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -165,32 +166,15 @@ constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 1 )
-skeleton = NodePath("..")
-material/0 = null
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor" index="1"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor" index="0"]
 
 visible = false
 shape = SubResource( 2 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="Wall" type="StaticBody" parent="Scenary/Floor" index="2"]
+[node name="Wall" type="StaticBody" parent="Scenary/Floor" index="1"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4.56 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -202,29 +186,13 @@ constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor/Wall" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall" index="1"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall" index="0"]
 
 visible = false
 shape = SubResource( 4 )
 disabled = false
 
-[node name="Wall2" type="StaticBody" parent="Scenary/Floor" index="3"]
+[node name="Wall2" type="StaticBody" parent="Scenary/Floor" index="2"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 4.9262 )
 input_ray_pickable = true
@@ -237,29 +205,13 @@ constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor/Wall2" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall2" index="1"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall2" index="0"]
 
 visible = false
 shape = SubResource( 4 )
 disabled = false
 
-[node name="Wall3" type="StaticBody" parent="Scenary/Floor" index="4"]
+[node name="Wall3" type="StaticBody" parent="Scenary/Floor" index="3"]
 
 transform = Transform( -1.96701e-008, 0, 1, 0, 1, 0, -0.45, 0, -4.37114e-008, -9.5, 0.5, -0.0738 )
 input_ray_pickable = true
@@ -272,29 +224,13 @@ constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor/Wall3" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall3" index="1"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall3" index="0"]
 
 visible = false
 shape = SubResource( 4 )
 disabled = false
 
-[node name="Wall4" type="StaticBody" parent="Scenary/Floor" index="5"]
+[node name="Wall4" type="StaticBody" parent="Scenary/Floor" index="4"]
 
 transform = Transform( -1.96701e-008, 0, 1, 0, 1, 0, -0.45, 0, -4.37114e-008, 9.5, 0.5, -0.0738 )
 input_ray_pickable = true
@@ -307,29 +243,13 @@ constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor/Wall4" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall4" index="1"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall4" index="0"]
 
 visible = false
 shape = SubResource( 4 )
 disabled = false
 
-[node name="StaticBody" type="StaticBody" parent="Scenary/Floor" index="6"]
+[node name="StaticBody" type="StaticBody" parent="Scenary/Floor" index="5"]
 
 transform = Transform( 0.983297, -0.182006, 0, 0.182006, 0.983297, 0, 0, 0, 1, 5.50513, 0.622776, 0.0341578 )
 input_ray_pickable = true
@@ -341,29 +261,13 @@ bounce = 0.0
 constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor/StaticBody" index="0"]
-
-transform = Transform( 3.89192, 0.0270853, 0, -0.0577046, 0.263718, 0, 0, 0, 1, -0.0522346, -0.282202, 0 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 5 )
-skeleton = NodePath("..")
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody" index="1"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody" index="0"]
 
 transform = Transform( 0.999788, 0.0206012, 0, -0.0206012, 0.999788, 0, 0, 0, 1, -0.0598183, -0.323172, 0 )
 shape = SubResource( 6 )
 disabled = false
 
-[node name="StaticBody2" type="StaticBody" parent="Scenary/Floor" index="7"]
+[node name="StaticBody2" type="StaticBody" parent="Scenary/Floor" index="6"]
 
 transform = Transform( -0.983296, 0.182005, 0.00159708, 0.182006, 0.983297, 0, -0.0015704, 0.000290677, -0.999999, 12.9198, 0.622776, 0.0341578 )
 input_ray_pickable = true
@@ -375,201 +279,14 @@ bounce = 0.0
 constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor/StaticBody2" index="0"]
-
-transform = Transform( 3.89192, 0.0270853, 0, -0.0577046, 0.263718, 0, 0, 0, 1, -0.0522346, -0.282202, 0 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 5 )
-skeleton = NodePath("..")
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody2" index="1"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody2" index="0"]
 
 transform = Transform( 0.999788, 0.0206012, 0, -0.0206012, 0.999788, 0, 0, 0, 1, -0.0598183, -0.323172, 0 )
 shape = SubResource( 6 )
 disabled = false
 
-[node name="Floor2" type="StaticBody" parent="Scenary" index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21.776 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 5
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor2" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 1 )
-skeleton = NodePath("..")
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor2" index="1"]
-
-shape = SubResource( 2 )
-disabled = false
-_sections_unfolded = [ "Transform" ]
-
-[node name="Wall" type="StaticBody" parent="Scenary/Floor2" index="2"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4.56 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 5
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor2/Wall" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor2/Wall" index="1"]
-
-shape = SubResource( 4 )
-disabled = false
-
-[node name="Wall2" type="StaticBody" parent="Scenary/Floor2" index="3"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 4.9262 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 5
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor2/Wall2" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor2/Wall2" index="1"]
-
-shape = SubResource( 4 )
-disabled = false
-
-[node name="Wall3" type="StaticBody" parent="Scenary/Floor2" index="4"]
-
-transform = Transform( -1.96701e-008, 0, 1, 0, 1, 0, -0.45, 0, -4.37114e-008, -9.5, 0.5, -0.0738 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 5
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor2/Wall3" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor2/Wall3" index="1"]
-
-shape = SubResource( 4 )
-disabled = false
-
-[node name="Wall4" type="StaticBody" parent="Scenary/Floor2" index="5"]
-
-transform = Transform( -1.96701e-008, 0, 1, 0, 1, 0, -0.45, 0, -4.37114e-008, 9.5, 0.5, -0.0738 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 5
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/Floor2/Wall4" index="0"]
-
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor2/Wall4" index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.199958, 0 )
-shape = SubResource( 4 )
-disabled = false
-
 [node name="MainFloor" type="StaticBody" parent="Scenary" index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.194602, -9.32166 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -602,66 +319,10 @@ _sections_unfolded = [ "Transform" ]
 shape = SubResource( 8 )
 disabled = false
 
-[node name="Road" type="MeshInstance" parent="Scenary" index="3"]
-
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.653175, -10.0132 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = ExtResource( 3 )
-skeleton = NodePath("..")
-material/0 = null
-material/1 = null
-material/2 = null
-_sections_unfolded = [ "Transform", "material" ]
-
-[node name="Road2" type="MeshInstance" parent="Scenary" index="4"]
-
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 10, 19.9677, -0.653175, -10.0132 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = ExtResource( 3 )
-skeleton = NodePath("..")
-material/0 = null
-material/1 = null
-material/2 = null
-_sections_unfolded = [ "Transform", "material" ]
-
-[node name="Road3" type="MeshInstance" parent="Scenary" index="5"]
-
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 10, -19.7206, -0.653175, -10.0132 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = ExtResource( 3 )
-skeleton = NodePath("..")
-material/0 = null
-material/1 = null
-material/2 = null
-_sections_unfolded = [ "Transform", "material" ]
-
 [node name="Area" type="Area" parent="." index="1"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92489, 0.405229, 2.23795 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.78808, 3.99196, 2.23795 )
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0
@@ -703,43 +364,41 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 10 )
 skeleton = NodePath("..")
 material/0 = SubResource( 11 )
-_sections_unfolded = [ "material" ]
+_sections_unfolded = [ "Transform", "material" ]
 
-[node name="Gui" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Gui" parent="." index="2" instance=ExtResource( 3 )]
 
 [node name="Bystanders" type="Node" parent="." index="3"]
 
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [node name="Spawners" type="Node" parent="." index="4"]
 
-editor/display_folded = true
-
-[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 6 )]
+[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 5 )]
 
 editor/display_folded = true
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 39.8381, 0.21934, -15.1986 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 39.8381, 3.90906, -15.1986 )
 _sections_unfolded = [ "Transform" ]
 speed = 10
 
-[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 6 )]
+[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 5 )]
 
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -39.9302, 0.21934, -9.51752 )
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -39.9302, 3.90906, -9.51752 )
 _sections_unfolded = [ "Transform" ]
 speed = 10
 
-[node name="Spawner3" parent="Spawners" index="2" instance=ExtResource( 6 )]
+[node name="Spawner3" parent="Spawners" index="2" instance=ExtResource( 5 )]
 
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 39.8381, 0.21934, -7.00314 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 39.8381, 3.90906, -7.00314 )
 _sections_unfolded = [ "Transform" ]
 speed = 10
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="5"]
 
-transform = Transform( 0.922851, 0.24589, -0.296454, 0.198043, 0.357215, 0.912786, 0.330342, -0.901075, 0.280959, -49.2239, 40.9166, 4.40157 )
+transform = Transform( -0.21689, 0.954121, -0.206426, 0.646261, 0.298824, 0.702176, 0.731646, 0.0188898, -0.681423, -0.253176, 81.7919, -48.7188 )
 layers = 1
-light_color = Color( 1, 0.922455, 0.871094, 1 )
-light_energy = 2.0
+light_color = Color( 0.910156, 0.987366, 1, 1 )
+light_energy = 1.0
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -764,20 +423,18 @@ _sections_unfolded = [ "Light", "Shadow" ]
 
 [node name="Houses" type="Node" parent="." index="6"]
 
-editor/display_folded = true
+[node name="Shop" parent="Houses" index="0" instance=ExtResource( 6 )]
 
-[node name="Shop" parent="Houses" index="0" instance=ExtResource( 7 )]
+transform = Transform( -6.55671e-008, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-008, 19.4889, 2.8077, -46.3708 )
 
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 19.4889, 0, -25.2181 )
+[node name="BurgerShop" parent="Houses" index="1" instance=ExtResource( 7 )]
 
-[node name="BurgerShop" parent="Houses" index="1" instance=ExtResource( 8 )]
-
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -19.1233, 0, -25.1419 )
+transform = Transform( -6.55671e-008, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-008, -19.1233, 2.8077, -46.7498 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Player" parent="." index="7" instance=ExtResource( 9 )]
+[node name="Player" parent="." index="7" instance=ExtResource( 8 )]
 
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 1.6, 0 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, -1, -1.2132, 3.66378, 38.6669 )
 player_id = 1
 
 [node name="Camera" type="Camera" parent="Player" index="6"]
@@ -794,15 +451,15 @@ current = true
 fov = 70.0
 size = 1.0
 near = 0.05
-far = 100.0
-script = ExtResource( 10 )
+far = 1000.0
+script = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
 mouse_sensitivity = 1200
 
-[node name="NPC" parent="." index="8" instance=ExtResource( 11 )]
+[node name="NPC" parent="." index="8" instance=ExtResource( 10 )]
 
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27201, 1.6, -20 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27201, 2.92688, -20 )
 player_id = 2
 fire_delay = 0.1
 
@@ -815,7 +472,41 @@ transform = Transform( 0.972341, -0.233565, -1.43504e-008, 0.233565, 0.972341, -
 autoplay = "Move"
 anims/Move = SubResource( 12 )
 
-[node name="PauseMenu" parent="." index="9" instance=ExtResource( 12 )]
+[node name="PauseMenu" parent="." index="9" instance=ExtResource( 11 )]
+
+[node name="House1" type="MeshInstance" parent="." index="10"]
+
+transform = Transform( -4.37114e-007, 0, -10, 0, 10, 0, 10, 0, -4.37114e-007, 22.0092, 3.03812, 60.3299 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 12 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 13 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="House2" type="MeshInstance" parent="." index="11"]
+
+transform = Transform( -4.37114e-007, 0, 10, 0, 10, 0, -10, 0, -4.37114e-007, -21.1639, 3.03812, 37.9176 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 12 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 14 )
+_sections_unfolded = [ "Transform", "material" ]
 
 [connection signal="body_entered" from="Area" to="Player" method="_on_Area_body_entered"]
 

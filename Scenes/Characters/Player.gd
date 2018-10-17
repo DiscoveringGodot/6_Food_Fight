@@ -28,34 +28,26 @@ func _physics_process(delta):
 
 
 func move():
+	motion = Vector3(0,0,0)
+
 	var camera_forward = cam_xform.basis[2]
+	var camera_right = cam_xform.basis[0]
+
 	if Input.is_action_pressed("up") and not Input.is_action_pressed("down"):
-		motion = -camera_forward
+		motion -= camera_forward
 		facing_direction = 0
 	elif Input.is_action_pressed("down") and not Input.is_action_pressed("up"):
-		motion = camera_forward
+		motion += camera_forward
 		facing_direction = PI
-	else:
-		motion = Vector3(0,0,0)
-	
-	var camera_right = cam_xform.basis[0]
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
 		motion -= cam_xform.basis[0]
 		facing_direction = PI *0.5
 	elif Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
 		motion += cam_xform.basis[0]
 		facing_direction = PI *1.5
-		
 	
 	motion = motion.normalized()
 
-	if motion.length() > 0.25:
-		movement_rate += 0.1
-	else:
-		movement_rate -= 0.2
-
-	movement_rate = clamp(movement_rate, 0, 1)
-#	$PlayerModel.look_at( -motion, Vector3(0,1,0))
 	$PlayerModel.rotation.y = facing_direction
 	
 
@@ -124,6 +116,13 @@ func refresh_refill():
 
 
 func animate():
+
+	if motion.length() > 0.25:
+		movement_rate += 0.1
+	else:
+		movement_rate -= 0.2
+
+	movement_rate = clamp(movement_rate, 0, 1)
 	var animation = $PlayerModel/AnimationTreePlayer
 	if can_refill:
 		action_rate += 0.25

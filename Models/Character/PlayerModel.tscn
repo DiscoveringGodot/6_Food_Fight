@@ -2019,10 +2019,11 @@ data = {
 "position": Vector2( 449, 231 ),
 "type": "blend2"
 }, {
-"blend": -0.07,
-"id": "State",
-"position": Vector2( 934, 288 ),
-"type": "blend3"
+"filter": [  ],
+"from": "Working",
+"id": "anim 4",
+"position": Vector2( 148, 376 ),
+"type": "animation"
 }, {
 "animation": ExtResource( 3 ),
 "filter": [  ],
@@ -2036,11 +2037,10 @@ data = {
 "position": Vector2( 617, 53 ),
 "type": "animation"
 }, {
-"filter": [  ],
-"from": "Working",
-"id": "anim 4",
-"position": Vector2( 148, 376 ),
-"type": "animation"
+"blend": -0.08,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
 } ]
 }
 _sections_unfolded = [ "Playback" ]

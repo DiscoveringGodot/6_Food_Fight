@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Shop.obj-f659ae011f32f4fd9c0aab5344775be3.mesh"
+
+[deps]
+
+files=[ "res://.import/Shop.obj-f659ae011f32f4fd9c0aab5344775be3.mesh" ]
+
+source_file="res://Models/Buildings/Houses/Shop.obj"
+dest_files=[ "res://.import/Shop.obj-f659ae011f32f4fd9c0aab5344775be3.mesh", "res://.import/Shop.obj-f659ae011f32f4fd9c0aab5344775be3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 3, 3, 3 )

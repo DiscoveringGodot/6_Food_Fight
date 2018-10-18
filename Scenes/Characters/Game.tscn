@@ -434,7 +434,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Player" parent="." index="7" instance=ExtResource( 8 )]
 
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, -1, -1.28534, 3.54428, 39.5819 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, -1, -1.28534, 7.08423, 39.5819 )
 player_id = 1
 
 [node name="Camera" type="Camera" parent="Player" index="6"]

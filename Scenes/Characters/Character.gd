@@ -1,12 +1,14 @@
 extends KinematicBody
 
 const UP = Vector3(0,1,0)
-const GRAVITY = 9.8
+const GRAVITY = -30
+const JUMP_SPEED = 20
 
 export var player_id = 0
 
 var motion = Vector3()
-var speed = 20
+#var speed = 20
+var MAX_SPEED = 40
 
 var lives = 3
 

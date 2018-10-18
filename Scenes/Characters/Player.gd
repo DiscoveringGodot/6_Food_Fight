@@ -6,14 +6,22 @@ var can_refill
 var movement_rate = 0 # how much you're moving, from 0 to 1
 var action_rate = 0 # -1 is shoot, 1 is search
 
-var facing_direction 
+var facing_dir 
 var upward_movement =0
-var cam_xform = Vector3(0,0,0)
+var vel = Vector3()
+var dir = Vector3()
+
+const ACCEL= 4.5
+const DEACCEL= 16
+
+var camera
+
+#var cam_xform = Vector3(0,0,0)
 
 
 func _ready():
-	
-	facing_direction = 0
+	var camera = $Camera
+	facing_dir = 0
 	can_refill = false
 	if Customisations.Player_materials != null:
 		$PlayerModel/Armature/Human_Mesh.set_surface_material(0, load(Customisations.Player_materials))
@@ -22,45 +30,71 @@ func _ready():
 func _physics_process(delta):
 	motion.x = 0
 	motion.z = 0
-	cam_xform = $Camera.global_transform
-	move()
-	fall(delta)
-	move_and_slide(motion * speed, UP)
+#	cam_xform = $Camera.get_global_transform()
+	move(delta)
+	fall()
+#	move_and_slide(vel, UP)
 	reload()
 	animate()
 
 
-func move():
-
-	var camera_forward = cam_xform.basis[2]
-	var camera_right = cam_xform.basis[0]
+func move(delta):
+	var dir = Vector3()
+	var movement_vector = Vector2()
+	var camera_xform = $Camera.get_global_transform()
 	if Input.is_action_pressed("up") and not Input.is_action_pressed("down"):
-		motion -= camera_forward
-		facing_direction = 0
+		movement_vector.y += 1
+		facing_dir = 0
 	if Input.is_action_pressed("down") and not Input.is_action_pressed("up"):
-		motion += camera_forward
-		facing_direction = PI
+		movement_vector.y -= 1
+		facing_dir = PI
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
-		motion -= camera_right
-		facing_direction = PI *0.5
+		movement_vector.x += 1
+		facing_dir = PI *0.5
 	if Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
-		motion += camera_right
-		facing_direction = PI *1.5
-	motion.y = 0
+		movement_vector.x -= 1
+		facing_dir = PI *1.5
+	
+	movement_vector = movement_vector.normalized()
+	
+	dir += -camera_xform.basis.z.normalized() * movement_vector.y
+	dir += -camera_xform.basis.x.normalized() * movement_vector.x
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		motion.y = 500
+		vel.y = JUMP_SPEED
 	
-	motion = motion.normalized()
+#	motion = motion.normalized()
+	dir.y = 0
+	dir = dir.normalized()
+	
+	vel.y += delta*GRAVITY
+	var hvel = vel
+	hvel.y = 0
+	
+	var target = dir
+	target *= MAX_SPEED
+	
+	var accel
+	if dir.dot(hvel) > 0:
+		 accel = ACCEL
+	else:
+		accel = DEACCEL
 
-	$PlayerModel.rotation.y = facing_direction
+	hvel = hvel.linear_interpolate(target, accel*delta)
+	vel.x = hvel.x
+	vel.z = hvel.z
+	vel = move_and_slide(vel,UP)
 
 
-func fall(delta):
-	if not is_on_floor():
-		motion.y -= GRAVITY * delta
+	$PlayerModel.rotation.y = facing_dir
+
+
+func fall():
+#	if not is_on_floor():
+#		motion.y -= GRAVITY
 #	elif is_on_floor() and motion.y < 0:
 #		motion.y = 0
+	pass
 
 
 func _input(event):
@@ -115,7 +149,7 @@ func refresh_refill():
 
 
 func animate():
-	if motion.length() > 0.25:
+	if vel.length() > 0.25:
 		movement_rate += 0.1
 	else:
 		movement_rate -= 0.2
@@ -131,3 +165,6 @@ func animate():
 	
 	animation.blend2_node_set_amount("Move", movement_rate)
 	animation.blend3_node_set_amount("State", action_rate)
+	
+	
+

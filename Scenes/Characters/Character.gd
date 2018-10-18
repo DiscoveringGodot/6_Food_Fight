@@ -1,9 +1,7 @@
 extends KinematicBody
 
 const UP = Vector3(0,1,0)
-const GRAVITY = 0.25
-const JUMP_VELOCITY = 2.5
-const MAX_SPEED = 10
+const GRAVITY = 9.8
 
 export var player_id = 0
 
@@ -33,11 +31,12 @@ func fire():
 
 #	var bullet = preload("res://Scenes/Ammo/Doughnut.tscn").duplicate().instance()
 	var bullet = ammo_types[randi() %ammo_types.size()-1].instance()
-	var forward = $Forward
+
 	
-	bullet.set_transform(forward.get_global_transform().orthonormalized())
+	bullet.set_transform(get_global_transform().orthonormalized())
 	get_parent().add_child(bullet)
-	bullet.set_linear_velocity(forward.get_global_transform().basis[2].normalized() * projectile_speed)
+	bullet.set_as_toplevel(true)
+	bullet.set_linear_velocity(get_global_transform().basis[2].normalized() * projectile_speed)
 	bullet.add_collision_exception_with(self) 
 	bullet.fired_by = player_id
 

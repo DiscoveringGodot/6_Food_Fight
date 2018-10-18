@@ -15,34 +15,34 @@
 [ext_resource path="res://Models/Buildings/Houses/House1.material" type="Material" id=13]
 [ext_resource path="res://Models/Buildings/Houses/House2.material" type="Material" id=14]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 10, 0.1, 5 )
 
-[sub_resource type="ConvexPolygonShape" id=4]
+[sub_resource type="ConvexPolygonShape" id=2]
 
 points = PoolVector3Array( -10, 0.75, 0.5, 10, 0.75, -0.5, 10, 0.75, 0.5, -10, 0.75, -0.5, -10, -0.75, 0.5, 10, -0.75, -0.5, 10, -0.75, 0.5, -10, -0.75, -0.5, 10, 0.75, 0.5, -10, 0.75, -0.5, 10, 0.75, -0.5, -10, 0.75, 0.5, 10, -0.75, 0.5, -10, -0.75, -0.5, 10, -0.75, -0.5, -10, -0.75, 0.5, 10, 0.75, 0.5, -10, -0.75, 0.5, -10, 0.75, 0.5, 10, -0.75, 0.5, 10, 0.75, -0.5, -10, -0.75, -0.5, -10, 0.75, -0.5, 10, -0.75, -0.5 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=3]
 
 extents = Vector3( 3.94729, 0.278848, 1 )
 
-[sub_resource type="PlaneMesh" id=7]
+[sub_resource type="PlaneMesh" id=4]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector2( 100, 50 )
 subdivide_width = 0
 subdivide_depth = 0
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="BoxShape" id=5]
 
 extents = Vector3( 50, 0.1, 25 )
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=6]
 
 extents = Vector3( 1, 1, 1 )
 
-[sub_resource type="CubeMesh" id=10]
+[sub_resource type="CubeMesh" id=7]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector3( 2, 2, 2 )
@@ -50,7 +50,7 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[sub_resource type="SpatialMaterial" id=11]
+[sub_resource type="SpatialMaterial" id=8]
 
 render_priority = 0
 flags_transparent = true
@@ -102,7 +102,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=9]
 
 length = 3.0
 loop = true
@@ -145,7 +145,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 0, 1, 537919488, 2, 1, 1048590, 4, 1, -1609564146, 6, 1, 1048590, 65532, 1, 1048590, 65534, 1, 1048587, 0, 3, 1048576, 2, 3, 1048590, 4, 3, 536870922, 6, 3, 1441802, 65532, 3, 537919502, 65534, 3, 537919488, 0, 5, 4, 2, 5, 0, 4, 5, 1, 6, 5, 1048576, 65534, 5, 537919498, 0, 7, 13, 2, 7, 537919502, 4, 7, 1048586, 6, 7, 655370, 0, 9, 1441804, 0, 65533, 14, 2, 65533, 14, 4, 65533, 537919499, 65534, 65533, 14, 0, 65535, 1048578, 2, 65535, 0, 4, 65535, 1441793, 65532, 65535, 3, 65534, 65535, 0 )
+"cells": PoolIntArray( 0, 1, 1048576, 2, 1, -2146435058, 4, 1, 537919502, 6, 1, 1048590, 65532, 1, -2146435058, 65534, 1, 1048587, 0, 3, -2146435072, 2, 3, -2146435058, 4, 3, 536870922, 6, 3, 538312714, 65532, 3, 537919502, 65534, 3, 1048576, 0, 5, 4, 2, 5, 0, 4, 5, 1, 6, 5, 537919488, 65534, 5, 537919498, 0, 7, 536870925, 2, 7, 537919502, 4, 7, 1048586, 6, 7, 537526282, 0, 9, 538312716, 0, 65533, 536870926, 2, 65533, 536870926, 4, 65533, 1048587, 65534, 65533, 14, 0, 65535, 1048578, 2, 65535, 0, 4, 65535, 1441793, 65532, 65535, 3, 65534, 65535, 0 )
 }
 _sections_unfolded = [ "Cell", "Pause", "Transform" ]
 __meta__ = {
@@ -169,7 +169,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor" index="0"]
 
 visible = false
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
@@ -189,7 +189,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall" index="0"]
 
 visible = false
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 disabled = false
 
 [node name="Wall2" type="StaticBody" parent="Scenary/Floor" index="2"]
@@ -208,7 +208,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall2" index="0"]
 
 visible = false
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 disabled = false
 
 [node name="Wall3" type="StaticBody" parent="Scenary/Floor" index="3"]
@@ -227,7 +227,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall3" index="0"]
 
 visible = false
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 disabled = false
 
 [node name="Wall4" type="StaticBody" parent="Scenary/Floor" index="4"]
@@ -246,7 +246,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/Wall4" index="0"]
 
 visible = false
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 disabled = false
 
 [node name="StaticBody" type="StaticBody" parent="Scenary/Floor" index="5"]
@@ -264,7 +264,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody" index="0"]
 
 transform = Transform( 0.999788, 0.0206012, 0, -0.0206012, 0.999788, 0, 0, 0, 1, -0.0598183, -0.323172, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 disabled = false
 
 [node name="StaticBody2" type="StaticBody" parent="Scenary/Floor" index="6"]
@@ -282,7 +282,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/Floor/StaticBody2" index="0"]
 
 transform = Transform( 0.999788, 0.0206012, 0, -0.0206012, 0.999788, 0, 0, 0, 1, -0.0598183, -0.323172, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 disabled = false
 
 [node name="MainFloor" type="StaticBody" parent="Scenary" index="2"]
@@ -309,14 +309,14 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 7 )
+mesh = SubResource( 4 )
 skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/MainFloor" index="1"]
 
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 disabled = false
 
 [node name="Area" type="Area" parent="." index="1"]
@@ -347,7 +347,7 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 disabled = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Area" index="1"]
@@ -361,9 +361,9 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 10 )
+mesh = SubResource( 7 )
 skeleton = NodePath("..")
-material/0 = SubResource( 11 )
+material/0 = SubResource( 8 )
 _sections_unfolded = [ "Transform", "material" ]
 
 [node name="Gui" parent="." index="2" instance=ExtResource( 3 )]
@@ -397,8 +397,8 @@ speed = 10
 
 transform = Transform( -0.21689, 0.954121, -0.206426, 0.646261, 0.298824, 0.702176, 0.731646, 0.0188898, -0.681423, -0.253176, 81.7919, -48.7188 )
 layers = 1
-light_color = Color( 0.910156, 0.987366, 1, 1 )
-light_energy = 1.0
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 3.0
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -434,7 +434,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Player" parent="." index="7" instance=ExtResource( 8 )]
 
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, -1, -1.2132, 3.66378, 38.6669 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, -1, -1.28534, 3.54428, 39.5819 )
 player_id = 1
 
 [node name="Camera" type="Camera" parent="Player" index="6"]
@@ -470,7 +470,7 @@ transform = Transform( 0.972341, -0.233565, -1.43504e-008, 0.233565, 0.972341, -
 [node name="AnimationPlayer" parent="NPC" index="6"]
 
 autoplay = "Move"
-anims/Move = SubResource( 12 )
+anims/Move = SubResource( 9 )
 
 [node name="PauseMenu" parent="." index="9" instance=ExtResource( 11 )]
 

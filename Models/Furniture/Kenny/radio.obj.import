@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/radio.obj-8b4ee8565ed1096e979e57b7c8a12a0e.mesh"
+
+[deps]
+
+files=[ "res://.import/radio.obj-8b4ee8565ed1096e979e57b7c8a12a0e.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/radio.obj"
+dest_files=[ "res://.import/radio.obj-8b4ee8565ed1096e979e57b7c8a12a0e.mesh", "res://.import/radio.obj-8b4ee8565ed1096e979e57b7c8a12a0e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

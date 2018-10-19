@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/plantSmall3.obj-4666da993d40a114e31b4615de2d3978.mesh"
+
+[deps]
+
+files=[ "res://.import/plantSmall3.obj-4666da993d40a114e31b4615de2d3978.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/plantSmall3.obj"
+dest_files=[ "res://.import/plantSmall3.obj-4666da993d40a114e31b4615de2d3978.mesh", "res://.import/plantSmall3.obj-4666da993d40a114e31b4615de2d3978.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

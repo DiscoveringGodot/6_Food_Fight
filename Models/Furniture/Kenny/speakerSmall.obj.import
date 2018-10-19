@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/speakerSmall.obj-5d83e7d0c5eadaabdce84eeb442df932.mesh"
+
+[deps]
+
+files=[ "res://.import/speakerSmall.obj-5d83e7d0c5eadaabdce84eeb442df932.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/speakerSmall.obj"
+dest_files=[ "res://.import/speakerSmall.obj-5d83e7d0c5eadaabdce84eeb442df932.mesh", "res://.import/speakerSmall.obj-5d83e7d0c5eadaabdce84eeb442df932.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

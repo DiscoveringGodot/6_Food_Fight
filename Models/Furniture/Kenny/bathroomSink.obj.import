@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bathroomSink.obj-568dad0657be895915aee5d11f11a57a.mesh"
+
+[deps]
+
+files=[ "res://.import/bathroomSink.obj-568dad0657be895915aee5d11f11a57a.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/bathroomSink.obj"
+dest_files=[ "res://.import/bathroomSink.obj-568dad0657be895915aee5d11f11a57a.mesh", "res://.import/bathroomSink.obj-568dad0657be895915aee5d11f11a57a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

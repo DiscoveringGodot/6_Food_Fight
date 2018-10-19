@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bedSingle.obj-36ce3ac2a70348ae79036c44ab533e98.mesh"
+
+[deps]
+
+files=[ "res://.import/bedSingle.obj-36ce3ac2a70348ae79036c44ab533e98.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/bedSingle.obj"
+dest_files=[ "res://.import/bedSingle.obj-36ce3ac2a70348ae79036c44ab533e98.mesh", "res://.import/bedSingle.obj-36ce3ac2a70348ae79036c44ab533e98.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/televisionVintage.obj-15b8f60a06de0a1837f427d293b21667.mesh"
+
+[deps]
+
+files=[ "res://.import/televisionVintage.obj-15b8f60a06de0a1837f427d293b21667.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/televisionVintage.obj"
+dest_files=[ "res://.import/televisionVintage.obj-15b8f60a06de0a1837f427d293b21667.mesh", "res://.import/televisionVintage.obj-15b8f60a06de0a1837f427d293b21667.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

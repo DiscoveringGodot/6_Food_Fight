@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/dryer.obj-f9d2308872650b08757fb8eb5776ecfe.mesh"
+
+[deps]
+
+files=[ "res://.import/dryer.obj-f9d2308872650b08757fb8eb5776ecfe.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/dryer.obj"
+dest_files=[ "res://.import/dryer.obj-f9d2308872650b08757fb8eb5776ecfe.mesh", "res://.import/dryer.obj-f9d2308872650b08757fb8eb5776ecfe.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

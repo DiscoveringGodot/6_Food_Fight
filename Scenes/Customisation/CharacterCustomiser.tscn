@@ -207,7 +207,7 @@ tracks/0/keys = {
 "values": [ Vector3( 90, 0, 0 ), Vector3( 90, 180, 0 ), Vector3( 90, 359, 0 ) ]
 }
 
-[node name="CharacterCustomiser" type="Spatial"]
+[node name="CharacterCustomiser" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 

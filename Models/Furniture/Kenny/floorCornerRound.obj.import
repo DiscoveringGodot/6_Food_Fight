@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/floorCornerRound.obj-0c6e6b16d84fdbec21a2efaf6bd9c55b.mesh"
+
+[deps]
+
+files=[ "res://.import/floorCornerRound.obj-0c6e6b16d84fdbec21a2efaf6bd9c55b.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/floorCornerRound.obj"
+dest_files=[ "res://.import/floorCornerRound.obj-0c6e6b16d84fdbec21a2efaf6bd9c55b.mesh", "res://.import/floorCornerRound.obj-0c6e6b16d84fdbec21a2efaf6bd9c55b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

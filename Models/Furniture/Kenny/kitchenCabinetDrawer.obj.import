@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/kitchenCabinetDrawer.obj-3ef0d79a8c22b7d017bb2371fc2a29fe.mesh"
+
+[deps]
+
+files=[ "res://.import/kitchenCabinetDrawer.obj-3ef0d79a8c22b7d017bb2371fc2a29fe.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/kitchenCabinetDrawer.obj"
+dest_files=[ "res://.import/kitchenCabinetDrawer.obj-3ef0d79a8c22b7d017bb2371fc2a29fe.mesh", "res://.import/kitchenCabinetDrawer.obj-3ef0d79a8c22b7d017bb2371fc2a29fe.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

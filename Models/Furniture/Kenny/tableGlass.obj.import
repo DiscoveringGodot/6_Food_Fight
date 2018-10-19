@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tableGlass.obj-5f804857b2874c28c6aabf428bed9f80.mesh"
+
+[deps]
+
+files=[ "res://.import/tableGlass.obj-5f804857b2874c28c6aabf428bed9f80.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/tableGlass.obj"
+dest_files=[ "res://.import/tableGlass.obj-5f804857b2874c28c6aabf428bed9f80.mesh", "res://.import/tableGlass.obj-5f804857b2874c28c6aabf428bed9f80.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

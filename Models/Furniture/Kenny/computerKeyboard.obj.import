@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/computerKeyboard.obj-c4f7bad98d4363c6ba5b3494ed39030d.mesh"
+
+[deps]
+
+files=[ "res://.import/computerKeyboard.obj-c4f7bad98d4363c6ba5b3494ed39030d.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/computerKeyboard.obj"
+dest_files=[ "res://.import/computerKeyboard.obj-c4f7bad98d4363c6ba5b3494ed39030d.mesh", "res://.import/computerKeyboard.obj-c4f7bad98d4363c6ba5b3494ed39030d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

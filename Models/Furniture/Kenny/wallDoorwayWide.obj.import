@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallDoorwayWide.obj-8dd33b14b91385f77799b467ff4f018a.mesh"
+
+[deps]
+
+files=[ "res://.import/wallDoorwayWide.obj-8dd33b14b91385f77799b467ff4f018a.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/wallDoorwayWide.obj"
+dest_files=[ "res://.import/wallDoorwayWide.obj-8dd33b14b91385f77799b467ff4f018a.mesh", "res://.import/wallDoorwayWide.obj-8dd33b14b91385f77799b467ff4f018a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

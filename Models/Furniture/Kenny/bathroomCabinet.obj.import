@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bathroomCabinet.obj-f5e30e34f4131eda909b1a1324dd2818.mesh"
+
+[deps]
+
+files=[ "res://.import/bathroomCabinet.obj-f5e30e34f4131eda909b1a1324dd2818.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/bathroomCabinet.obj"
+dest_files=[ "res://.import/bathroomCabinet.obj-f5e30e34f4131eda909b1a1324dd2818.mesh", "res://.import/bathroomCabinet.obj-f5e30e34f4131eda909b1a1324dd2818.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

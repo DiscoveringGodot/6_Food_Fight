@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ceilingFan.obj-60e877b3481c826767e572ed6e5161b5.mesh"
+
+[deps]
+
+files=[ "res://.import/ceilingFan.obj-60e877b3481c826767e572ed6e5161b5.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/ceilingFan.obj"
+dest_files=[ "res://.import/ceilingFan.obj-60e877b3481c826767e572ed6e5161b5.mesh", "res://.import/ceilingFan.obj-60e877b3481c826767e572ed6e5161b5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

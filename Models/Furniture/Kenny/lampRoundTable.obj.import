@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lampRoundTable.obj-deb2e190e93e1f2c96db73f8fcf72b56.mesh"
+
+[deps]
+
+files=[ "res://.import/lampRoundTable.obj-deb2e190e93e1f2c96db73f8fcf72b56.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/lampRoundTable.obj"
+dest_files=[ "res://.import/lampRoundTable.obj-deb2e190e93e1f2c96db73f8fcf72b56.mesh", "res://.import/lampRoundTable.obj-deb2e190e93e1f2c96db73f8fcf72b56.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

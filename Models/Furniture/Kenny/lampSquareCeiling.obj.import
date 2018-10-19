@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lampSquareCeiling.obj-538fb0e1409378389ddb59d79cce7f5b.mesh"
+
+[deps]
+
+files=[ "res://.import/lampSquareCeiling.obj-538fb0e1409378389ddb59d79cce7f5b.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/lampSquareCeiling.obj"
+dest_files=[ "res://.import/lampSquareCeiling.obj-538fb0e1409378389ddb59d79cce7f5b.mesh", "res://.import/lampSquareCeiling.obj-538fb0e1409378389ddb59d79cce7f5b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

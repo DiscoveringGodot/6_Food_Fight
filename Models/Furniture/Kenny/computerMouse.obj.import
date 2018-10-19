@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/computerMouse.obj-de32aac209e235c64b924fbb66548e48.mesh"
+
+[deps]
+
+files=[ "res://.import/computerMouse.obj-de32aac209e235c64b924fbb66548e48.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/computerMouse.obj"
+dest_files=[ "res://.import/computerMouse.obj-de32aac209e235c64b924fbb66548e48.mesh", "res://.import/computerMouse.obj-de32aac209e235c64b924fbb66548e48.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

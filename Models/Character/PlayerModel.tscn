@@ -1995,7 +1995,7 @@ base_path = NodePath("..")
 active = true
 data = {
 "active": true,
-"connections": [ "anim 3", "scale", 0, "State", "out", 0, "anim", "Move", 0, "anim 2", "Move", 1, "scale", "State", 0, "Move", "State", 1, "anim 4", "State", 2 ],
+"connections": [ "anim 3", "scale", 0, "State", "out", 0, "scale", "State", 0, "Move", "State", 1, "anim 4", "State", 2, "anim", "Move", 0, "anim 2", "Move", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
@@ -2013,22 +2013,10 @@ data = {
 "position": Vector2( 1136, 307 ),
 "type": "output"
 }, {
-"blend": 0.0,
-"filter": [  ],
-"id": "Move",
-"position": Vector2( 449, 231 ),
-"type": "blend2"
-}, {
 "filter": [  ],
 "from": "Working",
 "id": "anim 4",
 "position": Vector2( 148, 376 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 3 ),
-"filter": [  ],
-"id": "anim 2",
-"position": Vector2( 150, 233 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -2041,6 +2029,18 @@ data = {
 "id": "State",
 "position": Vector2( 934, 288 ),
 "type": "blend3"
+}, {
+"animation": ExtResource( 3 ),
+"filter": [  ],
+"id": "anim 2",
+"position": Vector2( 150, 233 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 449, 231 ),
+"type": "blend2"
 } ]
 }
 _sections_unfolded = [ "Playback" ]

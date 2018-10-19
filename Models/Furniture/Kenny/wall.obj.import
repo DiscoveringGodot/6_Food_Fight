@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wall.obj-631c5037dc11678dd7d4bf961f34f120.mesh"
+
+[deps]
+
+files=[ "res://.import/wall.obj-631c5037dc11678dd7d4bf961f34f120.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/wall.obj"
+dest_files=[ "res://.import/wall.obj-631c5037dc11678dd7d4bf961f34f120.mesh", "res://.import/wall.obj-631c5037dc11678dd7d4bf961f34f120.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

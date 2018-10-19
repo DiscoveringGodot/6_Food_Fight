@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bathroomMirror.obj-ee2b49746fc5b7e2f1fe7b7209091753.mesh"
+
+[deps]
+
+files=[ "res://.import/bathroomMirror.obj-ee2b49746fc5b7e2f1fe7b7209091753.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/bathroomMirror.obj"
+dest_files=[ "res://.import/bathroomMirror.obj-ee2b49746fc5b7e2f1fe7b7209091753.mesh", "res://.import/bathroomMirror.obj-ee2b49746fc5b7e2f1fe7b7209091753.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/washerDryerStacked.obj-d8bd881e1984efb1dbfbfc217ec09cef.mesh"
+
+[deps]
+
+files=[ "res://.import/washerDryerStacked.obj-d8bd881e1984efb1dbfbfc217ec09cef.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/washerDryerStacked.obj"
+dest_files=[ "res://.import/washerDryerStacked.obj-d8bd881e1984efb1dbfbfc217ec09cef.mesh", "res://.import/washerDryerStacked.obj-d8bd881e1984efb1dbfbfc217ec09cef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

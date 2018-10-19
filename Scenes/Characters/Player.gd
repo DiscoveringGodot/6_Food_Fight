@@ -30,7 +30,6 @@ func _ready():
 func _physics_process(delta):
 	motion.x = 0
 	motion.z = 0
-#	cam_xform = $Camera.get_global_transform()
 	move(delta)
 	fall()
 #	move_and_slide(vel, UP)

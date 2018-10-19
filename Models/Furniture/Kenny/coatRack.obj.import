@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/coatRack.obj-afcdf47bb4faafb0e1065d201a1889ac.mesh"
+
+[deps]
+
+files=[ "res://.import/coatRack.obj-afcdf47bb4faafb0e1065d201a1889ac.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/coatRack.obj"
+dest_files=[ "res://.import/coatRack.obj-afcdf47bb4faafb0e1065d201a1889ac.mesh", "res://.import/coatRack.obj-afcdf47bb4faafb0e1065d201a1889ac.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

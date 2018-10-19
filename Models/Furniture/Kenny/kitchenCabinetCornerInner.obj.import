@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/kitchenCabinetCornerInner.obj-ef0f7016f128858aa74d23f1a4badeac.mesh"
+
+[deps]
+
+files=[ "res://.import/kitchenCabinetCornerInner.obj-ef0f7016f128858aa74d23f1a4badeac.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/kitchenCabinetCornerInner.obj"
+dest_files=[ "res://.import/kitchenCabinetCornerInner.obj-ef0f7016f128858aa74d23f1a4badeac.mesh", "res://.import/kitchenCabinetCornerInner.obj-ef0f7016f128858aa74d23f1a4badeac.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

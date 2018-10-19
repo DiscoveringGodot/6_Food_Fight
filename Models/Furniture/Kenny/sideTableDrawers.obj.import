@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sideTableDrawers.obj-82df3f1b9601ef2cdb36594f53af990c.mesh"
+
+[deps]
+
+files=[ "res://.import/sideTableDrawers.obj-82df3f1b9601ef2cdb36594f53af990c.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/sideTableDrawers.obj"
+dest_files=[ "res://.import/sideTableDrawers.obj-82df3f1b9601ef2cdb36594f53af990c.mesh", "res://.import/sideTableDrawers.obj-82df3f1b9601ef2cdb36594f53af990c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

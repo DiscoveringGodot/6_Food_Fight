@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/loungeSofaCorner.obj-ec1aa4e2bf7658733e1afff4f707a4a1.mesh"
+
+[deps]
+
+files=[ "res://.import/loungeSofaCorner.obj-ec1aa4e2bf7658733e1afff4f707a4a1.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/loungeSofaCorner.obj"
+dest_files=[ "res://.import/loungeSofaCorner.obj-ec1aa4e2bf7658733e1afff4f707a4a1.mesh", "res://.import/loungeSofaCorner.obj-ec1aa4e2bf7658733e1afff4f707a4a1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

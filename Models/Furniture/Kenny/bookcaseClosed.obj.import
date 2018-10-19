@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bookcaseClosed.obj-5d298525f0047b340347ac312eff1fc2.mesh"
+
+[deps]
+
+files=[ "res://.import/bookcaseClosed.obj-5d298525f0047b340347ac312eff1fc2.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/bookcaseClosed.obj"
+dest_files=[ "res://.import/bookcaseClosed.obj-5d298525f0047b340347ac312eff1fc2.mesh", "res://.import/bookcaseClosed.obj-5d298525f0047b340347ac312eff1fc2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

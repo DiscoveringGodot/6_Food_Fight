@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/stoolBar.obj-07054e16603bc6e675ef6905cee6c728.mesh"
+
+[deps]
+
+files=[ "res://.import/stoolBar.obj-07054e16603bc6e675ef6905cee6c728.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/stoolBar.obj"
+dest_files=[ "res://.import/stoolBar.obj-07054e16603bc6e675ef6905cee6c728.mesh", "res://.import/stoolBar.obj-07054e16603bc6e675ef6905cee6c728.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

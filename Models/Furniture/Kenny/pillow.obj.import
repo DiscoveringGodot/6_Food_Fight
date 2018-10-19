@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pillow.obj-7294e5bd76af715cbe574cd4e1a45d36.mesh"
+
+[deps]
+
+files=[ "res://.import/pillow.obj-7294e5bd76af715cbe574cd4e1a45d36.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/pillow.obj"
+dest_files=[ "res://.import/pillow.obj-7294e5bd76af715cbe574cd4e1a45d36.mesh", "res://.import/pillow.obj-7294e5bd76af715cbe574cd4e1a45d36.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

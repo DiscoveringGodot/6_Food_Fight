@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/chairCushion.obj-bcbaef7ca0d5d6e785ff7162e3dfef97.mesh"
+
+[deps]
+
+files=[ "res://.import/chairCushion.obj-bcbaef7ca0d5d6e785ff7162e3dfef97.mesh" ]
+
+source_file="res://Models/Furniture/Kenny/chairCushion.obj"
+dest_files=[ "res://.import/chairCushion.obj-bcbaef7ca0d5d6e785ff7162e3dfef97.mesh", "res://.import/chairCushion.obj-bcbaef7ca0d5d6e785ff7162e3dfef97.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

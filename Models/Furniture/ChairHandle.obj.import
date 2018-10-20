@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ChairHandle.obj-ef017cea695ba2b0fe749723cf566c1a.mesh"
+
+[deps]
+
+files=[ "res://.import/ChairHandle.obj-ef017cea695ba2b0fe749723cf566c1a.mesh" ]
+
+source_file="res://Models/Furniture/ChairHandle.obj"
+dest_files=[ "res://.import/ChairHandle.obj-ef017cea695ba2b0fe749723cf566c1a.mesh", "res://.import/ChairHandle.obj-ef017cea695ba2b0fe749723cf566c1a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

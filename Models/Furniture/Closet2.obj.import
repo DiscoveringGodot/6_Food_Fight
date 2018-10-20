@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Closet2.obj-2c59df2e6482d904755f08636aa63fef.mesh"
+
+[deps]
+
+files=[ "res://.import/Closet2.obj-2c59df2e6482d904755f08636aa63fef.mesh" ]
+
+source_file="res://Models/Furniture/Closet2.obj"
+dest_files=[ "res://.import/Closet2.obj-2c59df2e6482d904755f08636aa63fef.mesh", "res://.import/Closet2.obj-2c59df2e6482d904755f08636aa63fef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

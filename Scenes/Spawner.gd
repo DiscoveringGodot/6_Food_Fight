@@ -1,6 +1,6 @@
 extends Spatial
 
-export var speed = 20
+export var speed = 10
 var max_wait = 5
 
 var bystanders = {}

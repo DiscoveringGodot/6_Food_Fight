@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SofaDouble.obj-4f830f525c53ae6ae696e423f9989ae4.mesh"
+
+[deps]
+
+files=[ "res://.import/SofaDouble.obj-4f830f525c53ae6ae696e423f9989ae4.mesh" ]
+
+source_file="res://Models/Furniture/SofaDouble.obj"
+dest_files=[ "res://.import/SofaDouble.obj-4f830f525c53ae6ae696e423f9989ae4.mesh", "res://.import/SofaDouble.obj-4f830f525c53ae6ae696e423f9989ae4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

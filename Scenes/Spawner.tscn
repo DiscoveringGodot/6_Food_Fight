@@ -14,7 +14,7 @@ subdivide_depth = 0
 [node name="Spawner" type="Spatial"]
 
 script = ExtResource( 1 )
-speed = 20
+speed = 10
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

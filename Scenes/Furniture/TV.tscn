@@ -36,6 +36,7 @@ angular_damp = -1.0
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.506622, 0, 0.578851 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -52,6 +53,7 @@ _sections_unfolded = [ "material" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.506622, 0, 0.578851 )
 shape = SubResource( 1 )
 disabled = false
 

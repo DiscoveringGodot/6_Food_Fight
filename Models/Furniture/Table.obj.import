@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Table.obj-582f7fa2b1bbf921201b232bee99a970.mesh"
+
+[deps]
+
+files=[ "res://.import/Table.obj-582f7fa2b1bbf921201b232bee99a970.mesh" ]
+
+source_file="res://Models/Furniture/Table.obj"
+dest_files=[ "res://.import/Table.obj-582f7fa2b1bbf921201b232bee99a970.mesh", "res://.import/Table.obj-582f7fa2b1bbf921201b232bee99a970.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

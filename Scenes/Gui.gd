@@ -4,7 +4,10 @@ func update_gui(ammo):
 	$AmmoCount.text = str(ammo)
 
 func refill(amount):
-	$refil.value = amount * 100
+	$refill.value = amount * 100
+
+func empty_GUI():
+	$refill.value = 0
 	
 
 func update_score(score):

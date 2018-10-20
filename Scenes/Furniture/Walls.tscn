@@ -1,0 +1,2755 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Models/Furniture/Kenny/wall.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Furniture/Kenny/MetalDark.material" type="Material" id=2]
+[ext_resource path="res://Models/Furniture/Kenny/wallWindowSlide.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/Furniture/Kenny/wallDoorwayWide.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Models/Furniture/Kenny/wallWindow.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Models/Furniture/Kenny/kitchenBar.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/Furniture/Kenny/DarkWood.material" type="Material" id=7]
+[ext_resource path="res://Models/Furniture/Kenny/wallDoorway.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://Models/Furniture/Kenny/doorway.obj" type="ArrayMesh" id=9]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+
+points = PoolVector3Array( 0, 0, 0.25, 0, 0, 0, -5, 0, 0.25, -5, 0, 0, 0, 6.44531, 0, 0, 6.44531, 0.25, -5, 6.44531, 0, -5, 6.44531, 0.25, 0, 6.44531, 0, 0, 0, 0, 0, 6.44531, 0.25, 0, 0, 0.25, 0, 6.44531, 0.25, 0, 0, 0, -5, 0, 0, -5, 6.44531, 0, -5, 0, 0.25, -5, 6.44531, 0.25, -5, 0, 0.25, -5, 6.44531, 0, -5, 0, 0, 0, 0, 0, -5, 6.44531, 0, 0, 6.44531, 0, -5, 6.44531, 0, 0, 0, 0, 0, 0, 0.25, -5, 0, 0.25, 0, 6.44531, 0.25, -5, 6.44531, 0.25 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+
+points = PoolVector3Array( -1.31445, 5.53125, 0.25, -1.31445, 5.53125, 0.347656, -3.68359, 5.53125, 0.25, -3.68359, 5.53125, 0.347656, -1.31445, 1.71484, 0.347656, -1.31445, 1.71484, 0.25, -3.68359, 1.71484, 0.347656, -3.68359, 1.71484, 0.25, -3.68359, 1.71484, 0.25, -3.68359, 5.53125, 0.25, -3.68359, 1.71484, 0.347656, -3.68359, 5.53125, 0.347656, -3.68359, 1.71484, 0.347656, -1.56348, 1.96289, 0.347656, -1.31445, 1.71484, 0.347656, -1.31445, 5.53125, 0.347656, -1.56348, 5.28125, 0.347656, -3.43555, 5.28125, 0.347656, -3.43555, 1.96289, 0.347656, -3.68359, 5.53125, 0.347656, -1.31445, 5.53125, 0.25, -1.31445, 1.71484, 0.25, -1.31445, 5.53125, 0.347656, -1.31445, 1.71484, 0.347656, -1.31445, 1.71484, -0.0977173, -3.43555, 1.96289, -0.0977173, -3.68359, 1.71484, -0.0977173, -3.68359, 5.53125, -0.0977173, -3.43555, 5.28125, -0.0977173, -1.56348, 5.28125, -0.0977173, -1.56348, 1.96289, -0.0977173, -1.31445, 5.53125, -0.0977173, -1.31445, 5.53125, -0.0977173, -1.31445, 5.53125, 0, -3.68359, 5.53125, -0.0977173, -3.68359, 5.53125, 0, -1.31445, 5.53125, -0.0977173, -1.31445, 1.71484, -0.0977173, -1.31445, 5.53125, 0, -1.31445, 1.71484, 0, -1.31445, 1.71484, 0, -1.31445, 1.71484, -0.0977173, -3.68359, 1.71484, 0, -3.68359, 1.71484, -0.0977173, -3.68359, 1.71484, -0.0977173, -3.68359, 5.53125, -0.0977173, -3.68359, 1.71484, 0, -3.68359, 5.53125, 0, 0, 0, 0.25, 0, 0, 0, -5, 0, 0.25, -5, 0, 0, 0, 6.44531, 0, 0, 6.44531, 0.25, -5, 6.44531, 0, -5, 6.44531, 0.25, -3.43555, 5.28125, -0.0977173, -3.43555, 1.96289, -0.0977173, -3.43555, 5.28125, 0.347656, -3.43555, 1.96289, 0.347656, -1.56348, 5.28125, 0.347656, -1.56348, 5.28125, -0.0977173, -3.43555, 5.28125, 0.347656, -3.43555, 5.28125, -0.0977173, -1.56348, 1.96289, -0.0977173, -1.56348, 1.96289, 0.347656, -3.43555, 1.96289, -0.0977173, -3.43555, 1.96289, 0.347656, -1.56348, 1.96289, -0.0977173, -1.56348, 5.28125, -0.0977173, -1.56348, 1.96289, 0.347656, -1.56348, 5.28125, 0.347656, -5, 0, 0.25, -1.31445, 1.71484, 0.25, 0, 0, 0.25, 0, 6.44531, 0.25, -1.31445, 5.53125, 0.25, -3.68359, 5.53125, 0.25, -3.68359, 1.71484, 0.25, -5, 6.44531, 0.25, 0, 0, 0, -3.68359, 1.71484, 0, -5, 0, 0, -5, 6.44531, 0, -5, 0, 0, -3.68359, 1.71484, 0, -3.68359, 5.53125, 0, -5, 6.44531, 0, -3.68359, 1.71484, 0, -1.31445, 5.53125, 0, -5, 6.44531, 0, -3.68359, 5.53125, 0, 0, 6.44531, 0, -1.31445, 1.71484, 0, 0, 0, 0, -3.68359, 1.71484, 0, 0, 0, 0, -1.31445, 1.71484, 0, -1.31445, 5.53125, 0, -1.31445, 1.71484, 0, 0, 6.44531, 0, -5, 6.44531, 0, -1.31445, 5.53125, 0, 0, 6.44531, 0, 0, 6.44531, 0, 0, 0, 0, 0, 6.44531, 0.25, 0, 0, 0.25, 0, 6.44531, 0.25, 0, 0, 0, -5, 0, 0, -5, 6.44531, 0, -5, 0, 0.25, -5, 6.44531, 0.25, -5, 0, 0.25, -5, 6.44531, 0, -3.18945, 2.20898, 0.186279, -1.80957, 2.20898, 0.186279, -3.18945, 3.37695, 0.186279, -1.80957, 3.37695, 0.186279, -3.18945, 3.37695, 0.186279, -1.80957, 2.20898, 0.186279, -3.18945, 2.20898, 0.186279, -1.80957, 3.37695, 0.186279, -3.18945, 3.37695, 0.125, -3.18945, 2.20898, 0.125, -3.18945, 3.37695, 0.186279, -3.18945, 2.20898, 0.186279, -3.18945, 3.37695, 0.247681, -3.18945, 2.20898, 0.247681, -1.80957, 3.37695, 0.186279, -1.80957, 3.37695, 0.125, -3.18945, 3.37695, 0.186279, -3.18945, 3.37695, 0.125, -3.18945, 3.37695, 0.247681, -1.80957, 3.37695, 0.247681, -1.80957, 2.20898, 0.125, -1.80957, 3.37695, 0.125, -1.80957, 2.20898, 0.186279, -1.80957, 3.37695, 0.186279, -1.80957, 2.20898, 0.247681, -1.80957, 3.37695, 0.247681, -1.80957, 2.20898, 0.125, -1.80957, 2.20898, 0.186279, -3.18945, 2.20898, 0.125, -3.18945, 2.20898, 0.186279, -1.80957, 2.20898, 0.247681, -3.18945, 2.20898, 0.247681, -3.43555, 1.96289, 0.125, -3.43555, 3.62305, 0.125, -3.43555, 1.96289, 0.247681, -3.43555, 3.62305, 0.247681, -1.56348, 3.62305, 0.125, -1.56348, 3.62305, 0.247681, -3.43555, 3.62305, 0.125, -3.43555, 3.62305, 0.247681, -3.43555, 1.96289, 0.247681, -1.80957, 2.20898, 0.247681, -1.56348, 1.96289, 0.247681, -1.56348, 3.62305, 0.247681, -1.80957, 3.37695, 0.247681, -3.18945, 3.37695, 0.247681, -3.18945, 2.20898, 0.247681, -3.43555, 3.62305, 0.247681, -1.56348, 1.96289, 0.125, -3.18945, 2.20898, 0.125, -3.43555, 1.96289, 0.125, -3.43555, 3.62305, 0.125, -3.18945, 3.37695, 0.125, -1.80957, 3.37695, 0.125, -1.80957, 2.20898, 0.125, -1.56348, 3.62305, 0.125, -1.56348, 1.96289, 0.247681, -1.56348, 1.96289, 0.125, -3.43555, 1.96289, 0.247681, -3.43555, 1.96289, 0.125, -1.56348, 3.62305, 0.125, -1.56348, 1.96289, 0.125, -1.56348, 3.62305, 0.247681, -1.56348, 1.96289, 0.247681, -3.18945, 3.86914, 0.0635986, -1.80957, 3.86914, 0.0635986, -3.18945, 5.03516, 0.0635986, -1.80957, 5.03516, 0.0635986, -3.18945, 5.03516, 0.0635986, -1.80957, 3.86914, 0.0635986, -3.18945, 3.86914, 0.0635986, -1.80957, 5.03516, 0.0635986, -3.18945, 5.03516, 0.00224876, -3.18945, 3.86914, 0.00224876, -3.18945, 5.03516, 0.0635986, -3.18945, 3.86914, 0.0635986, -3.18945, 5.03516, 0.125, -3.18945, 3.86914, 0.125, -1.80957, 5.03516, 0.0635986, -1.80957, 5.03516, 0.00224876, -3.18945, 5.03516, 0.0635986, -3.18945, 5.03516, 0.00224876, -3.18945, 5.03516, 0.125, -1.80957, 5.03516, 0.125, -1.80957, 3.86914, 0.00224876, -1.80957, 5.03516, 0.00224876, -1.80957, 3.86914, 0.0635986, -1.80957, 5.03516, 0.0635986, -1.80957, 3.86914, 0.125, -1.80957, 5.03516, 0.125, -1.80957, 3.86914, 0.00224876, -1.80957, 3.86914, 0.0635986, -3.18945, 3.86914, 0.00224876, -3.18945, 3.86914, 0.0635986, -1.80957, 3.86914, 0.125, -3.18945, 3.86914, 0.125, -3.43555, 3.62305, 0.00224876, -3.43555, 5.28125, 0.00224876, -3.43555, 3.62305, 0.125, -3.43555, 5.28125, 0.125, -1.56348, 5.28125, 0.00224876, -1.56348, 5.28125, 0.125, -3.43555, 5.28125, 0.00224876, -3.43555, 5.28125, 0.125, -3.43555, 3.62305, 0.125, -1.80957, 3.86914, 0.125, -1.56348, 3.62305, 0.125, -1.56348, 5.28125, 0.125, -1.80957, 5.03516, 0.125, -3.18945, 5.03516, 0.125, -3.18945, 3.86914, 0.125, -3.43555, 5.28125, 0.125, -1.56348, 3.62305, 0.00224876, -3.18945, 3.86914, 0.00224876, -3.43555, 3.62305, 0.00224876, -3.43555, 5.28125, 0.00224876, -3.18945, 5.03516, 0.00224876, -1.80957, 5.03516, 0.00224876, -1.80957, 3.86914, 0.00224876, -1.56348, 5.28125, 0.00224876, -1.56348, 3.62305, 0.125, -1.56348, 3.62305, 0.00224876, -3.43555, 3.62305, 0.125, -3.43555, 3.62305, 0.00224876, -1.56348, 5.28125, 0.00224876, -1.56348, 3.62305, 0.00224876, -1.56348, 5.28125, 0.125, -1.56348, 3.62305, 0.125 )
+
+[sub_resource type="ConcavePolygonShape" id=3]
+
+data = PoolVector3Array( 0, 6.4453, 0, 0, 0, 0, 0, 6.4453, 0.25, 0, 0, 0.25, 0, 6.4453, 0.25, 0, 0, 0, -5, 0, 0, -5, 6.4453, 0, -5, 0, 0.25, -5, 6.4453, 0.25, -5, 0, 0.25, -5, 6.4453, 0, -4.7852, 0, 0, -4.7852, 5.0469, 0, -5, 0, 0, -5, 6.4453, 0, -5, 0, 0, -4.7852, 5.0469, 0, -0.2117, 0, 0, 0, 0, 0, -0.2117, 5.0469, 0, 0, 6.4453, 0, -0.2117, 5.0469, 0, 0, 0, 0, -4.7852, 5.0469, 0, -0.2117, 5.0469, 0, 0, 6.4453, 0, -5, 6.4453, 0, -4.7852, 5.0469, 0, 0, 6.4453, 0, 0, 6.4453, 0, 0, 6.4453, 0.25, -5, 6.4453, 0, -5, 6.4453, 0.25, -5, 6.4453, 0, 0, 6.4453, 0.25, -4.7852, 0, 0.25, -4.7852, 0, 0, -5, 0, 0.25, -5, 0, 0, -5, 0, 0.25, -4.7852, 0, 0, -4.7852, 0, 0, -4.7852, 0, 0.25, -4.7852, 0, -0.0977, -4.7852, 0, 0.25, -4.7852, 0, 0.3477, -4.7852, 0, -0.0977, -4.7852, 0, -0.0977, -4.7852, 0, 0.3477, -4.6445, 0, -0.0977, -4.6445, 0, 0.3477, -4.6445, 0, -0.0977, -4.7852, 0, 0.3477, -0.2117, 5.0469, 0.25, -0.2117, 0, 0.25, -0.2117, 5.0469, 0.3477, -0.2117, 0, 0.3477, -0.2117, 5.0469, 0.3477, -0.2117, 0, 0.25, -0.2117, 0, 0.3477, -0.3533, 0, 0.3477, -0.2117, 5.0469, 0.3477, -0.3533, 4.9023, 0.3477, -0.2117, 5.0469, 0.3477, -0.3533, 0, 0.3477, -4.6445, 4.9023, 0.3477, -0.2117, 5.0469, 0.3477, -0.3533, 4.9023, 0.3477, -0.2117, 5.0469, 0.3477, -4.6445, 4.9023, 0.3477, -4.7852, 5.0469, 0.3477, -4.6445, 4.9023, 0.3477, -4.6445, 0, 0.3477, -4.7852, 5.0469, 0.3477, -4.7852, 0, 0.3477, -4.7852, 5.0469, 0.3477, -4.6445, 0, 0.3477, -0.2117, 0, 0.3477, -0.2117, 0, 0.25, -0.3533, 0, 0.3477, -0.2117, 0, 0, -0.3533, 0, 0.3477, -0.2117, 0, 0.25, -0.2117, 0, -0.0977, -0.3533, 0, 0.3477, -0.2117, 0, 0, -0.3533, 0, -0.0977, -0.3533, 0, 0.3477, -0.2117, 0, -0.0977, -0.2117, 0, 0, -0.2117, 0, 0.25, 0, 0, 0, 0, 0, 0.25, 0, 0, 0, -0.2117, 0, 0.25, -0.3533, 4.9023, 0.3477, -0.3533, 4.9023, -0.0977, -4.6445, 4.9023, 0.3477, -4.6445, 4.9023, -0.0977, -4.6445, 4.9023, 0.3477, -0.3533, 4.9023, -0.0977, -4.7852, 0, -0.0977, -4.6445, 0, -0.0977, -4.7852, 5.0469, -0.0977, -4.6445, 4.9023, -0.0977, -4.7852, 5.0469, -0.0977, -4.6445, 0, -0.0977, -0.3533, 4.9023, -0.0977, -4.7852, 5.0469, -0.0977, -4.6445, 4.9023, -0.0977, -4.7852, 5.0469, -0.0977, -0.3533, 4.9023, -0.0977, -0.2117, 5.0469, -0.0977, -0.3533, 4.9023, -0.0977, -0.3533, 0, -0.0977, -0.2117, 5.0469, -0.0977, -0.2117, 0, -0.0977, -0.2117, 5.0469, -0.0977, -0.3533, 0, -0.0977, -0.3533, 0, -0.0977, -0.3533, 4.9023, -0.0977, -0.3533, 0, 0.3477, -0.3533, 4.9023, 0.3477, -0.3533, 0, 0.3477, -0.3533, 4.9023, -0.0977, -0.2117, 5.0469, 0.25, -0.2117, 5.0469, 0.3477, -4.7852, 5.0469, 0.25, -4.7852, 5.0469, 0.3477, -4.7852, 5.0469, 0.25, -0.2117, 5.0469, 0.3477, -4.7852, 0, 0.25, -4.7852, 5.0469, 0.25, -4.7852, 0, 0.3477, -4.7852, 5.0469, 0.3477, -4.7852, 0, 0.3477, -4.7852, 5.0469, 0.25, -4.6445, 4.9023, -0.0977, -4.6445, 0, -0.0977, -4.6445, 4.9023, 0.3477, -4.6445, 0, 0.3477, -4.6445, 4.9023, 0.3477, -4.6445, 0, -0.0977, -4.7852, 0, -0.0977, -4.7852, 5.0469, -0.0977, -4.7852, 0, 0, -4.7852, 5.0469, 0, -4.7852, 0, 0, -4.7852, 5.0469, -0.0977, -0.2117, 5.0469, -0.0977, -0.2117, 5.0469, 0, -4.7852, 5.0469, -0.0977, -4.7852, 5.0469, 0, -4.7852, 5.0469, -0.0977, -0.2117, 5.0469, 0, -0.2117, 5.0469, -0.0977, -0.2117, 0, -0.0977, -0.2117, 5.0469, 0, -0.2117, 0, 0, -0.2117, 5.0469, 0, -0.2117, 0, -0.0977, -0.2117, 0, 0.25, -0.2117, 5.0469, 0.25, 0, 0, 0.25, 0, 6.4453, 0.25, 0, 0, 0.25, -0.2117, 5.0469, 0.25, -4.7852, 5.0469, 0.25, 0, 6.4453, 0.25, -0.2117, 5.0469, 0.25, 0, 6.4453, 0.25, -4.7852, 5.0469, 0.25, -5, 6.4453, 0.25, -5, 6.4453, 0.25, -4.7852, 5.0469, 0.25, -5, 0, 0.25, -4.7852, 0, 0.25, -5, 0, 0.25, -4.7852, 5.0469, 0.25 )
+
+[sub_resource type="ConvexPolygonShape" id=4]
+
+points = PoolVector3Array( -1.31445, 5.53125, 0.25, -1.31445, 5.53125, 0.347656, -3.68359, 5.53125, 0.25, -3.68359, 5.53125, 0.347656, -1.31445, 1.71484, 0.347656, -1.31445, 1.71484, 0.25, -3.68359, 1.71484, 0.347656, -3.68359, 1.71484, 0.25, -3.68359, 1.71484, 0.25, -3.68359, 5.53125, 0.25, -3.68359, 1.71484, 0.347656, -3.68359, 5.53125, 0.347656, -3.68359, 1.71484, 0.347656, -1.56348, 1.96289, 0.347656, -1.31445, 1.71484, 0.347656, -1.31445, 5.53125, 0.347656, -1.56348, 5.28125, 0.347656, -3.43555, 5.28125, 0.347656, -3.43555, 1.96289, 0.347656, -3.68359, 5.53125, 0.347656, -1.31445, 5.53125, 0.25, -1.31445, 1.71484, 0.25, -1.31445, 5.53125, 0.347656, -1.31445, 1.71484, 0.347656, -1.31445, 1.71484, -0.0977173, -3.43555, 1.96289, -0.0977173, -3.68359, 1.71484, -0.0977173, -3.68359, 5.53125, -0.0977173, -3.43555, 5.28125, -0.0977173, -1.56348, 5.28125, -0.0977173, -1.56348, 1.96289, -0.0977173, -1.31445, 5.53125, -0.0977173, -1.31445, 5.53125, -0.0977173, -1.31445, 5.53125, 0, -3.68359, 5.53125, -0.0977173, -3.68359, 5.53125, 0, -1.31445, 5.53125, -0.0977173, -1.31445, 1.71484, -0.0977173, -1.31445, 5.53125, 0, -1.31445, 1.71484, 0, -1.31445, 1.71484, 0, -1.31445, 1.71484, -0.0977173, -3.68359, 1.71484, 0, -3.68359, 1.71484, -0.0977173, -3.68359, 1.71484, -0.0977173, -3.68359, 5.53125, -0.0977173, -3.68359, 1.71484, 0, -3.68359, 5.53125, 0, 0, 0, 0.25, 0, 0, 0, -5, 0, 0.25, -5, 0, 0, 0, 6.44531, 0, 0, 6.44531, 0.25, -5, 6.44531, 0, -5, 6.44531, 0.25, -3.43555, 5.28125, -0.0977173, -3.43555, 1.96289, -0.0977173, -3.43555, 5.28125, 0.347656, -3.43555, 1.96289, 0.347656, -1.56348, 5.28125, 0.347656, -1.56348, 5.28125, -0.0977173, -3.43555, 5.28125, 0.347656, -3.43555, 5.28125, -0.0977173, -1.56348, 1.96289, -0.0977173, -1.56348, 1.96289, 0.347656, -3.43555, 1.96289, -0.0977173, -3.43555, 1.96289, 0.347656, -1.56348, 1.96289, -0.0977173, -1.56348, 5.28125, -0.0977173, -1.56348, 1.96289, 0.347656, -1.56348, 5.28125, 0.347656, -5, 0, 0.25, -1.31445, 1.71484, 0.25, 0, 0, 0.25, 0, 6.44531, 0.25, -1.31445, 5.53125, 0.25, -3.68359, 5.53125, 0.25, -3.68359, 1.71484, 0.25, -5, 6.44531, 0.25, 0, 0, 0, -3.68359, 1.71484, 0, -5, 0, 0, -5, 6.44531, 0, -5, 0, 0, -3.68359, 1.71484, 0, -3.68359, 5.53125, 0, -5, 6.44531, 0, -3.68359, 1.71484, 0, -1.31445, 5.53125, 0, -5, 6.44531, 0, -3.68359, 5.53125, 0, 0, 6.44531, 0, -1.31445, 1.71484, 0, 0, 0, 0, -3.68359, 1.71484, 0, 0, 0, 0, -1.31445, 1.71484, 0, -1.31445, 5.53125, 0, -1.31445, 1.71484, 0, 0, 6.44531, 0, -5, 6.44531, 0, -1.31445, 5.53125, 0, 0, 6.44531, 0, 0, 6.44531, 0, 0, 0, 0, 0, 6.44531, 0.25, 0, 0, 0.25, 0, 6.44531, 0.25, 0, 0, 0, -5, 0, 0, -5, 6.44531, 0, -5, 0, 0.25, -5, 6.44531, 0.25, -5, 0, 0.25, -5, 6.44531, 0, -3.18945, 2.20898, 0.125, -1.80957, 2.20898, 0.125, -3.18945, 5.03516, 0.125, -1.80957, 5.03516, 0.125, -3.18945, 5.03516, 0.125, -1.80957, 2.20898, 0.125, -3.18945, 2.20898, 0.125, -1.80957, 5.03516, 0.125, -3.18945, 5.03516, 0.0635986, -3.18945, 2.20898, 0.0635986, -3.18945, 5.03516, 0.125, -3.18945, 2.20898, 0.125, -3.18945, 5.03516, 0.186279, -3.18945, 2.20898, 0.186279, -1.80957, 5.03516, 0.125, -1.80957, 5.03516, 0.0635986, -3.18945, 5.03516, 0.125, -3.18945, 5.03516, 0.0635986, -3.18945, 5.03516, 0.186279, -1.80957, 5.03516, 0.186279, -1.80957, 2.20898, 0.0635986, -1.80957, 5.03516, 0.0635986, -1.80957, 2.20898, 0.125, -1.80957, 5.03516, 0.125, -1.80957, 2.20898, 0.186279, -1.80957, 5.03516, 0.186279, -1.80957, 2.20898, 0.0635986, -1.80957, 2.20898, 0.125, -3.18945, 2.20898, 0.0635986, -3.18945, 2.20898, 0.125, -1.80957, 2.20898, 0.186279, -3.18945, 2.20898, 0.186279, -3.43555, 1.96289, 0.0635986, -3.43555, 5.28125, 0.0635986, -3.43555, 1.96289, 0.186279, -3.43555, 5.28125, 0.186279, -1.56348, 5.28125, 0.0635986, -1.56348, 5.28125, 0.186279, -3.43555, 5.28125, 0.0635986, -3.43555, 5.28125, 0.186279, -3.43555, 1.96289, 0.186279, -1.80957, 2.20898, 0.186279, -1.56348, 1.96289, 0.186279, -1.56348, 5.28125, 0.186279, -1.80957, 5.03516, 0.186279, -3.18945, 5.03516, 0.186279, -3.18945, 2.20898, 0.186279, -3.43555, 5.28125, 0.186279, -1.56348, 1.96289, 0.0635986, -3.18945, 2.20898, 0.0635986, -3.43555, 1.96289, 0.0635986, -3.43555, 5.28125, 0.0635986, -3.18945, 5.03516, 0.0635986, -1.80957, 5.03516, 0.0635986, -1.80957, 2.20898, 0.0635986, -1.56348, 5.28125, 0.0635986, -1.56348, 1.96289, 0.186279, -1.56348, 1.96289, 0.0635986, -3.43555, 1.96289, 0.186279, -3.43555, 1.96289, 0.0635986, -1.56348, 5.28125, 0.0635986, -1.56348, 1.96289, 0.0635986, -1.56348, 5.28125, 0.186279, -1.56348, 1.96289, 0.186279 )
+
+[sub_resource type="ConcavePolygonShape" id=5]
+
+data = PoolVector3Array( 0, 0, 0.8496, 0, 0, 0.2, -2.1484, 0, 0.8496, -2.1484, 0, 0.2, -2.1484, 0, 0.8496, 0, 0, 0.2, -2.1484, 0, 0.2, 0, 0, 0.2, -2.1484, 0.291, 0.2, 0, 0.291, 0.2, -2.1484, 0.291, 0.2, 0, 0, 0.2, -2.1484, 0, 0.2, -2.1484, 0.291, 0.2, -2.1484, 0, 0.8496, -2.1484, 0, 0.8496, -2.1484, 0.291, 0.2, -2.1484, 0.291, 0.8496, -2.1484, 0.291, 0.8496, -2.1484, 0.291, 0.2, -2.1484, 1.9492, 0.9497, -2.1484, 1.9492, 0.9497, -2.1484, 0.291, 0.2, -2.1484, 1.9492, 0.1, -2.1484, 0.291, 0.1, -2.1484, 1.9492, 0.1, -2.1484, 0.291, 0.2, -2.1484, 0.291, 0.9497, -2.1484, 0.291, 0.8496, -2.1484, 1.9492, 0.9497, 0, 1.9492, 0.1, 0, 0.291, 0.1, 0, 1.9492, 0.9497, 0, 0.291, 0.2, 0, 1.9492, 0.9497, 0, 0.291, 0.1, 0, 0, 0.2, 0, 1.9492, 0.9497, 0, 0.291, 0.2, 0, 0.291, 0.8496, 0, 1.9492, 0.9497, 0, 0, 0.2, 0, 0.291, 0.9497, 0, 1.9492, 0.9497, 0, 0.291, 0.8496, 0, 0.291, 0.8496, 0, 0, 0.2, 0, 0, 0.8496, 0, 0.291, 0.1, -2.0156, 0.4253, 0.1, -2.1484, 0.291, 0.1, -2.1484, 1.9492, 0.1, -2.1484, 0.291, 0.1, -2.0156, 0.4253, 0.1, -2.0156, 1.8154, 0.1, -2.1484, 1.9492, 0.1, -2.0156, 0.4253, 0.1, -0.1342, 1.8154, 0.1, -2.1484, 1.9492, 0.1, -2.0156, 1.8154, 0.1, -2.0156, 0.4253, 0.1, 0, 0.291, 0.1, -0.1342, 0.4253, 0.1, 0, 1.9492, 0.1, -0.1342, 0.4253, 0.1, 0, 0.291, 0.1, -0.1342, 1.8154, 0.1, -0.1342, 0.4253, 0.1, 0, 1.9492, 0.1, -2.1484, 1.9492, 0.1, -0.1342, 1.8154, 0.1, 0, 1.9492, 0.1, 0, 0.291, 0.2, 0, 0.291, 0.1, -2.1484, 0.291, 0.2, -2.1484, 0.291, 0.1, -2.1484, 0.291, 0.2, 0, 0.291, 0.1, 0, 0, 0.8496, -2.1484, 0, 0.8496, 0, 0.291, 0.8496, -2.1484, 0.291, 0.8496, 0, 0.291, 0.8496, -2.1484, 0, 0.8496, 0, 0.291, 0.9497, 0, 0.291, 0.8496, -2.1484, 0.291, 0.9497, -2.1484, 0.291, 0.8496, -2.1484, 0.291, 0.9497, 0, 0.291, 0.8496, -2.1484, 0.291, 0.9497, -0.1342, 0.4253, 0.9497, 0, 0.291, 0.9497, 0, 1.9492, 0.9497, 0, 0.291, 0.9497, -0.1342, 0.4253, 0.9497, -0.1342, 1.8154, 0.9497, 0, 1.9492, 0.9497, -0.1342, 0.4253, 0.9497, -2.0156, 1.8154, 0.9497, 0, 1.9492, 0.9497, -0.1342, 1.8154, 0.9497, -0.1342, 0.4253, 0.9497, -2.1484, 0.291, 0.9497, -2.0156, 0.4253, 0.9497, -2.1484, 1.9492, 0.9497, -2.0156, 0.4253, 0.9497, -2.1484, 0.291, 0.9497, -2.0156, 1.8154, 0.9497, -2.0156, 0.4253, 0.9497, -2.1484, 1.9492, 0.9497, 0, 1.9492, 0.9497, -2.0156, 1.8154, 0.9497, -2.1484, 1.9492, 0.9497, -1.9141, 0.5269, 0.1, -0.2358, 0.5269, 0.1, -1.9141, 1.7139, 0.1, -0.2358, 1.7139, 0.1, -1.9141, 1.7139, 0.1, -0.2358, 0.5269, 0.1, -0.2358, 0.5269, 0.9497, -1.9141, 0.5269, 0.9497, -0.2358, 1.7139, 0.9497, -1.9141, 1.7139, 0.9497, -0.2358, 1.7139, 0.9497, -1.9141, 0.5269, 0.9497, 0, 2.0996, 0, 0, 1.9492, 0, 0, 2.0996, 1.0498, 0, 1.9492, 0.1, 0, 2.0996, 1.0498, 0, 1.9492, 0, 0, 1.9492, 0.9497, 0, 2.0996, 1.0498, 0, 1.9492, 0.1, 0, 1.9492, 1.0498, 0, 2.0996, 1.0498, 0, 1.9492, 0.9497, -2.1484, 1.9492, 0, -2.1484, 2.0996, 0, -2.1484, 1.9492, 0.1, -2.1484, 2.0996, 1.0498, -2.1484, 1.9492, 0.1, -2.1484, 2.0996, 0, -2.1484, 1.9492, 0.9497, -2.1484, 1.9492, 0.1, -2.1484, 2.0996, 1.0498, -2.1484, 1.9492, 1.0498, -2.1484, 1.9492, 0.9497, -2.1484, 2.0996, 1.0498, -2.1484, 1.9492, 0, 0, 1.9492, 0, -2.1484, 2.0996, 0, 0, 2.0996, 0, -2.1484, 2.0996, 0, 0, 1.9492, 0, 0, 2.0996, 0, 0, 2.0996, 1.0498, -2.1484, 2.0996, 0, -2.1484, 2.0996, 1.0498, -2.1484, 2.0996, 0, 0, 2.0996, 1.0498, 0, 1.9492, 0.1, 0, 1.9492, 0, -2.1484, 1.9492, 0.1, -2.1484, 1.9492, 0, -2.1484, 1.9492, 0.1, 0, 1.9492, 0, 0, 1.9492, 1.0498, -2.1484, 1.9492, 1.0498, 0, 2.0996, 1.0498, -2.1484, 2.0996, 1.0498, 0, 2.0996, 1.0498, -2.1484, 1.9492, 1.0498, 0, 1.9492, 1.0498, 0, 1.9492, 0.9497, -2.1484, 1.9492, 1.0498, -2.1484, 1.9492, 0.9497, -2.1484, 1.9492, 1.0498, 0, 1.9492, 0.9497, -0.1342, 0.4253, 0.1, -1.9141, 0.5269, 0.1, -2.0156, 0.4253, 0.1, -2.0156, 1.8154, 0.1, -2.0156, 0.4253, 0.1, -1.9141, 0.5269, 0.1, -1.9141, 1.7139, 0.1, -2.0156, 1.8154, 0.1, -1.9141, 0.5269, 0.1, -0.2358, 1.7139, 0.1, -2.0156, 1.8154, 0.1, -1.9141, 1.7139, 0.1, -1.9141, 0.5269, 0.1, -0.1342, 0.4253, 0.1, -0.2358, 0.5269, 0.1, -0.1342, 1.8154, 0.1, -0.2358, 0.5269, 0.1, -0.1342, 0.4253, 0.1, -0.2358, 1.7139, 0.1, -0.2358, 0.5269, 0.1, -0.1342, 1.8154, 0.1, -2.0156, 1.8154, 0.1, -0.2358, 1.7139, 0.1, -0.1342, 1.8154, 0.1, -2.0156, 0.4253, 0.9497, -0.2358, 0.5269, 0.9497, -0.1342, 0.4253, 0.9497, -0.1342, 1.8154, 0.9497, -0.1342, 0.4253, 0.9497, -0.2358, 0.5269, 0.9497, -0.2358, 1.7139, 0.9497, -0.1342, 1.8154, 0.9497, -0.2358, 0.5269, 0.9497, -1.9141, 1.7139, 0.9497, -0.1342, 1.8154, 0.9497, -0.2358, 1.7139, 0.9497, -0.2358, 0.5269, 0.9497, -2.0156, 0.4253, 0.9497, -1.9141, 0.5269, 0.9497, -2.0156, 1.8154, 0.9497, -1.9141, 0.5269, 0.9497, -2.0156, 0.4253, 0.9497, -1.9141, 1.7139, 0.9497, -1.9141, 0.5269, 0.9497, -2.0156, 1.8154, 0.9497, -0.1342, 1.8154, 0.9497, -1.9141, 1.7139, 0.9497, -2.0156, 1.8154, 0.9497 )
+
+[node name="Walls" type="Spatial"]
+
+[node name="Wall" type="MeshInstance" parent="." index="0"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, 5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall27" type="MeshInstance" parent="." index="1"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, 5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall27" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall27/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall8" type="MeshInstance" parent="." index="2"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -30, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall8" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall8/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall11" type="MeshInstance" parent="." index="3"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -5, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall11" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall11/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall25" type="MeshInstance" parent="." index="4"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -55, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall25" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall25/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall20" type="MeshInstance" parent="." index="5"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -35, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall20" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall20/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall42" type="MeshInstance" parent="." index="6"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -60, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall42" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall42/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall30" type="MeshInstance" parent="." index="7"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -10, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall30" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall30/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall18" type="MeshInstance" parent="." index="8"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, 10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall18" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall18/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall37" type="MeshInstance" parent="." index="9"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, 10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall37" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall37/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall15" type="MeshInstance" parent="." index="10"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, -25 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall15" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall15/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall41" type="MeshInstance" parent="." index="11"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, -25 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall41" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall41/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall46" type="MeshInstance" parent="." index="12"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, -20 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall46" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall46/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall47" type="MeshInstance" parent="." index="13"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, -15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall47" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall47/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall17" type="MeshInstance" parent="." index="14"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall17" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall17/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall43" type="MeshInstance" parent="." index="15"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall43" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall43/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall12" type="MeshInstance" parent="." index="16"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, 5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall12" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall12/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall35" type="MeshInstance" parent="." index="17"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, 5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall35" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall35/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall16" type="MeshInstance" parent="." index="18"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, -10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall16" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall16/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall36" type="MeshInstance" parent="." index="19"]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, -10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall36" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall36/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="WindowSill2" type="MeshInstance" parent="." index="20"]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, -20 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 3 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+_sections_unfolded = [ "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="WindowSill2" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="WindowSill2/StaticBody" index="0"]
+
+shape = SubResource( 2 )
+disabled = false
+
+[node name="Wall13" type="MeshInstance" parent="." index="21"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall13" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall13/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall40" type="MeshInstance" parent="." index="22"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall40" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall40/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall14" type="MeshInstance" parent="." index="23"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, -15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall14" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall14/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall9" type="MeshInstance" parent="." index="24"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -35, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall9" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall9/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall22" type="MeshInstance" parent="." index="25"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -10, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall22" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall22/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall24" type="MeshInstance" parent="." index="26"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -60, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall24" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall24/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall19" type="MeshInstance" parent="." index="27"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -30, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall19" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall19/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall45" type="MeshInstance" parent="." index="28"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -55, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall45" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall45/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall38" type="MeshInstance" parent="." index="29"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -5, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall38" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall38/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall21" type="MeshInstance" parent="." index="30"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -25, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall21" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall21/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall44" type="MeshInstance" parent="." index="31"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -50, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall44" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall44/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall31" type="MeshInstance" parent="." index="32"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, 0, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall31" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall31/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall10" type="MeshInstance" parent="." index="33"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -40, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall10" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall10/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall23" type="MeshInstance" parent="." index="34"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -15, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall23" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall23/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall26" type="MeshInstance" parent="." index="35"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -65, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall26" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall26/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall2" type="MeshInstance" parent="." index="36"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, 10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall2" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall2/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall28" type="MeshInstance" parent="." index="37"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, 10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall28" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall28/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall3" type="MeshInstance" parent="." index="38"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall3" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall3/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall29" type="MeshInstance" parent="." index="39"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall29" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall29/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall4" type="MeshInstance" parent="." index="40"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, -5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall4" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall4/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall32" type="MeshInstance" parent="." index="41"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, -5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall32" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall32/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall5" type="MeshInstance" parent="." index="42"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, -15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall5" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall5/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall33" type="MeshInstance" parent="." index="43"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, -15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall33" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall33/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall6" type="MeshInstance" parent="." index="44"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, -20 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall6" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall6/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall34" type="MeshInstance" parent="." index="45"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, -20 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Wall34" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall34/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Wall7" type="MeshInstance" parent="." index="46"]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, -25 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall39" type="MeshInstance" parent="." index="47"]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, -25 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="WideDoorway" type="MeshInstance" parent="." index="48"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -20, 1, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="WideDoorway" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="WideDoorway/StaticBody" index="0"]
+
+shape = SubResource( 3 )
+disabled = false
+
+[node name="WideDoorway2" type="MeshInstance" parent="." index="49"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -45, 1, -5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="WideDoorway2" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="WideDoorway2/StaticBody" index="0"]
+
+shape = SubResource( 3 )
+disabled = false
+
+[node name="Window" type="MeshInstance" parent="." index="50"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -25, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window7" type="MeshInstance" parent="." index="51"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window7" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window7/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window9" type="MeshInstance" parent="." index="52"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -50, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window9" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window9/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window4" type="MeshInstance" parent="." index="53"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -40, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window4" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window4/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window14" type="MeshInstance" parent="." index="54"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -65, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window14" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window14/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window12" type="MeshInstance" parent="." index="55"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -15, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window12" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window12/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window2" type="MeshInstance" parent="." index="56"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -45, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window2" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window2/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window6" type="MeshInstance" parent="." index="57"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -20, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window6" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window6/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window8" type="MeshInstance" parent="." index="58"]
+
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -70, 1, 15 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window8" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window8/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window3" type="MeshInstance" parent="." index="59"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -20, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window3" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window3/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window13" type="MeshInstance" parent="." index="60"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -45, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window13" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window13/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window10" type="MeshInstance" parent="." index="61"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, 5, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window10" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window10/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window5" type="MeshInstance" parent="." index="62"]
+
+editor/display_folded = true
+transform = Transform( 1.31135e-007, 0, -1, 0, 1, 0, 1, 0, 1.31135e-007, -20, 1, -10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window5" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window5/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Window11" type="MeshInstance" parent="." index="63"]
+
+editor/display_folded = true
+transform = Transform( 1.31135e-007, 0, -1, 0, 1, 0, 1, 0, 1.31135e-007, 5, 1, -10 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = ExtResource( 2 )
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Window11" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Window11/StaticBody" index="0"]
+
+visible = false
+shape = SubResource( 4 )
+disabled = false
+
+[node name="Bar" type="MeshInstance" parent="." index="64"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2505, 1, -23.5266 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar2" type="MeshInstance" parent="." index="65"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2505, 1, -23.5266 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar2" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar2/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar3" type="MeshInstance" parent="." index="66"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2505, 1, -23.5266 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Geometry", "Transform", "material" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar3" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar3/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar4" type="MeshInstance" parent="." index="67"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2505, 1, -23.5266 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar4" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar4/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar5" type="MeshInstance" parent="." index="68"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4119, 1, -23.5266 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar5" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar5/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar6" type="MeshInstance" parent="." index="69"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.4119, 1, -23.5266 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar6" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar6/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar9" type="MeshInstance" parent="." index="70"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4119, 1, -23.5266 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar9" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar9/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar7" type="MeshInstance" parent="." index="71"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -34.4119, 1, -22.4733 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar7" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar7/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Bar8" type="MeshInstance" parent="." index="72"]
+
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -34.4119, 1, -27.4733 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 7 )
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Bar8" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bar8/StaticBody" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
+
+[node name="Doorway2" type="MeshInstance" parent="." index="73"]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5, 1, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 8 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Geometry", "Transform", "material" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="Doorway2" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17809, 0, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 9 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Doorway3" type="MeshInstance" parent="." index="74"]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -70, 1, -5 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 8 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = ExtResource( 2 )
+_sections_unfolded = [ "Geometry", "Transform", "material" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="Doorway3" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13234, 0, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 9 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+
+

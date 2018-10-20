@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Sofa.obj-082407c67ffe0135e84441488c7d1f12.mesh"
+
+[deps]
+
+files=[ "res://.import/Sofa.obj-082407c67ffe0135e84441488c7d1f12.mesh" ]
+
+source_file="res://Models/Furniture/Sofa.obj"
+dest_files=[ "res://.import/Sofa.obj-082407c67ffe0135e84441488c7d1f12.mesh", "res://.import/Sofa.obj-082407c67ffe0135e84441488c7d1f12.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

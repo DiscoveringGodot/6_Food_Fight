@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/CoffeeTable2.obj-ac233219417280fe5b11c7dbd8801339.mesh"
+
+[deps]
+
+files=[ "res://.import/CoffeeTable2.obj-ac233219417280fe5b11c7dbd8801339.mesh" ]
+
+source_file="res://Models/Furniture/CoffeeTable2.obj"
+dest_files=[ "res://.import/CoffeeTable2.obj-ac233219417280fe5b11c7dbd8801339.mesh", "res://.import/CoffeeTable2.obj-ac233219417280fe5b11c7dbd8801339.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

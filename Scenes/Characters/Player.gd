@@ -1,22 +1,23 @@
 extends "res://Scenes/Characters/Character.gd"
 
+# State variables
 var can_refill
 
 # Animation variables
 var movement_rate = 0 # how much you're moving, from 0 to 1
 var action_rate = 0 # -1 is shoot, 1 is search
 
+# Movement variables
 var facing_dir 
 var upward_movement =0
 var vel = Vector3()
 var dir = Vector3()
 
+# Accelleration variables
 const ACCEL= 4.5
 const DEACCEL= 16
 
 var camera
-
-#var cam_xform = Vector3(0,0,0)
 
 
 func _ready():
@@ -31,8 +32,6 @@ func _physics_process(delta):
 	motion.x = 0
 	motion.z = 0
 	move(delta)
-	fall()
-#	move_and_slide(vel, UP)
 	reload()
 	animate()
 
@@ -41,6 +40,7 @@ func move(delta):
 	var dir = Vector3()
 	var movement_vector = Vector2()
 	var camera_xform = $Camera.get_global_transform()
+	
 	if Input.is_action_pressed("up") and not Input.is_action_pressed("down"):
 		movement_vector.y += 1
 		facing_dir = 0
@@ -61,8 +61,7 @@ func move(delta):
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		vel.y = JUMP_SPEED
-	
-#	motion = motion.normalized()
+
 	dir.y = 0
 	dir = dir.normalized()
 	
@@ -88,13 +87,6 @@ func move(delta):
 	$PlayerModel.rotation.y = facing_dir
 
 
-func fall():
-#	if not is_on_floor():
-#		motion.y -= GRAVITY
-#	elif is_on_floor() and motion.y < 0:
-#		motion.y = 0
-	pass
-
 
 func _input(event):
 	if Input.is_action_just_pressed("fire"):
@@ -102,8 +94,10 @@ func _input(event):
 
 
 func try_to_fire():
-	if ammo > 0:
+	if ammo > 0 and can_fire:
 		fire()
+		can_fire = false
+		$CanFire.start()
 		ammo -=1
 		update_gui()
 		action_rate = -1
@@ -131,6 +125,8 @@ func reload():
 func _on_Area_body_exited(body):
 	$Timer.stop()
 	can_refill = false
+	get_tree().call_group("GUI", "empty_GUI")
+	$Harp.stop()
 
 
 func update_gui():
@@ -139,6 +135,7 @@ func update_gui():
 
 func _on_Area_body_entered(body):
 	if check_ammo() and ammo < max_ammo:
+		$Harp.play()
 		$Timer.start()
 		can_refill = true
 

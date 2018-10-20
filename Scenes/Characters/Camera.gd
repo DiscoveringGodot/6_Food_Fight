@@ -6,8 +6,6 @@ onready var Player = get_parent()
 
 
 func _input(event):
-	##
-	## We'll only process mouse motion events
 	if event is InputEventMouseMotion:
 		return mouse(event)
 

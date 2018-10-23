@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Customisation/CharacterCustomiser.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Customisation/MaterialsList.gd" type="Script" id=2]
 [ext_resource path="res://Models/Character/PlayerModel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GUI/ChargenGUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://SFX/intro.ogg" type="AudioStream" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -207,7 +208,7 @@ tracks/0/keys = {
 "values": [ Vector3( 90, 0, 0 ), Vector3( 90, 180, 0 ), Vector3( 90, 359, 0 ) ]
 }
 
-[node name="CharacterCustomiser" type="Spatial"]
+[node name="CharacterCustomiser" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 
@@ -417,6 +418,15 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Rotation = SubResource( 7 )
 blend_times = [  ]
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 5 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonLeft" to="." method="change_material" binds= [ "Left" ]]
 

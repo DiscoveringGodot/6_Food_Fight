@@ -19,6 +19,8 @@ const DEACCEL= 16
 
 var camera
 
+var can_move = true
+
 
 func _ready():
 	var camera = $Camera
@@ -31,9 +33,10 @@ func _ready():
 func _physics_process(delta):
 	motion.x = 0
 	motion.z = 0
-	move(delta)
+	if can_move:
+		move(delta)
+		animate()
 	reload()
-	animate()
 
 
 func move(delta):
@@ -164,3 +167,10 @@ func animate():
 	
 	
 
+func die():
+	can_move = false
+	$PlayerModel/AnimationTreePlayer.active = false
+	$PlayerModel/AnimationPlayer.play("Death")
+
+func game_over():
+	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")

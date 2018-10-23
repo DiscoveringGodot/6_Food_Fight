@@ -19,6 +19,8 @@ var ammo_types
 
 var projectile_speed = 50
 
+#onready var projectile = preload("res://Scenes/Ammo/Doughnut.tscn")
+
 
 func _enter_tree():
 	randomize()
@@ -28,23 +30,24 @@ func _enter_tree():
 func hurt(hurt_by):
 	$AudioStreamPlayer3D.play()
 	get_parent().update_score(hurt_by, true)
+	lives-= 1
+	check_lives()
+		
 
 func fire():
-
-#	var bullet = preload("res://Scenes/Ammo/Doughnut.tscn").instance()
 	var bullet = ammo_types[randi() %ammo_types.size()-1].instance()
-
-	
+#	var bullet = preload("res://Scenes/Ammo/Doughnut.tscn").instance()
+	add_child(bullet)
+	bullet.fired_by = player_id
+	bullet.set_as_toplevel(true)
 	bullet.global_transform = $Forward.global_transform
-	get_parent().add_child(bullet)
 	bullet.set_linear_velocity(get_global_transform().basis[2].normalized() * projectile_speed)
 	bullet.add_collision_exception_with(self) 
-	bullet.fired_by = player_id
 
 
 func check_lives():
 	if lives == 0:
-		queue_free()
+		die()
 
 func _on_CanFire_timeout():
 	can_fire = true

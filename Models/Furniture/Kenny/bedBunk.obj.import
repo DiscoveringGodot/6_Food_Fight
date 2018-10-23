@@ -14,4 +14,4 @@ dest_files=[ "res://.import/bedBunk.obj-ede57177d6d4f4b2157b53299255e545.mesh", 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 0.5, 0.5, 0.5 )
+scale_mesh=Vector3( 1, 1, 1 )

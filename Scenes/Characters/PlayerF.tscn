@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Characters/Player.gd" type="Script" id=2]
+[ext_resource path="res://SFX/harp-glissando-up.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/Characters/Female.tscn" type="PackedScene" id=4]
+
+[node name="Player" index="0" instance=ExtResource( 1 )]
+
+axis_lock_linear_z = true
+script = ExtResource( 2 )
+_sections_unfolded = [ "Axis Lock", "Collision", "Transform", "collision" ]
+
+[node name="Timer" parent="." index="2"]
+
+wait_time = 0.5
+
+[node name="Harp" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 3 )
+volume_db = -15.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Armature" parent="." index="6" instance=ExtResource( 4 )]
+
+transform = Transform( 0.000522935, 0, -0.00597717, 0, 0.006, 0, 0.00597717, 0, 0.000522935, 0, -1.66664, 0 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -15,6 +15,7 @@ _sections_unfolded = [ "Axis Lock", "Collision", "Transform" ]
 
 [node name="PlayerModel" parent="." index="0" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform = Transform( 0.4, 0, 0, 0, -1.74846e-008, -0.4, 0, 0.4, -1.74846e-008, 0, -1.5, 0 )
 
 [node name="AnimationTreePlayer" parent="PlayerModel" index="3"]
@@ -51,10 +52,11 @@ data = {
 "position": Vector2( 148, 376 ),
 "type": "animation"
 }, {
-"blend": -0.08,
-"id": "State",
-"position": Vector2( 934, 288 ),
-"type": "blend3"
+"filter": [  ],
+"from": "Punch",
+"id": "anim 3",
+"position": Vector2( 617, 53 ),
+"type": "animation"
 }, {
 "animation": ExtResource( 5 ),
 "filter": [  ],
@@ -62,21 +64,16 @@ data = {
 "position": Vector2( 150, 233 ),
 "type": "animation"
 }, {
-"filter": [  ],
-"from": "Punch",
-"id": "anim 3",
-"position": Vector2( 617, 53 ),
-"type": "animation"
+"blend": -0.08,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
 } ]
 }
 
 [node name="Timer" parent="." index="3"]
 
 wait_time = 0.5
-
-[node name="MeshInstance" parent="." index="5"]
-
-visible = false
 
 [node name="Harp" type="AudioStreamPlayer" parent="." index="6"]
 

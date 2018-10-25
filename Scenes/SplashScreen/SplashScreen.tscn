@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://MyTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Scenes/GameOver/GameOver.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Characters/Players/Robot.tscn" type="PackedScene" id=3]
-[ext_resource path="res://SFX/GameOver.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Scenes/SplashScreen/SplashScreen.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Ammo/models/doughnut.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://Scenes/Ammo/models/Burger.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://Scenes/Ammo/models/Hotdog.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://Scenes/Ammo/models/Icecream.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://Scenes/Ammo/models/Soda.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://SFX/interlude.ogg" type="AudioStream" id=8]
 
 [sub_resource type="Environment" id=1]
 
@@ -84,7 +88,45 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "SS Reflections" ]
 
-[node name="GameOver" type="Control"]
+[sub_resource type="ParticlesMaterial" id=2]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_align_y = true
+flag_rotate_y = true
+flag_disable_z = false
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 2, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 0.5
+scale_random = 0.0
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Scale" ]
+
+[node name="SplashScreen" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -134,10 +176,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 342.0
-margin_top = 146.0
-margin_right = 682.0
-margin_bottom = 453.0
+margin_left = 312.0
+margin_top = 59.0
+margin_right = 712.0
+margin_bottom = 540.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -152,16 +194,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 340.0
-margin_bottom = 49.0
+margin_right = 400.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Oh No! 
-You have been defeated!"
+text = "Food Fight!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -173,9 +214,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 53.0
-margin_right = 340.0
-margin_bottom = 253.0
+margin_top = 27.0
+margin_right = 400.0
+margin_bottom = 427.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -189,7 +230,7 @@ _sections_unfolded = [ "Rect", "Size Flags" ]
 [node name="Viewport" type="Viewport" parent="CenterContainer/VBoxContainer/ViewportContainer" index="0"]
 
 arvr = false
-size = Vector2( 200, 200 )
+size = Vector2( 400, 400 )
 own_world = false
 world = null
 transparent_bg = true
@@ -230,65 +271,11 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="Robot" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="1" instance=ExtResource( 3 )]
-
-[node name="AnimationPlayer" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="0"]
-
-autoplay = "Robot_ThumbsUp"
-
-[node name="BoneAttachment" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="1"]
-
-transform = Transform( -0.0564262, 0.0120857, -0.998333, 0.0680234, 0.99765, 0.00823249, 0.996087, -0.0674447, -0.0571156, 0.666745, 2.43728, -0.0168432 )
-
-[node name="BoneAttachment001" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="2"]
-
-transform = Transform( -0.059884, -0.0283931, 0.997801, -0.264981, 0.964185, 0.0115335, -0.962391, -0.263708, -0.0652628, -0.738989, 2.43851, -0.0168432 )
-
-[node name="BoneAttachment002" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="3"]
-
-transform = Transform( -1, 2.15749e-007, -2.93496e-007, 2.0612e-007, 0.999474, 0.0324216, 3.00337e-007, 0.0324217, -0.999474, 0.633527, 0.024694, -0.138034 )
-
-[node name="BoneAttachment003" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="4"]
-
-transform = Transform( -1, 1.64626e-006, -2.93497e-007, 1.63588e-006, 0.999474, 0.0324217, 3.46717e-007, 0.0324215, -0.999475, -0.640076, 0.024694, -0.138034 )
-
-[node name="BoneAttachment004" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="7"]
-
-transform = Transform( 0.999996, -5.63962e-005, 0.00280693, 0.00280538, -0.0187642, -0.99982, 0.000109056, 0.999824, -0.018764, 6.14762e-009, 3.03846, -0.0107013 )
-
-[node name="BoneAttachment005" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="8"]
-
-transform = Transform( 1, -5.21525e-007, -2.88221e-008, -6.37748e-008, -0.176683, 0.984268, -5.18403e-007, -0.984274, -0.176683, 0.630296, 1.5368, -0.0698894 )
-
-[node name="BoneAttachment006" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="9"]
-
-transform = Transform( 1, 4.47292e-007, -2.88221e-008, 1.07397e-007, -0.176683, 0.984268, 4.35164e-007, -0.984274, -0.176683, -0.643307, 1.5368, -0.0698895 )
-
-[node name="BoneAttachment007" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="10"]
-
-transform = Transform( 1, -2.54154e-007, 3.50088e-009, 4.47876e-008, 0.189744, 0.981834, -2.5019e-007, -0.98184, 0.189746, 0.630296, 0.935406, 0.0380651 )
-
-[node name="BoneAttachment008" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="11"]
-
-transform = Transform( 1, -2.01132e-007, -5.3216e-008, 9.04119e-008, 0.189744, 0.981834, -1.87384e-007, -0.98184, 0.189746, -0.643307, 0.935406, 0.038065 )
-
-[node name="BoneAttachment009" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="12"]
-
-transform = Transform( -0.0262237, 2.39866e-007, -0.999656, -0.999656, -2.22027e-006, 0.0262235, -2.91318e-006, 0.999999, 3.12459e-007, 0.582738, 2.43949, -0.0168432 )
-
-[node name="BoneAttachment010" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="13"]
-
-transform = Transform( -0.00985826, -2.69916e-007, 0.999951, 0.999951, 7.59959e-007, 0.00985831, -1.02818e-006, 1, 2.61236e-007, -0.636816, 2.43952, -0.0168431 )
-
-[node name="BoneAttachment011" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="14"]
-
-transform = Transform( 1, 7.15256e-007, 0, 0, 0, -1, -7.15256e-007, 1, 0, 0.00205059, 1.44057, 0.112672 )
-
-[node name="SpotLight" type="OmniLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="2"]
+[node name="SpotLight" type="OmniLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="1"]
 
 transform = Transform( 0.715597, -0.182908, 0.674141, 0, 0.965108, 0.261853, -0.698514, -0.187381, 0.690628, 5.21607, 5.17361, 5.61274 )
 layers = 1
-light_color = Color( 0.0692749, 0.675972, 0.886719, 1 )
+light_color = Color( 1, 1, 1, 1 )
 light_energy = 4.0
 light_indirect_energy = 1.0
 light_negative = false
@@ -307,11 +294,11 @@ omni_shadow_mode = 1
 omni_shadow_detail = 1
 _sections_unfolded = [ "Light", "Omni", "Spot" ]
 
-[node name="SpotLight2" type="SpotLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="3"]
+[node name="SpotLight2" type="SpotLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="2"]
 
 transform = Transform( 0.816344, -0.166396, -0.553078, 0.0420908, 0.972194, -0.230363, 0.576031, 0.164776, 0.800648, -3.29744, 1.96327, 4.77733 )
 layers = 1
-light_color = Color( 0.980469, 0.688674, 0.275757, 1 )
+light_color = Color( 1, 0.856048, 0.652344, 1 )
 light_energy = 3.0
 light_indirect_energy = 1.0
 light_negative = false
@@ -330,11 +317,11 @@ spot_angle = 25.4839
 spot_angle_attenuation = 1.0
 _sections_unfolded = [ "Light", "Spot" ]
 
-[node name="OmniLight" type="OmniLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="4"]
+[node name="OmniLight" type="OmniLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="3"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79489, -3.57131 )
 layers = 1
-light_color = Color( 0.0503643, 0.0344391, 0.238281, 1 )
+light_color = Color( 1, 0.920654, 0.609375, 1 )
 light_energy = 3.0
 light_indirect_energy = 1.0
 light_negative = false
@@ -353,15 +340,165 @@ omni_shadow_mode = 1
 omni_shadow_detail = 1
 _sections_unfolded = [ "Light" ]
 
+[node name="Particles" type="Spatial" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport" index="4"]
+
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 4, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Doughnuts" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="0"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+emitting = true
+amount = 24
+lifetime = 3.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 2 )
+draw_passes = 1
+draw_pass_1 = ExtResource( 3 )
+_sections_unfolded = [ "Draw Passes", "Process Material", "Time" ]
+
+[node name="Hamburgers" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="1"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+emitting = true
+amount = 8
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 2 )
+draw_passes = 1
+draw_pass_1 = ExtResource( 4 )
+_sections_unfolded = [ "Draw Passes", "Process Material" ]
+
+[node name="HOtdogs" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="2"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+emitting = true
+amount = 8
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 2 )
+draw_passes = 1
+draw_pass_1 = ExtResource( 5 )
+_sections_unfolded = [ "Draw Passes", "Process Material" ]
+
+[node name="IceCreeams" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="3"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+emitting = true
+amount = 8
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 2 )
+draw_passes = 1
+draw_pass_1 = ExtResource( 6 )
+_sections_unfolded = [ "Draw Passes", "Process Material" ]
+
+[node name="Sodas" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="4"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+emitting = true
+amount = 8
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 2 )
+draw_passes = 1
+draw_pass_1 = ExtResource( 7 )
+_sections_unfolded = [ "Draw Passes", "Process Material" ]
+
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 257.0
-margin_right = 340.0
-margin_bottom = 280.0
+margin_top = 431.0
+margin_right = 400.0
+margin_bottom = 454.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -373,7 +510,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "I demand a rematch!"
+text = "Begin!"
 flat = false
 align = 1
 
@@ -383,9 +520,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 284.0
-margin_right = 340.0
-margin_bottom = 307.0
+margin_top = 458.0
+margin_right = 400.0
+margin_bottom = 481.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -397,13 +534,13 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "I accept my ignoble defeat!"
+text = "Get me out of here!"
 flat = false
 align = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 8 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = true
@@ -415,4 +552,3 @@ bus = "Master"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
 
 
-[editable path="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot"]

@@ -11,12 +11,13 @@ config_version=3
 [application]
 
 config/name="Exploration"
-run/main_scene="res://Scenes/Characters/Game.tscn"
+run/main_scene="res://Scenes/SplashScreen/SplashScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Customisations="*res://Scenes/Customisation/Customisations.gd"
+Ammo_Types="*res://Ammo_Types.gd"
 
 [input]
 

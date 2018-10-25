@@ -1,0 +1,356 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/Characters/Game.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Furniture/Walls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Models/Furniture/Kenny/floorFull.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Scenes/Refill.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Characters/Bystanders.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SFX/finalbattle.ogg" type="AudioStream" id=9]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+
+points = PoolVector3Array( 0, 0.25, 0, 0, 0, 0, 0, 0.25, 5, 0, 0, 5, 0, 0.25, 0, 0, 0.25, 5, -5, 0.25, 0, -5, 0.25, 5, 0, 0, 5, 0, 0, 0, -5, 0, 5, -5, 0, 0, 0, 0, 5, -5, 0, 5, 0, 0.25, 5, -5, 0.25, 5, -5, 0, 0, 0, 0, 0, -5, 0.25, 0, 0, 0.25, 0, -5, 0, 0, -5, 0.25, 0, -5, 0, 5, -5, 0.25, 5 )
+
+[sub_resource type="BoxShape" id=11]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="CubeMesh" id=12]
+
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+size = Vector3( 2, 2, 2 )
+subdivide_width = 0
+subdivide_height = 0
+subdivide_depth = 0
+
+[sub_resource type="SpatialMaterial" id=13]
+
+render_priority = 0
+flags_transparent = true
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 1, 0.207031, 0.207031, 0.287294 )
+metallic = 0.0
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.0
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
+
+[sub_resource type="BoxShape" id=14]
+
+extents = Vector3( 12.4082, 4.55901, 1 )
+
+[node name="Game" type="Node" groups=[
+"gamestate",
+]]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Scenary" type="Spatial" parent="." index="0"]
+
+[node name="Walls" parent="Scenary" index="0" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4774, 0, 0 )
+
+[node name="Floors" type="Spatial" parent="Scenary" index="1"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4774, 0, 0 )
+
+[node name="Floor" type="MeshInstance" parent="Scenary/Floors" index="0"]
+
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, -20, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 3 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Scenary/Floors/Floor" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floors/Floor/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Floor2" type="MeshInstance" parent="Scenary/Floors" index="1"]
+
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, 5, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 3 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Scenary/Floors/Floor2" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floors/Floor2/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Floor3" type="MeshInstance" parent="Scenary/Floors" index="2"]
+
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, -45, 1, -30 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 3 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="Scenary/Floors/Floor3" index="0"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/Floors/Floor3/StaticBody" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="furniture" type="Spatial" parent="Scenary" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4014, 0, 0 )
+
+[node name="RefillZone" type="Area" parent="." index="1"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.36736, 2.6856, -21.518 )
+input_ray_pickable = false
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 0
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+script = ExtResource( 4 )
+_sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="RefillZone" index="0"]
+
+shape = SubResource( 11 )
+disabled = false
+
+[node name="MeshInstance" type="MeshInstance" parent="RefillZone" index="1"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 12 )
+skeleton = NodePath("..")
+material/0 = SubResource( 13 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="Gui" parent="." index="2" instance=ExtResource( 5 )]
+
+[node name="Bystanders" type="Node" parent="." index="3"]
+
+script = ExtResource( 6 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="4"]
+
+transform = Transform( -0.21689, 0.954121, -0.206426, 0.646261, 0.298824, 0.702176, 0.731646, 0.0188898, -0.681423, -0.253176, 81.7919, -48.7188 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 3.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.1
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 2
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = false
+directional_shadow_normal_bias = 0.8
+directional_shadow_bias_split_scale = 0.25
+directional_shadow_depth_range = 0
+directional_shadow_max_distance = 200.0
+_sections_unfolded = [ "Light", "Shadow" ]
+
+[node name="PauseMenu" parent="." index="5" instance=ExtResource( 7 )]
+
+[node name="NoCrossLine" type="StaticBody" parent="." index="6"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.576295, -13.062, 1.74762, -4.3499 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 0
+collision_mask = 2
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="NoCrossLine" index="0"]
+
+shape = SubResource( 14 )
+disabled = false
+
+[node name="NoCrossLine2" type="StaticBody" parent="." index="7"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.062, 1.74762, -23.4883 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 0
+collision_mask = 2
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="NoCrossLine2" index="0"]
+
+shape = SubResource( 14 )
+disabled = false
+
+[node name="Spawners" type="Node" parent="." index="8"]
+
+[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 8 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -46.9236, 1.5, -1.57321 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 8 )]
+
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, 21.1106, 1.64277, -2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="9"]
+
+stream = ExtResource( 9 )
+volume_db = -15.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="PlayerSpawn" type="Position3D" parent="." index="10"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.14786, 2.52251, -14.5746 )
+
+[connection signal="body_entered" from="RefillZone" to="RefillZone" method="_on_Area_body_entered"]
+
+[connection signal="body_exited" from="RefillZone" to="RefillZone" method="_on_Area_body_exited"]
+
+

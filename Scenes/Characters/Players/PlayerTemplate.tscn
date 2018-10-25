@@ -74,14 +74,14 @@ data = {
 }, {
 "animation": null,
 "filter": [  ],
-"id": "IdleAnim",
-"position": Vector2( 120, 127 ),
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
 "type": "animation"
 }, {
 "animation": null,
 "filter": [  ],
-"id": "PunchAnim",
-"position": Vector2( 617, 53 ),
+"id": "IdleAnim",
+"position": Vector2( 120, 127 ),
 "type": "animation"
 } ]
 }

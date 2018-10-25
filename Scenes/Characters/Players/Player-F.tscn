@@ -6,14 +6,21 @@
 
 [node name="Player" instance=ExtResource( 1 )]
 
-[node name="AnimationTreePlayer" parent="." index="6"]
+[node name="Armature" parent="." index="6" instance=ExtResource( 2 )]
 
-playback_process_mode = 1
+transform = Transform( 0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 0, -1.54007, 0 )
+
+[node name="AnimationPlayer" parent="Armature" index="0"]
+
+anims/Death = ExtResource( 3 )
+
+[node name="AnimationTreePlayer" parent="." index="7"]
+
 master_player = NodePath("../Armature/AnimationPlayer")
 base_path = NodePath("../Armature")
 data = {
 "active": true,
-"connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "scale 2", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2, "RunAnim", "scale 2", 0 ],
+"connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2 ],
 "master": NodePath("../Armature/AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
@@ -32,26 +39,9 @@ data = {
 "type": "blend2"
 }, {
 "filter": [  ],
-"from": "Running",
-"id": "RunAnim",
-"position": Vector2( 78, 253 ),
-"type": "animation"
-}, {
-"blend": 0.0,
-"id": "State",
-"position": Vector2( 934, 288 ),
-"type": "blend3"
-}, {
-"filter": [  ],
 "from": "PickUp",
 "id": "PickupAnim",
 "position": Vector2( 148, 376 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 261, 92 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -60,20 +50,24 @@ data = {
 "position": Vector2( 617, 53 ),
 "type": "animation"
 }, {
-"id": "scale 2",
-"position": Vector2( 223, 249 ),
-"scale": 1.5,
-"type": "timescale"
+"filter": [  ],
+"from": "Running",
+"id": "RunAnim",
+"position": Vector2( 150, 233 ),
+"type": "animation"
+}, {
+"blend": -0.08,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 120, 127 ),
+"type": "animation"
 } ]
 }
-
-[node name="Armature" parent="." index="7" instance=ExtResource( 2 )]
-
-transform = Transform( 0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 0, -1.54007, 0 )
-
-[node name="AnimationPlayer" parent="Armature" index="0"]
-
-anims/Death = ExtResource( 3 )
 
 
 [editable path="Armature"]

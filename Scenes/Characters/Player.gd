@@ -2,6 +2,7 @@ extends "res://Scenes/Characters/Character.gd"
 
 # State variables
 var can_refill
+var can_move = true
 
 # Animation variables
 var movement_rate = 0 # how much you're moving, from 0 to 1
@@ -17,18 +18,14 @@ var dir = Vector3()
 const ACCEL= 4.5
 const DEACCEL= 16
 
-var camera
-
-var can_move = true
-
 
 func _ready():
 	player_id = 1
-	var camera = $Camera
 	facing_dir = 0
 	can_refill = false
 	if Customisations.Player_materials != null:
 		$Armature/Mesh.set_surface_material(0, load(Customisations.Player_materials))
+	update_lives()
 
 
 func _physics_process(delta):
@@ -142,6 +139,11 @@ func Refil_exited():
 
 func update_gui():
 	get_tree().call_group("GUI", "update_gui", ammo)
+
+
+func update_lives():
+	if player_id == 1:
+		get_tree().call_group("GUI", "update_lives", lives)
 
 
 func refresh_refill():

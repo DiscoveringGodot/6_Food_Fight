@@ -8,7 +8,7 @@
 radius = 0.842027
 height = 1.47536
 
-[node name="Character" type="KinematicBody"]
+[node name="Character" type="KinematicBody" index="0"]
 
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 input_ray_pickable = true
@@ -24,7 +24,6 @@ axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
-player_id = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 

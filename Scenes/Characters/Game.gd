@@ -1,28 +1,29 @@
 extends Node
 
-var ammo_types = [preload("res://Scenes/Ammo/Burger.tscn"), 
-		preload("res://Scenes/Ammo/Doughnut.tscn"), 
-		preload("res://Scenes/Ammo/Soda.tscn"), 
-		preload("res://Scenes/Ammo/Hotdog.tscn"), 
-		preload("res://Scenes/Ammo/IceCream.tscn")]
-
-var male = preload("res://Scenes/Characters/Players/Player-M.tscn").instance()
-var female = preload("res://Scenes/Characters/Players/Player-F.tscn").instance()
-
-var score = {1:0, 2:0}
-var lives = {1:3, 2:3}
+var enemy_count
 
 
 func _ready():
+	customise_player()
+	count_enemies()
+
+
+func customise_player():
 	var Player
-	print(Customisations.Player_gender)
 	if Customisations.Player_gender == "Male":
-		Player = male
+		Player = Customisations.male.instance()
 	else:
-		Player = female
-	
+		Player = Customisations.female.instance()
+
 	add_child(Player)
 	Player.transform = $PlayerSpawn.transform
 
 
+func count_enemies():
+	enemy_count = $Enemies.get_child_count()
 
+
+func remove_enemy():
+	enemy_count -= 1
+	if enemy_count < 1:
+		get_tree().change_scene("res://Scenes/Victory/Victory.tscn")

@@ -191,7 +191,7 @@ height = 10.0
 radial_segments = 64
 rings = 4
 
-[node name="CharacterCustomiser" type="Spatial"]
+[node name="CharacterCustomiser" type="Spatial" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -410,6 +410,7 @@ _sections_unfolded = [ "Light", "Transform" ]
 [node name="CheckButton" parent="ChargenGUI/Controls" index="0"]
 
 text = "Frey"
+items = [ "Frey", null, false, 0, null, "Freya", null, false, 1, null ]
 
 [node name="Music" type="AudioStreamPlayer" parent="." index="6"]
 

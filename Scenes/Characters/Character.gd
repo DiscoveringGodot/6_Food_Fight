@@ -22,14 +22,16 @@ var projectile_speed = 50
 
 func _enter_tree():
 	randomize()
-	ammo_types = get_parent().ammo_types
+	ammo_types = Ammo_Types.ammo_types
 	$Timer.wait_time = ammo_collection_speed
-	
+
+
 func hurt(hurt_by):
-	$AudioStreamPlayer3D.play()
-	lives-= 1
-	check_lives()
-		
+	if player_id != hurt_by: # Why are you hitting yourself?
+		$AudioStreamPlayer3D.play()
+		lives-= 1
+		update_lives()
+		check_lives()
 
 func fire():
 	var bullet = ammo_types[randi() %ammo_types.size()-1].instance()

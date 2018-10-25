@@ -15,14 +15,14 @@ func _ready():
 func change_material(direction):
 	var materials_count = $MaterialsList.materials.size()
 	
-	#check if we're at the last material
+
 	if direction == "Right":
-		if current_material == materials_count:
+		if current_material == materials_count: #check if we're at the last material
 			current_material = 1
 		else:
 			current_material += 1
-	else:
-		if current_material == 1:
+	else: 
+		if current_material == 1: # check if we're at the first material
 			current_material = materials_count
 		else:
 			current_material -= 1
@@ -37,7 +37,7 @@ func change_material(direction):
 func _on_ButtonBegin_pressed():
 	Customisations.Player_materials = $MaterialsList.materials[current_material]
 	Customisations.Player_gender = gender
-	get_tree().change_scene("res://Scenes/Characters/Game.tscn")
+	get_tree().change_scene("res://Scenes/Game.tscn")
 
 
 func Character_selection(ID):

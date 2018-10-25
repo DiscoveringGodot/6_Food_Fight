@@ -1007,7 +1007,7 @@ surfaces/0 = {
 }
 _sections_unfolded = [ "surface_1" ]
 
-[node name="Armature" type="Skeleton" index="0"]
+[node name="Armature" type="Skeleton"]
 
 transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
 bones/0/name = "Hips"

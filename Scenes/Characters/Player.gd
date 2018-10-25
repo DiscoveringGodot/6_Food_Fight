@@ -23,11 +23,12 @@ var can_move = true
 
 
 func _ready():
+	player_id = 1
 	var camera = $Camera
 	facing_dir = 0
 	can_refill = false
 	if Customisations.Player_materials != null:
-		$PlayerModel/Armature/Human_Mesh.set_surface_material(0, load(Customisations.Player_materials))
+		$Armature/Mesh.set_surface_material(0, load(Customisations.Player_materials))
 
 
 func _physics_process(delta):
@@ -87,7 +88,7 @@ func move(delta):
 	vel = move_and_slide(vel,UP)
 
 
-	$PlayerModel.rotation.y = facing_dir
+	$Armature.rotation.y = facing_dir
 
 
 
@@ -125,7 +126,14 @@ func reload():
 		refresh_refill()
 
 
-func _on_Area_body_exited(body):
+func Refil_entered():
+	if check_ammo() and ammo < max_ammo:
+		$Harp.play()
+		$Timer.start()
+		can_refill = true
+
+
+func Refil_exited():
 	$Timer.stop()
 	can_refill = false
 	get_tree().call_group("GUI", "empty_GUI")
@@ -134,13 +142,6 @@ func _on_Area_body_exited(body):
 
 func update_gui():
 	get_tree().call_group("GUI", "update_gui", ammo)
-
-
-func _on_Area_body_entered(body):
-	if check_ammo() and ammo < max_ammo:
-		$Harp.play()
-		$Timer.start()
-		can_refill = true
 
 
 func refresh_refill():
@@ -154,7 +155,7 @@ func animate():
 		movement_rate -= 0.2
 
 	movement_rate = clamp(movement_rate, 0, 1)
-	var animation = $PlayerModel/AnimationTreePlayer
+	var animation = $AnimationTreePlayer
 	if can_refill:
 		action_rate += 0.25
 	
@@ -164,13 +165,13 @@ func animate():
 	
 	animation.blend2_node_set_amount("Move", movement_rate)
 	animation.blend3_node_set_amount("State", action_rate)
-	
-	
+
 
 func die():
 	can_move = false
-	$PlayerModel/AnimationTreePlayer.active = false
-	$PlayerModel/AnimationPlayer.play("Death")
+	$AnimationTreePlayer.active = false
+	$Armature/AnimationPlayer.play("Death")
+
 
 func game_over():
 	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")

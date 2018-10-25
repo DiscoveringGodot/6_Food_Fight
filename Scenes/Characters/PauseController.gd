@@ -18,3 +18,7 @@ func _on_Button1_pressed():
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
+
+
+func _on_CustomiseButton_pressed():
+	get_tree().change_scene("res://Scenes/Customisation/CharacterCustomiser.tscn")

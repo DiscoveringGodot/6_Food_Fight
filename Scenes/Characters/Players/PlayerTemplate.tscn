@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Characters/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Characters/Camera.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Characters/AnimationTreePlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://SFX/harp-glissando-up.wav" type="AudioStream" id=5]
+
+[node name="PlayerTemplate" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="CollisionShape" parent="." index="0"]
+
+visible = true
+
+[node name="Camera" type="Camera" parent="." index="5"]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 2, -6 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+mouse_sensitivity = 1200
+
+[node name="AnimationTreePlayer" parent="." index="6" instance=ExtResource( 4 )]
+
+data = {
+"active": true,
+"connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2 ],
+"master": NodePath(""),
+"nodes": [ {
+"id": "scale",
+"position": Vector2( 773, 112 ),
+"scale": 1.5,
+"type": "timescale"
+}, {
+"id": "out",
+"position": Vector2( 1136, 307 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 449, 231 ),
+"type": "blend2"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "RunAnim",
+"position": Vector2( 150, 233 ),
+"type": "animation"
+}, {
+"blend": -0.08,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "PickupAnim",
+"position": Vector2( 148, 376 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "IdleAnim",
+"position": Vector2( 120, 127 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
+"type": "animation"
+} ]
+}
+
+[node name="Harp" type="AudioStreamPlayer3D" parent="." index="7"]
+
+stream = ExtResource( 5 )
+attenuation_model = 0
+unit_db = 3.0
+unit_size = 1.0
+max_db = 3.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 0.0
+out_of_range_mode = 0
+bus = "Master"
+area_mask = 1
+emission_angle_enabled = false
+emission_angle_degrees = 45.0
+emission_angle_filter_attenuation_db = -12.0
+attenuation_filter_cutoff_hz = 5000.0
+attenuation_filter_db = -24.0
+doppler_tracking = 0
+
+

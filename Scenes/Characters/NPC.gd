@@ -3,6 +3,7 @@ extends "res://Scenes/Characters/Character.gd"
 export var fire_delay = 0.1
 
 func _enter_tree():
+	player_id = 2
 	$Timer.wait_time = fire_delay
 	$Robot/RobotArmature/AnimationPlayer.get_animation("Robot_Running").set_loop(true)
 	$Robot/RobotArmature/AnimationPlayer.play("Robot_Running")

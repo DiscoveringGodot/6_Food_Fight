@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene format=2]
 
-[ext_resource path="res://Models/TestChar/animations/idle.anim" type="Animation" id=1]
-[ext_resource path="res://Models/TestChar/animations/run.anim" type="Animation" id=2]
-
-[node name="AnimationTreePlayer" type="AnimationTreePlayer"]
+[node name="AnimationTreePlayer" type="AnimationTreePlayer" index="0"]
 
 playback_process_mode = 0
 master_player = NodePath("")
@@ -11,19 +8,13 @@ base_path = NodePath("..")
 active = true
 data = {
 "active": true,
-"connections": [ "anim 3", "scale", 0, "State", "out", 0, "anim", "Move", 0, "anim 2", "Move", 1, "scale", "State", 0, "Move", "State", 1, "anim 4", "State", 2 ],
+"connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2 ],
 "master": NodePath(""),
 "nodes": [ {
 "id": "scale",
 "position": Vector2( 773, 112 ),
 "scale": 1.5,
 "type": "timescale"
-}, {
-"animation": ExtResource( 1 ),
-"filter": [  ],
-"id": "anim",
-"position": Vector2( 120, 127 ),
-"type": "animation"
 }, {
 "id": "out",
 "position": Vector2( 1136, 307 ),
@@ -37,25 +28,31 @@ data = {
 }, {
 "animation": null,
 "filter": [  ],
-"id": "anim 3",
-"position": Vector2( 617, 53 ),
+"id": "RunAnim",
+"position": Vector2( 150, 233 ),
 "type": "animation"
 }, {
-"blend": -0.07,
+"blend": -0.08,
 "id": "State",
 "position": Vector2( 934, 288 ),
 "type": "blend3"
 }, {
 "animation": null,
 "filter": [  ],
-"id": "anim 4",
+"id": "PickupAnim",
 "position": Vector2( 148, 376 ),
 "type": "animation"
 }, {
-"animation": ExtResource( 2 ),
+"animation": null,
 "filter": [  ],
-"id": "anim 2",
-"position": Vector2( 150, 233 ),
+"id": "IdleAnim",
+"position": Vector2( 120, 127 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
 "type": "animation"
 } ]
 }

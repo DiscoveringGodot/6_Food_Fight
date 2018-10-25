@@ -4,7 +4,7 @@ const UP = Vector3(0,1,0)
 const GRAVITY = -45
 const JUMP_SPEED = 15
 
-export var player_id = 0
+var player_id = 0
 
 var motion = Vector3()
 var MAX_SPEED = 20
@@ -19,8 +19,6 @@ var ammo_types
 
 var projectile_speed = 50
 
-#onready var projectile = preload("res://Scenes/Ammo/Doughnut.tscn")
-
 
 func _enter_tree():
 	randomize()
@@ -29,14 +27,12 @@ func _enter_tree():
 	
 func hurt(hurt_by):
 	$AudioStreamPlayer3D.play()
-	get_parent().update_score(hurt_by, true)
 	lives-= 1
 	check_lives()
 		
 
 func fire():
 	var bullet = ammo_types[randi() %ammo_types.size()-1].instance()
-#	var bullet = preload("res://Scenes/Ammo/Doughnut.tscn").instance()
 	add_child(bullet)
 	bullet.fired_by = player_id
 	bullet.set_as_toplevel(true)

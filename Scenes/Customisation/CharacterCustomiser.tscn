@@ -1,10 +1,11 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Customisation/CharacterCustomiser.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Customisation/MaterialsList.gd" type="Script" id=2]
-[ext_resource path="res://Models/Character/PlayerModel.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/GUI/ChargenGUI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://SFX/intro.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Customisation/MaterialsList.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/GUI/ChargenGUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SFX/intro.ogg" type="AudioStream" id=6]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -190,37 +191,34 @@ height = 10.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="Animation" id=7]
+[node name="CharacterCustomiser" type="Spatial"]
 
-length = 6.0
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("PlayerModelM:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 90, 0, 0 ), Vector3( 90, 180, 0 ), Vector3( 90, 359, 0 ) ]
-}
-
-[node name="CharacterCustomiser" type="Spatial" index="0"]
-
+pause_mode = 2
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
-[node name="MaterialsList" type="Node" parent="." index="0"]
+[node name="ArmatureM" parent="." index="0" groups=[
+"characters",
+] instance=ExtResource( 2 )]
 
-script = ExtResource( 2 )
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0, 0, 0 )
 
-[node name="PlayerModelM" parent="." index="1" instance=ExtResource( 3 )]
+[node name="ArmatureF" parent="." index="1" groups=[
+"characters",
+] instance=ExtResource( 3 )]
 
-transform = Transform( 0.0354166, 0.398429, -1.74159e-008, 0, -1.74846e-008, -0.4, -0.398429, 0.0354166, -1.54811e-009, 0, 0, 0 )
+transform = Transform( 0.0075, 0, 1.31134e-009, 0, 0.0075, 0, -1.31134e-009, 0, 0.0075, 0, 0, 0 )
+visible = false
 
-[node name="Camera" type="Camera" parent="." index="2"]
+[node name="AnimationPlayer" parent="ArmatureF" index="0"]
+
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="MaterialsList" type="Node" parent="." index="2"]
+
+script = ExtResource( 4 )
+
+[node name="Camera" type="Camera" parent="." index="3"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72892, 5.87771 )
 keep_aspect = 1
@@ -237,7 +235,7 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="Scenery" type="Node" parent="." index="3"]
+[node name="Scenery" type="Node" parent="." index="4"]
 
 [node name="Podium" type="MeshInstance" parent="Scenery" index="0"]
 
@@ -407,32 +405,30 @@ spot_angle = 40.0
 spot_angle_attenuation = 1.0
 _sections_unfolded = [ "Light", "Transform" ]
 
-[node name="ChargenGUI" parent="." index="4" instance=ExtResource( 4 )]
+[node name="ChargenGUI" parent="." index="5" instance=ExtResource( 5 )]
 
-[node name="Rotator" type="AnimationPlayer" parent="." index="5"]
+[node name="CheckButton" parent="ChargenGUI/Controls" index="0"]
 
-root_node = NodePath("..")
-autoplay = "Rotation"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/Rotation = SubResource( 7 )
-blend_times = [  ]
+text = "Frey"
 
 [node name="Music" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonLeft" to="." method="change_material" binds= [ "Left" ]]
+[connection signal="item_selected" from="ChargenGUI/Controls/CheckButton" to="." method="Character_selection"]
 
-[connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonBegin" to="." method="_on_ButtonBegin_pressed"]
+[connection signal="pressed" from="ChargenGUI/Controls/HBoxContainer/ButtonLeft" to="." method="change_material" binds= [ "Left" ]]
 
-[connection signal="pressed" from="ChargenGUI/HBoxContainer/ButtonRight" to="." method="change_material" binds= [ "Right" ]]
+[connection signal="pressed" from="ChargenGUI/Controls/HBoxContainer/ButtonBegin" to="." method="_on_ButtonBegin_pressed"]
+
+[connection signal="pressed" from="ChargenGUI/Controls/HBoxContainer/ButtonRight" to="." method="change_material" binds= [ "Right" ]]
 
 
+[editable path="ArmatureM"]
+[editable path="ArmatureF"]
 [editable path="ChargenGUI"]

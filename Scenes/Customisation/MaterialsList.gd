@@ -2,12 +2,9 @@ extends Node
 
 var materials = {}
 
-signal ready
 
 func _enter_tree():
-	connect("ready", get_parent(), "materials_ready")
 	get_materials()
-	emit_signal("ready")
 
 
 func get_materials():

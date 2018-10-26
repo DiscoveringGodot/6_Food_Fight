@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Characters/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Furniture/Walls.tscn" type="PackedScene" id=2]
@@ -19,11 +19,10 @@
 [ext_resource path="res://Scenes/Furniture/Sofa.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Refill.gd" type="Script" id=18]
 [ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/Characters/Bystanders.gd" type="Script" id=20]
-[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=22]
-[ext_resource path="res://SFX/finalbattle.ogg" type="AudioStream" id=23]
-[ext_resource path="res://Scenes/Characters/Players/RobotNPC.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=21]
+[ext_resource path="res://SFX/finalbattle.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Scenes/Characters/Players/RobotNPC.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
@@ -1289,11 +1288,7 @@ _sections_unfolded = [ "Transform", "material" ]
 
 [node name="Gui" parent="." index="4" instance=ExtResource( 19 )]
 
-[node name="Bystanders" type="Node" parent="." index="5"]
-
-script = ExtResource( 20 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="6"]
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="5"]
 
 transform = Transform( -0.21689, 0.954121, -0.206426, 0.646261, 0.298824, 0.702176, 0.731646, 0.0188898, -0.681423, -0.253176, 81.7919, -48.7188 )
 layers = 1
@@ -1321,9 +1316,9 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Light", "Shadow" ]
 
-[node name="PauseMenu" parent="." index="7" instance=ExtResource( 21 )]
+[node name="PauseMenu" parent="." index="6" instance=ExtResource( 20 )]
 
-[node name="NoCrossLine" type="StaticBody" parent="." index="8"]
+[node name="NoCrossLine" type="StaticBody" parent="." index="7"]
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.576295, -13.062, 1.74762, -4.3499 )
@@ -1342,7 +1337,7 @@ _sections_unfolded = [ "Collision" ]
 shape = SubResource( 14 )
 disabled = false
 
-[node name="NoCrossLine2" type="StaticBody" parent="." index="9"]
+[node name="NoCrossLine2" type="StaticBody" parent="." index="8"]
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.062, 1.74762, -23.4883 )
@@ -1361,35 +1356,33 @@ _sections_unfolded = [ "Collision" ]
 shape = SubResource( 14 )
 disabled = false
 
-[node name="Spawners" type="Node" parent="." index="10"]
+[node name="Spawners" type="Node" parent="." index="9"]
 
-editor/display_folded = true
-
-[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 22 )]
+[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 21 )]
 
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -46.9236, 1.5, -1.57321 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 22 )]
+[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 21 )]
 
 transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, 21.1106, 1.64277, -2 )
 
-[node name="Music" type="AudioStreamPlayer" parent="." index="11"]
+[node name="Music" type="AudioStreamPlayer" parent="." index="10"]
 
-stream = ExtResource( 23 )
+stream = ExtResource( 22 )
 volume_db = -15.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="PlayerSpawn" type="Position3D" parent="." index="12"]
+[node name="PlayerSpawn" type="Position3D" parent="." index="11"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.14786, 2.52251, -14.5746 )
 
-[node name="Enemies" type="Node" parent="." index="13"]
+[node name="Enemies" type="Node" parent="." index="12"]
 
-[node name="RobotNPC" parent="Enemies" index="0" instance=ExtResource( 24 )]
+[node name="RobotNPC" parent="Enemies" index="0" instance=ExtResource( 23 )]
 
 editor/display_folded = true
 transform = Transform( -0.995982, 0, -0.0895483, 0, 1, 0, 0.0895483, 0, -0.995982, -2.30066, 1.33565, 4.92894 )
@@ -1404,7 +1397,7 @@ playback_speed = 1.0
 anims/Movement = SubResource( 15 )
 blend_times = [  ]
 
-[node name="RobotNPC2" parent="Enemies" index="1" instance=ExtResource( 24 )]
+[node name="RobotNPC2" parent="Enemies" index="1" instance=ExtResource( 23 )]
 
 editor/display_folded = true
 transform = Transform( -0.995982, 0, -0.0895483, 0, 1, 0, 0.0895483, 0, -0.995982, -1.80378, 1.33565, 11.0574 )

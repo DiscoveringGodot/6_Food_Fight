@@ -6,7 +6,7 @@ var max_wait = 5
 var bystanders = {}
 
 func _enter_tree():
-	bystanders = get_node("../../Bystanders").bystanders
+	bystanders = file_grabber.get_files("res://Scenes/Bystanders/")
 	set_timer()
 	randomize()
 
@@ -20,7 +20,7 @@ func _on_Timer_timeout():
 	set_timer()
 
 func spawn():
-	var bullet = load(bystanders[randi() % bystanders.size() +1]).instance()
+	var bullet = load(bystanders[randi() % bystanders.size() ]).instance()
 	add_child(bullet)
 	bullet.set_as_toplevel(true)
 	bullet.set_transform(get_node("Forward").get_global_transform().orthonormalized())

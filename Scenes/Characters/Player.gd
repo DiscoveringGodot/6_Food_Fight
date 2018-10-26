@@ -1,7 +1,7 @@
 extends "res://Scenes/Characters/Character.gd"
 
 # State variables
-var can_refill
+var can_refill = false
 var can_move = true
 
 # Animation variables
@@ -9,20 +9,18 @@ var movement_rate = 0 # how much you're moving, from 0 to 1
 var action_rate = 0 # -1 is shoot, 1 is search
 
 # Movement variables
-var facing_dir 
-var upward_movement =0
+var facing_dir = 0
 var vel = Vector3()
 var dir = Vector3()
 
-# Accelleration variables
+# Movement constants
 const ACCEL= 4.5
 const DEACCEL= 16
+const JUMP_SPEED = 15
 
 
 func _ready():
 	player_id = 1
-	facing_dir = 0
-	can_refill = false
 	if Customisations.Player_materials != null:
 		$Armature/Mesh.set_surface_material(0, load(Customisations.Player_materials))
 	update_lives()
@@ -84,9 +82,7 @@ func move(delta):
 	vel.z = hvel.z
 	vel = move_and_slide(vel,UP)
 
-
 	$Armature.rotation.y = facing_dir
-
 
 
 func _input(event):

@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Customisations="*res://Scenes/Customisation/Customisations.gd"
-Ammo_Types="*res://Ammo_Types.gd"
+file_grabber="*res://file_grabber.gd"
 
 [input]
 

@@ -2,7 +2,7 @@ extends KinematicBody
 
 const UP = Vector3(0,1,0)
 const GRAVITY = -45
-const JUMP_SPEED = 15
+
 
 var player_id = 0
 
@@ -12,17 +12,16 @@ var MAX_SPEED = 20
 var lives = 3
 var can_fire = true
 
+var ammo_types = {}
 var ammo_collection_speed = 1
 var ammo = 0
 var max_ammo = 5
-var ammo_types
-
 var projectile_speed = 50
 
 
 func _enter_tree():
+	ammo_types = file_grabber.get_files("res://Scenes/Ammo/Ammo_Scenes/")
 	randomize()
-	ammo_types = Ammo_Types.ammo_types
 	$Timer.wait_time = ammo_collection_speed
 
 
@@ -34,7 +33,7 @@ func hurt(hurt_by):
 		check_lives()
 
 func fire():
-	var bullet = ammo_types[randi() %ammo_types.size()-1].instance()
+	var bullet = load(ammo_types [randi() % ammo_types.size()] ).instance()
 	add_child(bullet)
 	bullet.fired_by = player_id
 	bullet.set_as_toplevel(true)

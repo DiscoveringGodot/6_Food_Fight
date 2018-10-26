@@ -11,7 +11,7 @@
 
 [sub_resource type="Environment" id=1]
 
-background_mode = 0
+background_mode = 1
 background_sky_custom_fov = 0.0
 background_color = Color( 0, 0, 0, 1 )
 background_energy = 1.0
@@ -86,7 +86,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Ambient Light", "SS Reflections" ]
+_sections_unfolded = [ "Ambient Light", "Background", "SS Reflections" ]
 
 [sub_resource type="ParticlesMaterial" id=2]
 
@@ -124,7 +124,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Scale" ]
+_sections_unfolded = [ "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Scale", "Trail" ]
 
 [node name="SplashScreen" type="Control" index="0"]
 
@@ -233,7 +233,7 @@ arvr = false
 size = Vector2( 400, 400 )
 own_world = false
 world = null
-transparent_bg = true
+transparent_bg = false
 msaa = 0
 hdr = true
 disable_3d = false
@@ -358,7 +358,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 emitting = true
 amount = 24
-lifetime = 3.0
+lifetime = 2.0
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
@@ -387,7 +387,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 emitting = true
 amount = 8
-lifetime = 1.0
+lifetime = 2.0
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
@@ -416,7 +416,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 emitting = true
 amount = 8
-lifetime = 1.0
+lifetime = 2.0
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
@@ -445,7 +445,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 emitting = true
 amount = 8
-lifetime = 1.0
+lifetime = 2.0
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
@@ -474,7 +474,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 emitting = true
 amount = 8
-lifetime = 1.0
+lifetime = 2.0
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0

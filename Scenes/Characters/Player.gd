@@ -157,7 +157,7 @@ func animate():
 		movement_rate -= 0.2
 
 	movement_rate = clamp(movement_rate, 0, 1)
-	var animation = $AnimationTreePlayer
+	var animation = $Armature/AnimationTreePlayer
 	if can_refill:
 		action_rate += 0.25
 	
@@ -171,7 +171,7 @@ func animate():
 
 func die():
 	can_move = false
-	$AnimationTreePlayer.active = false
+	$Armature/AnimationTreePlayer.active = false
 	$Armature/AnimationPlayer.play("Death")
 
 

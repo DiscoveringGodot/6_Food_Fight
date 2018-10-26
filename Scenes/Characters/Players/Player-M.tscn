@@ -1,11 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Characters/Players/PlayerTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Characters/Animations-Male/work.anim" type="Animation" id=3]
-[ext_resource path="res://Scenes/Characters/Animations-Male/punch.anim" type="Animation" id=4]
-[ext_resource path="res://Scenes/Characters/Animations-Male/run.anim" type="Animation" id=5]
-[ext_resource path="res://Scenes/Characters/Animations-Male/idle.anim" type="Animation" id=6]
 
 [node name="Player" instance=ExtResource( 1 )]
 
@@ -13,15 +9,12 @@
 
 transform = Transform( -1.74846e-008, -0.4, 1.74846e-008, 0, -1.74846e-008, -0.4, 0.4, -1.74846e-008, 7.64276e-016, 0, -1.54565, 0 )
 
-[node name="AnimationTreePlayer" parent="." index="7"]
+[node name="AnimationTreePlayer" parent="Armature" index="2"]
 
-playback_process_mode = 1
-master_player = NodePath("../Armature/AnimationPlayer")
-base_path = NodePath("../Armature")
 data = {
 "active": true,
 "connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2 ],
-"master": NodePath("../Armature/AnimationPlayer"),
+"master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
 "position": Vector2( 773, 112 ),
@@ -38,33 +31,33 @@ data = {
 "position": Vector2( 449, 231 ),
 "type": "blend2"
 }, {
-"animation": ExtResource( 3 ),
 "filter": [  ],
-"id": "PickupAnim",
-"position": Vector2( 148, 376 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 4 ),
-"filter": [  ],
-"id": "PunchAnim",
-"position": Vector2( 617, 53 ),
-"type": "animation"
-}, {
-"animation": ExtResource( 5 ),
-"filter": [  ],
+"from": "Run",
 "id": "RunAnim",
 "position": Vector2( 150, 233 ),
 "type": "animation"
 }, {
-"blend": 0.12,
+"blend": 0.04,
 "id": "State",
 "position": Vector2( 934, 288 ),
 "type": "blend3"
 }, {
-"animation": ExtResource( 6 ),
 "filter": [  ],
+"from": "Working",
+"id": "PickupAnim",
+"position": Vector2( 148, 376 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Punch",
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
 "id": "IdleAnim",
-"position": Vector2( 197, 67 ),
+"position": Vector2( 120, 127 ),
 "type": "animation"
 } ]
 }

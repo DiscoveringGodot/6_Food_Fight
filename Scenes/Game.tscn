@@ -171,7 +171,7 @@ tracks/0/keys = {
 "values": [ Vector3( -23.0822, 1.33565, 11.0574 ), Vector3( -1.80378, 1.33565, 11.0574 ) ]
 }
 
-[node name="Game" type="Node" index="0" groups=[
+[node name="Game" type="Node" groups=[
 "gamestate",
 ]]
 

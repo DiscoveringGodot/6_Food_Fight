@@ -16,8 +16,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Customisations="*res://Scenes/Customisation/Customisations.gd"
-file_grabber="*res://file_grabber.gd"
+Customisations="*res://scripts/Customisations.gd"
+file_grabber="*res://scripts/file_grabber.gd"
 
 [input]
 

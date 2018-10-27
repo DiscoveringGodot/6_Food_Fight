@@ -1,11 +1,12 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scenes/Customisation/CharacterCustomiser.gd" type="Script" id=1]
+[ext_resource path="res://scripts/CharacterCustomiser.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Customisation/MaterialsList.gd" type="Script" id=4]
+[ext_resource path="res://scripts/MaterialsList.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/GUI/ChargenGUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SFX/intro.ogg" type="AudioStream" id=6]
+
 
 [sub_resource type="SpatialMaterial" id=1]
 

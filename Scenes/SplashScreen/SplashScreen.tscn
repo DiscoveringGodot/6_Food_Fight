@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://MyTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Scenes/SplashScreen/SplashScreen.gd" type="Script" id=2]
+[ext_resource path="res://scripts/SplashScreen.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Ammo/models/doughnut.mesh" type="ArrayMesh" id=3]
 [ext_resource path="res://Scenes/Ammo/models/Burger.mesh" type="ArrayMesh" id=4]
 [ext_resource path="res://Scenes/Ammo/models/Hotdog.mesh" type="ArrayMesh" id=5]
@@ -129,7 +129,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Scale", "Trail" ]
 
-[node name="SplashScreen" type="Control" index="0"]
+[node name="SplashScreen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0

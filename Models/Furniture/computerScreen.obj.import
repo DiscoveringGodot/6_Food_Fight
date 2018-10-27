@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/computerScreen.obj-7cdf3eb1fcb1b786ff9b6472fb58c99c.mesh"
+
+[deps]
+
+files=[ "res://.import/computerScreen.obj-7cdf3eb1fcb1b786ff9b6472fb58c99c.mesh" ]
+
+source_file="res://Models/Furniture/computerScreen.obj"
+dest_files=[ "res://.import/computerScreen.obj-7cdf3eb1fcb1b786ff9b6472fb58c99c.mesh", "res://.import/computerScreen.obj-7cdf3eb1fcb1b786ff9b6472fb58c99c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

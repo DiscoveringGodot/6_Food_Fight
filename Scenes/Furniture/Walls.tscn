@@ -1,14 +1,13 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Models/Furniture/Kenny/wall.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Models/Furniture/Kenny/MetalDark.material" type="Material" id=2]
-[ext_resource path="res://Models/Furniture/Kenny/wallWindowSlide.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://Models/Furniture/Kenny/wallDoorwayWide.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://Models/Furniture/Kenny/wallWindow.obj" type="ArrayMesh" id=5]
-[ext_resource path="res://Models/Furniture/Kenny/kitchenBar.obj" type="ArrayMesh" id=6]
-[ext_resource path="res://Models/Furniture/Kenny/DarkWood.material" type="Material" id=7]
-[ext_resource path="res://Models/Furniture/Kenny/wallDoorway.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://Models/Furniture/Kenny/doorway.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://Models/Furniture/wall.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Materials/MetalDark.material" type="Material" id=2]
+[ext_resource path="res://Models/Furniture/wallWindowSlide.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/Furniture/wallDoorwayWide.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://Models/Furniture/wallWindow.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://Models/Furniture/kitchenBar.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/Furniture/wallDoorway.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://Models/Furniture/doorway.mesh" type="ArrayMesh" id=8]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
@@ -30,7 +29,7 @@ points = PoolVector3Array( -1.31445, 5.53125, 0.25, -1.31445, 5.53125, 0.347656,
 
 data = PoolVector3Array( 0, 0, 0.8496, 0, 0, 0.2, -2.1484, 0, 0.8496, -2.1484, 0, 0.2, -2.1484, 0, 0.8496, 0, 0, 0.2, -2.1484, 0, 0.2, 0, 0, 0.2, -2.1484, 0.291, 0.2, 0, 0.291, 0.2, -2.1484, 0.291, 0.2, 0, 0, 0.2, -2.1484, 0, 0.2, -2.1484, 0.291, 0.2, -2.1484, 0, 0.8496, -2.1484, 0, 0.8496, -2.1484, 0.291, 0.2, -2.1484, 0.291, 0.8496, -2.1484, 0.291, 0.8496, -2.1484, 0.291, 0.2, -2.1484, 1.9492, 0.9497, -2.1484, 1.9492, 0.9497, -2.1484, 0.291, 0.2, -2.1484, 1.9492, 0.1, -2.1484, 0.291, 0.1, -2.1484, 1.9492, 0.1, -2.1484, 0.291, 0.2, -2.1484, 0.291, 0.9497, -2.1484, 0.291, 0.8496, -2.1484, 1.9492, 0.9497, 0, 1.9492, 0.1, 0, 0.291, 0.1, 0, 1.9492, 0.9497, 0, 0.291, 0.2, 0, 1.9492, 0.9497, 0, 0.291, 0.1, 0, 0, 0.2, 0, 1.9492, 0.9497, 0, 0.291, 0.2, 0, 0.291, 0.8496, 0, 1.9492, 0.9497, 0, 0, 0.2, 0, 0.291, 0.9497, 0, 1.9492, 0.9497, 0, 0.291, 0.8496, 0, 0.291, 0.8496, 0, 0, 0.2, 0, 0, 0.8496, 0, 0.291, 0.1, -2.0156, 0.4253, 0.1, -2.1484, 0.291, 0.1, -2.1484, 1.9492, 0.1, -2.1484, 0.291, 0.1, -2.0156, 0.4253, 0.1, -2.0156, 1.8154, 0.1, -2.1484, 1.9492, 0.1, -2.0156, 0.4253, 0.1, -0.1342, 1.8154, 0.1, -2.1484, 1.9492, 0.1, -2.0156, 1.8154, 0.1, -2.0156, 0.4253, 0.1, 0, 0.291, 0.1, -0.1342, 0.4253, 0.1, 0, 1.9492, 0.1, -0.1342, 0.4253, 0.1, 0, 0.291, 0.1, -0.1342, 1.8154, 0.1, -0.1342, 0.4253, 0.1, 0, 1.9492, 0.1, -2.1484, 1.9492, 0.1, -0.1342, 1.8154, 0.1, 0, 1.9492, 0.1, 0, 0.291, 0.2, 0, 0.291, 0.1, -2.1484, 0.291, 0.2, -2.1484, 0.291, 0.1, -2.1484, 0.291, 0.2, 0, 0.291, 0.1, 0, 0, 0.8496, -2.1484, 0, 0.8496, 0, 0.291, 0.8496, -2.1484, 0.291, 0.8496, 0, 0.291, 0.8496, -2.1484, 0, 0.8496, 0, 0.291, 0.9497, 0, 0.291, 0.8496, -2.1484, 0.291, 0.9497, -2.1484, 0.291, 0.8496, -2.1484, 0.291, 0.9497, 0, 0.291, 0.8496, -2.1484, 0.291, 0.9497, -0.1342, 0.4253, 0.9497, 0, 0.291, 0.9497, 0, 1.9492, 0.9497, 0, 0.291, 0.9497, -0.1342, 0.4253, 0.9497, -0.1342, 1.8154, 0.9497, 0, 1.9492, 0.9497, -0.1342, 0.4253, 0.9497, -2.0156, 1.8154, 0.9497, 0, 1.9492, 0.9497, -0.1342, 1.8154, 0.9497, -0.1342, 0.4253, 0.9497, -2.1484, 0.291, 0.9497, -2.0156, 0.4253, 0.9497, -2.1484, 1.9492, 0.9497, -2.0156, 0.4253, 0.9497, -2.1484, 0.291, 0.9497, -2.0156, 1.8154, 0.9497, -2.0156, 0.4253, 0.9497, -2.1484, 1.9492, 0.9497, 0, 1.9492, 0.9497, -2.0156, 1.8154, 0.9497, -2.1484, 1.9492, 0.9497, -1.9141, 0.5269, 0.1, -0.2358, 0.5269, 0.1, -1.9141, 1.7139, 0.1, -0.2358, 1.7139, 0.1, -1.9141, 1.7139, 0.1, -0.2358, 0.5269, 0.1, -0.2358, 0.5269, 0.9497, -1.9141, 0.5269, 0.9497, -0.2358, 1.7139, 0.9497, -1.9141, 1.7139, 0.9497, -0.2358, 1.7139, 0.9497, -1.9141, 0.5269, 0.9497, 0, 2.0996, 0, 0, 1.9492, 0, 0, 2.0996, 1.0498, 0, 1.9492, 0.1, 0, 2.0996, 1.0498, 0, 1.9492, 0, 0, 1.9492, 0.9497, 0, 2.0996, 1.0498, 0, 1.9492, 0.1, 0, 1.9492, 1.0498, 0, 2.0996, 1.0498, 0, 1.9492, 0.9497, -2.1484, 1.9492, 0, -2.1484, 2.0996, 0, -2.1484, 1.9492, 0.1, -2.1484, 2.0996, 1.0498, -2.1484, 1.9492, 0.1, -2.1484, 2.0996, 0, -2.1484, 1.9492, 0.9497, -2.1484, 1.9492, 0.1, -2.1484, 2.0996, 1.0498, -2.1484, 1.9492, 1.0498, -2.1484, 1.9492, 0.9497, -2.1484, 2.0996, 1.0498, -2.1484, 1.9492, 0, 0, 1.9492, 0, -2.1484, 2.0996, 0, 0, 2.0996, 0, -2.1484, 2.0996, 0, 0, 1.9492, 0, 0, 2.0996, 0, 0, 2.0996, 1.0498, -2.1484, 2.0996, 0, -2.1484, 2.0996, 1.0498, -2.1484, 2.0996, 0, 0, 2.0996, 1.0498, 0, 1.9492, 0.1, 0, 1.9492, 0, -2.1484, 1.9492, 0.1, -2.1484, 1.9492, 0, -2.1484, 1.9492, 0.1, 0, 1.9492, 0, 0, 1.9492, 1.0498, -2.1484, 1.9492, 1.0498, 0, 2.0996, 1.0498, -2.1484, 2.0996, 1.0498, 0, 2.0996, 1.0498, -2.1484, 1.9492, 1.0498, 0, 1.9492, 1.0498, 0, 1.9492, 0.9497, -2.1484, 1.9492, 1.0498, -2.1484, 1.9492, 0.9497, -2.1484, 1.9492, 1.0498, 0, 1.9492, 0.9497, -0.1342, 0.4253, 0.1, -1.9141, 0.5269, 0.1, -2.0156, 0.4253, 0.1, -2.0156, 1.8154, 0.1, -2.0156, 0.4253, 0.1, -1.9141, 0.5269, 0.1, -1.9141, 1.7139, 0.1, -2.0156, 1.8154, 0.1, -1.9141, 0.5269, 0.1, -0.2358, 1.7139, 0.1, -2.0156, 1.8154, 0.1, -1.9141, 1.7139, 0.1, -1.9141, 0.5269, 0.1, -0.1342, 0.4253, 0.1, -0.2358, 0.5269, 0.1, -0.1342, 1.8154, 0.1, -0.2358, 0.5269, 0.1, -0.1342, 0.4253, 0.1, -0.2358, 1.7139, 0.1, -0.2358, 0.5269, 0.1, -0.1342, 1.8154, 0.1, -2.0156, 1.8154, 0.1, -0.2358, 1.7139, 0.1, -0.1342, 1.8154, 0.1, -2.0156, 0.4253, 0.9497, -0.2358, 0.5269, 0.9497, -0.1342, 0.4253, 0.9497, -0.1342, 1.8154, 0.9497, -0.1342, 0.4253, 0.9497, -0.2358, 0.5269, 0.9497, -0.2358, 1.7139, 0.9497, -0.1342, 1.8154, 0.9497, -0.2358, 0.5269, 0.9497, -1.9141, 1.7139, 0.9497, -0.1342, 1.8154, 0.9497, -0.2358, 1.7139, 0.9497, -0.2358, 0.5269, 0.9497, -2.0156, 0.4253, 0.9497, -1.9141, 0.5269, 0.9497, -2.0156, 1.8154, 0.9497, -1.9141, 0.5269, 0.9497, -2.0156, 0.4253, 0.9497, -1.9141, 1.7139, 0.9497, -1.9141, 0.5269, 0.9497, -2.0156, 1.8154, 0.9497, -0.1342, 1.8154, 0.9497, -1.9141, 1.7139, 0.9497, -2.0156, 1.8154, 0.9497 )
 
-[node name="Walls" type="Spatial"]
+[node name="Walls" type="Spatial" index="0"]
 
 [node name="Wall" type="MeshInstance" parent="." index="0"]
 
@@ -1754,7 +1753,7 @@ skeleton = NodePath("..")
 material/0 = null
 material/1 = null
 material/2 = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="WideDoorway" index="0"]
 
@@ -2369,7 +2368,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Transform" ]
@@ -2405,7 +2404,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Transform", "material" ]
@@ -2441,7 +2440,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
@@ -2477,7 +2476,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Transform" ]
@@ -2513,10 +2512,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="Bar5" index="0"]
 
@@ -2549,7 +2548,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Transform" ]
@@ -2585,7 +2584,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Transform" ]
@@ -2621,7 +2620,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Transform" ]
@@ -2657,7 +2656,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = null
 material/1 = null
 material/2 = null
 _sections_unfolded = [ "Transform" ]
@@ -2690,7 +2689,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 8 )
+mesh = ExtResource( 7 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -2709,7 +2708,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 9 )
+mesh = ExtResource( 8 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -2727,7 +2726,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 8 )
+mesh = ExtResource( 7 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -2746,10 +2745,11 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 9 )
+mesh = ExtResource( 8 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
 material/2 = null
+_sections_unfolded = [ "material" ]
 
 

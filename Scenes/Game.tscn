@@ -1,28 +1,27 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=39 format=2]
 
-[ext_resource path="res://Scenes/Characters/Game.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Furniture/Walls.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Models/Furniture/Kenny/floorFull.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://Models/Furniture/Kenny/deskCorner.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://Models/Furniture/Kenny/DarkWood.material" type="Material" id=5]
-[ext_resource path="res://Models/Furniture/Kenny/computerScreen.obj" type="ArrayMesh" id=6]
-[ext_resource path="res://Models/Furniture/Kenny/chairDesk.obj" type="ArrayMesh" id=7]
-[ext_resource path="res://Models/Furniture/Kenny/kitchenFridge.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://Models/Furniture/Kenny/kitchenCabinet.obj" type="ArrayMesh" id=9]
-[ext_resource path="res://Models/Furniture/Kenny/DarkWood.tres" type="Material" id=10]
-[ext_resource path="res://Models/Furniture/Kenny/kitchenCabinetCornerInner.obj" type="ArrayMesh" id=11]
-[ext_resource path="res://Models/Furniture/Kenny/kitchenCabinetDrawer 1.obj" type="ArrayMesh" id=12]
-[ext_resource path="res://Models/Furniture/Kenny/kitchenStove.obj" type="ArrayMesh" id=13]
-[ext_resource path="res://Models/Furniture/Kenny/kitchenSink.obj" type="ArrayMesh" id=14]
-[ext_resource path="res://Scenes/Furniture/SmallTable.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/Furniture/Chair.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Furniture/Sofa.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/Refill.gd" type="Script" id=18]
-[ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=21]
-[ext_resource path="res://SFX/finalbattle.ogg" type="AudioStream" id=22]
-[ext_resource path="res://Scenes/Characters/Players/RobotNPC.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Models/Furniture/floorFull.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/Furniture/deskCorner.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Materials/DarkWood.material" type="Material" id=5]
+[ext_resource path="res://Models/Furniture/computerScreen.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/Furniture/chairDesk.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://Models/Furniture/kitchenFridge.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://Models/Furniture/kitchenCabinet.mesh" type="ArrayMesh" id=9]
+[ext_resource path="res://Models/Furniture/kitchenCabinetCornerInner.mesh" type="ArrayMesh" id=10]
+[ext_resource path="res://Models/Furniture/kitchenCabinetDrawer 1.mesh" type="ArrayMesh" id=11]
+[ext_resource path="res://Models/Furniture/kitchenStove.mesh" type="ArrayMesh" id=12]
+[ext_resource path="res://Models/Furniture/kitchenSink.mesh" type="ArrayMesh" id=13]
+[ext_resource path="res://Scenes/Furniture/SmallTable.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Furniture/Chair.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Furniture/Sofa.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scripts/Refill.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=20]
+[ext_resource path="res://SFX/finalbattle.ogg" type="AudioStream" id=21]
+[ext_resource path="res://Scenes/Characters/Players/RobotNPC.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
@@ -170,7 +169,7 @@ tracks/0/keys = {
 "values": [ Vector3( -23.0822, 1.33565, 11.0574 ), Vector3( -1.80378, 1.33565, 11.0574 ) ]
 }
 
-[node name="Game" type="Node" groups=[
+[node name="Game" type="Node" index="0" groups=[
 "gamestate",
 ]]
 
@@ -178,8 +177,6 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Scenary" type="Spatial" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="Walls" parent="Scenary" index="0" instance=ExtResource( 2 )]
 
@@ -290,7 +287,6 @@ disabled = false
 
 [node name="furniture" type="Spatial" parent="Scenary" index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4014, 0, 0 )
 
 [node name="Desk" type="RigidBody" parent="Scenary/furniture" index="0"]
@@ -813,7 +809,7 @@ material/3 = null
 material/4 = null
 material/5 = null
 material/6 = null
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "material" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/furniture/Fridge" index="1"]
 
@@ -851,15 +847,17 @@ mesh = ExtResource( 9 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
-material/2 = ExtResource( 10 )
+material/2 = null
 material/3 = null
 material/4 = null
+_sections_unfolded = [ "material" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/furniture/Cabinet" index="1"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04091, 0, -1.24489 )
 shape = SubResource( 6 )
 disabled = false
+_sections_unfolded = [ "Transform" ]
 
 [node name="CornerCabinet" type="StaticBody" parent="Scenary/furniture" index="11"]
 
@@ -886,10 +884,11 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 11 )
+mesh = ExtResource( 10 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
+_sections_unfolded = [ "material" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="Scenary/furniture/CornerCabinet" index="1"]
 
@@ -897,7 +896,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22829, 0, -0.946224 )
 shape = SubResource( 7 )
 disabled = false
 
-[node name="MeshInstance" type="MeshInstance" parent="Scenary/furniture" index="12"]
+[node name="CounterDrawer" type="MeshInstance" parent="Scenary/furniture" index="12"]
 
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -22.5786, 1, -27.2581 )
 layers = 1
@@ -909,19 +908,19 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 12 )
+mesh = ExtResource( 11 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
-material/2 = ExtResource( 10 )
+material/2 = null
 material/3 = null
 material/4 = null
 material/5 = null
-material/6 = ExtResource( 10 )
+material/6 = null
 material/7 = null
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "material" ]
 
-[node name="StaticBody" type="StaticBody" parent="Scenary/furniture/MeshInstance" index="0"]
+[node name="StaticBody" type="StaticBody" parent="Scenary/furniture/CounterDrawer" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -932,7 +931,7 @@ bounce = 0.0
 constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Scenary/furniture/MeshInstance/StaticBody" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Scenary/furniture/CounterDrawer/StaticBody" index="0"]
 
 shape = SubResource( 8 )
 disabled = false
@@ -949,10 +948,10 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 13 )
+mesh = ExtResource( 12 )
 skeleton = NodePath("..")
 material/0 = null
-material/1 = ExtResource( 10 )
+material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
@@ -987,10 +986,10 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 13 )
+mesh = ExtResource( 12 )
 skeleton = NodePath("..")
 material/0 = null
-material/1 = ExtResource( 10 )
+material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
@@ -1025,14 +1024,14 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 14 )
+mesh = ExtResource( 13 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 10 )
+material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = ExtResource( 10 )
+material/5 = null
 material/6 = null
 material/7 = null
 _sections_unfolded = [ "Transform", "material" ]
@@ -1054,91 +1053,91 @@ shape = SubResource( 10 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="Table" parent="Scenary/furniture" index="16" instance=ExtResource( 15 )]
+[node name="Table" parent="Scenary/furniture" index="16" instance=ExtResource( 14 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5862, 2, 7.07793 )
 
-[node name="Table6" parent="Scenary/furniture" index="17" instance=ExtResource( 15 )]
+[node name="Table6" parent="Scenary/furniture" index="17" instance=ExtResource( 14 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.803, 2, 1.92951 )
 
-[node name="Table2" parent="Scenary/furniture" index="18" instance=ExtResource( 15 )]
+[node name="Table2" parent="Scenary/furniture" index="18" instance=ExtResource( 14 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0871, 2, 7.07793 )
 
-[node name="Table3" parent="Scenary/furniture" index="19" instance=ExtResource( 15 )]
+[node name="Table3" parent="Scenary/furniture" index="19" instance=ExtResource( 14 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0871, 2, -9.17108 )
 
-[node name="Table4" parent="Scenary/furniture" index="20" instance=ExtResource( 15 )]
+[node name="Table4" parent="Scenary/furniture" index="20" instance=ExtResource( 14 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5057, 2, -9.17108 )
 
-[node name="Table5" parent="Scenary/furniture" index="21" instance=ExtResource( 15 )]
+[node name="Table5" parent="Scenary/furniture" index="21" instance=ExtResource( 14 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5057, 2, -17.1862 )
 
-[node name="Chair" parent="Scenary/furniture" index="22" instance=ExtResource( 16 )]
+[node name="Chair" parent="Scenary/furniture" index="22" instance=ExtResource( 15 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.3068, 2, 6.97673 )
 
-[node name="Chair13" parent="Scenary/furniture" index="23" instance=ExtResource( 16 )]
+[node name="Chair13" parent="Scenary/furniture" index="23" instance=ExtResource( 15 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5236, 2, 1.82831 )
 
-[node name="Chair4" parent="Scenary/furniture" index="24" instance=ExtResource( 16 )]
+[node name="Chair4" parent="Scenary/furniture" index="24" instance=ExtResource( 15 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.8077, 2, 6.97673 )
 
-[node name="Chair6" parent="Scenary/furniture" index="25" instance=ExtResource( 16 )]
+[node name="Chair6" parent="Scenary/furniture" index="25" instance=ExtResource( 15 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.8077, 2, -9.27228 )
 
-[node name="Chair8" parent="Scenary/furniture" index="26" instance=ExtResource( 16 )]
+[node name="Chair8" parent="Scenary/furniture" index="26" instance=ExtResource( 15 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2263, 2, -9.27228 )
 
-[node name="Chair10" parent="Scenary/furniture" index="27" instance=ExtResource( 16 )]
+[node name="Chair10" parent="Scenary/furniture" index="27" instance=ExtResource( 15 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2263, 2, -17.2874 )
 
-[node name="Chair2" parent="Scenary/furniture" index="28" instance=ExtResource( 16 )]
+[node name="Chair2" parent="Scenary/furniture" index="28" instance=ExtResource( 15 )]
 
 transform = Transform( -0.998296, 0, -0.0583532, 0, 1, 0, 0.0583532, 0, -0.998296, -34.3853, 2, 7.12774 )
 
-[node name="Chair12" parent="Scenary/furniture" index="29" instance=ExtResource( 16 )]
+[node name="Chair12" parent="Scenary/furniture" index="29" instance=ExtResource( 15 )]
 
 transform = Transform( -0.998296, 0, -0.0583532, 0, 1, 0, 0.0583532, 0, -0.998296, -36.6021, 2, 1.97931 )
 
-[node name="Chair3" parent="Scenary/furniture" index="30" instance=ExtResource( 16 )]
+[node name="Chair3" parent="Scenary/furniture" index="30" instance=ExtResource( 15 )]
 
 transform = Transform( -0.998296, 0, -0.0583532, 0, 1, 0, 0.0583532, 0, -0.998296, -23.8862, 2, 7.12774 )
 
-[node name="Chair5" parent="Scenary/furniture" index="31" instance=ExtResource( 16 )]
+[node name="Chair5" parent="Scenary/furniture" index="31" instance=ExtResource( 15 )]
 
 transform = Transform( -0.998296, 0, -0.0583532, 0, 1, 0, 0.0583532, 0, -0.998296, -23.8862, 2, -9.12128 )
 
-[node name="Chair11" parent="Scenary/furniture" index="32" instance=ExtResource( 16 )]
+[node name="Chair11" parent="Scenary/furniture" index="32" instance=ExtResource( 15 )]
 
 transform = Transform( 0.038323, 0, 0.999265, 0, 1, 0, -0.999265, 0, 0.038323, -39.499, 2, -14.8727 )
 
-[node name="Chair9" parent="Scenary/furniture" index="33" instance=ExtResource( 16 )]
+[node name="Chair9" parent="Scenary/furniture" index="33" instance=ExtResource( 15 )]
 
 transform = Transform( -0.998296, 0, -0.0583532, 0, 1, 0, 0.0583532, 0, -0.998296, -37.3048, 2, -17.1364 )
 
-[node name="Sofa" parent="Scenary/furniture" index="34" instance=ExtResource( 17 )]
+[node name="Sofa" parent="Scenary/furniture" index="34" instance=ExtResource( 16 )]
 
 transform = Transform( -0.83509, 0, 0.550113, 0, 1, 0, -0.550113, 0, -0.83509, -64.5626, 0.750201, 8.17827 )
 
-[node name="Sofa3" parent="Scenary/furniture" index="35" instance=ExtResource( 17 )]
+[node name="Sofa3" parent="Scenary/furniture" index="35" instance=ExtResource( 16 )]
 
 transform = Transform( 0.880864, 0, 0.47337, 0, 1, 0, -0.47337, 0, 0.880864, -63.8118, 0.750201, -14.0591 )
 
-[node name="Sofa2" parent="Scenary/furniture" index="36" instance=ExtResource( 17 )]
+[node name="Sofa2" parent="Scenary/furniture" index="36" instance=ExtResource( 16 )]
 
 transform = Transform( -0.597766, 0, -0.801671, 0, 1, 0, 0.801671, 0, -0.597766, -59.0607, 0.750201, 8.17827 )
 
-[node name="Sofa4" parent="Scenary/furniture" index="37" instance=ExtResource( 17 )]
+[node name="Sofa4" parent="Scenary/furniture" index="37" instance=ExtResource( 16 )]
 
 transform = Transform( -0.421321, 0, 0.906911, 0, 1, 0, -0.906911, 0, -0.421321, -66.4263, 0.750201, -9.21814 )
 
@@ -1166,7 +1165,7 @@ reverb_bus_enable = false
 reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
-script = ExtResource( 18 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="RefillZone" index="0"]
@@ -1214,7 +1213,7 @@ reverb_bus_enable = false
 reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
-script = ExtResource( 18 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="RefillZone2" index="0"]
@@ -1262,7 +1261,7 @@ reverb_bus_enable = false
 reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
-script = ExtResource( 18 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="RefillZone3" index="0"]
@@ -1286,7 +1285,7 @@ skeleton = NodePath("..")
 material/0 = SubResource( 13 )
 _sections_unfolded = [ "Transform", "material" ]
 
-[node name="Gui" parent="." index="4" instance=ExtResource( 19 )]
+[node name="Gui" parent="." index="4" instance=ExtResource( 18 )]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="5"]
 
@@ -1316,7 +1315,7 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Light", "Shadow" ]
 
-[node name="PauseMenu" parent="." index="6" instance=ExtResource( 20 )]
+[node name="PauseMenu" parent="." index="6" instance=ExtResource( 19 )]
 
 [node name="NoCrossLine" type="StaticBody" parent="." index="7"]
 
@@ -1358,18 +1357,18 @@ disabled = false
 
 [node name="Spawners" type="Node" parent="." index="9"]
 
-[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 21 )]
+[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 20 )]
 
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -46.9236, 1.5, -1.57321 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 21 )]
+[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 20 )]
 
 transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, 21.1106, 1.64277, -2 )
 
 [node name="Music" type="AudioStreamPlayer" parent="." index="10"]
 
-stream = ExtResource( 22 )
+stream = ExtResource( 21 )
 volume_db = -15.0
 pitch_scale = 1.0
 autoplay = true
@@ -1378,11 +1377,11 @@ bus = "Master"
 
 [node name="PlayerSpawn" type="Position3D" parent="." index="11"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.14786, 2.52251, -14.5746 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.14786, 10.8934, -14.5746 )
 
 [node name="Enemies" type="Node" parent="." index="12"]
 
-[node name="RobotNPC" parent="Enemies" index="0" instance=ExtResource( 23 )]
+[node name="RobotNPC" parent="Enemies" index="0" instance=ExtResource( 22 )]
 
 editor/display_folded = true
 transform = Transform( -0.995982, 0, -0.0895483, 0, 1, 0, 0.0895483, 0, -0.995982, -2.30066, 1.33565, 4.92894 )
@@ -1397,7 +1396,7 @@ playback_speed = 1.0
 anims/Movement = SubResource( 15 )
 blend_times = [  ]
 
-[node name="RobotNPC2" parent="Enemies" index="1" instance=ExtResource( 23 )]
+[node name="RobotNPC2" parent="Enemies" index="1" instance=ExtResource( 22 )]
 
 editor/display_folded = true
 transform = Transform( -0.995982, 0, -0.0895483, 0, 1, 0, 0.0895483, 0, -0.995982, -1.80378, 1.33565, 11.0574 )

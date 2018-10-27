@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/kitchenSink.obj-2f7606baf384930131ae1993e2ae6ce6.mesh"
+
+[deps]
+
+files=[ "res://.import/kitchenSink.obj-2f7606baf384930131ae1993e2ae6ce6.mesh" ]
+
+source_file="res://Models/Furniture/kitchenSink.obj"
+dest_files=[ "res://.import/kitchenSink.obj-2f7606baf384930131ae1993e2ae6ce6.mesh", "res://.import/kitchenSink.obj-2f7606baf384930131ae1993e2ae6ce6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

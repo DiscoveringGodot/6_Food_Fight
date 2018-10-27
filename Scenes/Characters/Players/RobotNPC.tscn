@@ -1,9 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Scenes/Characters/NPC.gd" type="Script" id=1]
+[ext_resource path="res://scripts/NPC.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Characters/Players/Robot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://SFX/Hit_Hurt.wav" type="AudioStream" id=3]
 [ext_resource path="res://gfx/heart.png" type="Texture" id=4]
+
 
 [sub_resource type="CapsuleShape" id=1]
 

@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/Projectile.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Projectile.gd" type="Script" id=1]
 [ext_resource path="res://SFX/Explosion2.wav" type="AudioStream" id=2]
+
 
 [sub_resource type="SphereMesh" id=1]
 

@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/deskCorner.obj-275c06f8b30e5b31ef28552fc30a5ebd.mesh"
+
+[deps]
+
+files=[ "res://.import/deskCorner.obj-275c06f8b30e5b31ef28552fc30a5ebd.mesh" ]
+
+source_file="res://Models/Furniture/deskCorner.obj"
+dest_files=[ "res://.import/deskCorner.obj-275c06f8b30e5b31ef28552fc30a5ebd.mesh", "res://.import/deskCorner.obj-275c06f8b30e5b31ef28552fc30a5ebd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

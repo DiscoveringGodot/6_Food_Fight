@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pottedPlant.obj-5cb9873378eb427ce902dd8e6311239b.mesh"
+
+[deps]
+
+files=[ "res://.import/pottedPlant.obj-5cb9873378eb427ce902dd8e6311239b.mesh" ]
+
+source_file="res://Models/Furniture/pottedPlant.obj"
+dest_files=[ "res://.import/pottedPlant.obj-5cb9873378eb427ce902dd8e6311239b.mesh", "res://.import/pottedPlant.obj-5cb9873378eb427ce902dd8e6311239b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

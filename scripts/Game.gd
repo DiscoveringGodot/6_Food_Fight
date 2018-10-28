@@ -10,7 +10,7 @@ func _ready():
 
 func customise_player():
 	var Player
-	if Customisations.Player_gender == "Male":
+	if Customisations.Player_character == "Male":
 		Player = Customisations.male.instance()
 	else:
 		Player = Customisations.female.instance()

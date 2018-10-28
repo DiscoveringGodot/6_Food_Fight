@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Furniture/Walls.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Models/Furniture/floorFull.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=3]
 [ext_resource path="res://Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=4]
 [ext_resource path="res://Models/Furniture/computerScreen.mesh" type="ArrayMesh" id=5]
 [ext_resource path="res://Models/Furniture/chairDesk.mesh" type="ArrayMesh" id=6]
@@ -187,6 +187,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4774, 0, 0 )
 
 [node name="Floor" type="MeshInstance" parent="Scenary/Floors" index="0"]
 
+editor/display_folded = true
 transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, -20, 1, -30 )
 layers = 1
 material_override = null
@@ -220,6 +221,7 @@ disabled = false
 
 [node name="Floor2" type="MeshInstance" parent="Scenary/Floors" index="1"]
 
+editor/display_folded = true
 transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, 5, 1, -30 )
 layers = 1
 material_override = null
@@ -253,6 +255,7 @@ disabled = false
 
 [node name="Floor3" type="MeshInstance" parent="Scenary/Floors" index="2"]
 
+editor/display_folded = true
 transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, -45, 1, -30 )
 layers = 1
 material_override = null
@@ -290,6 +293,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4014, 0, 0 )
 
 [node name="Desk" type="RigidBody" parent="Scenary/furniture" index="0"]
 
+editor/display_folded = true
 transform = Transform( 0.00988933, 0, 0.999951, 0, 1, 0, -0.999951, 0, 0.00988933, -12.3898, 1.30891, 8.73193 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -344,6 +348,7 @@ disabled = false
 
 [node name="Desk3" type="RigidBody" parent="Scenary/furniture" index="1"]
 
+editor/display_folded = true
 transform = Transform( -0.999951, 0, 0.00988935, 0, 1, 0, -0.00988935, 0, -0.999951, -4.0409, 1.30891, 8.05725 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -398,6 +403,7 @@ disabled = false
 
 [node name="Desk2" type="RigidBody" parent="Scenary/furniture" index="2"]
 
+editor/display_folded = true
 transform = Transform( 0.00988933, 0, 0.999951, 0, 1, 0, -0.999951, 0, 0.00988933, -4.22382, 1.30891, 8.73193 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -452,6 +458,7 @@ disabled = false
 
 [node name="Computer" type="RigidBody" parent="Scenary/furniture" index="3"]
 
+editor/display_folded = true
 transform = Transform( 0.997632, 0.00122159, 0.0687737, -0.00108203, 0.999997, -0.00206659, -0.068776, 0.00198729, 0.99763, -9.96272, 3.24934, 12.9754 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -504,6 +511,7 @@ disabled = false
 
 [node name="Computer3" type="RigidBody" parent="Scenary/furniture" index="4"]
 
+editor/display_folded = true
 transform = Transform( -0.0687737, 0.0012216, 0.997631, 0.0020666, 0.999997, -0.00108203, -0.997631, 0.00198729, -0.068776, -0.0865784, 3.24608, 6.07919 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -557,6 +565,7 @@ disabled = false
 
 [node name="Computer2" type="RigidBody" parent="Scenary/furniture" index="5"]
 
+editor/display_folded = true
 transform = Transform( 0.997632, 0.00122159, 0.0687737, -0.00108203, 0.999997, -0.00206659, -0.068776, 0.00198729, 0.99763, -1.79671, 3.24934, 12.9754 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -609,6 +618,7 @@ disabled = false
 
 [node name="Deskchair" type="RigidBody" parent="Scenary/furniture" index="6"]
 
+editor/display_folded = true
 transform = Transform( -0.999951, 0, 0.00988929, 0, 1, 0, -0.00988929, 0, -0.999951, -11.1056, 1.2552, 10.2906 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -663,6 +673,7 @@ disabled = false
 
 [node name="Deskchair3" type="RigidBody" parent="Scenary/furniture" index="7"]
 
+editor/display_folded = true
 transform = Transform( -0.00988925, 0, -0.999951, 0, 1, 0, 0.999951, 0, -0.00988925, -2.4185, 1.2552, 6.2257 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -717,6 +728,7 @@ disabled = false
 
 [node name="Deskchair2" type="RigidBody" parent="Scenary/furniture" index="8"]
 
+editor/display_folded = true
 transform = Transform( -0.999951, 0, 0.00988929, 0, 1, 0, -0.00988929, 0, -0.999951, -2.93962, 1.2552, 10.2906 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -771,6 +783,7 @@ disabled = false
 
 [node name="Fridge" type="StaticBody" parent="Scenary/furniture" index="9"]
 
+editor/display_folded = true
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -27.7949, 0.913924, -29.2347 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -814,6 +827,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Cabinet" type="StaticBody" parent="Scenary/furniture" index="10"]
 
+editor/display_folded = true
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -23.5922, 1.0488, -28.5416 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -855,6 +869,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CornerCabinet" type="StaticBody" parent="Scenary/furniture" index="11"]
 
+editor/display_folded = true
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -21.2799, 1.04923, -28.1798 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -892,6 +907,7 @@ disabled = false
 
 [node name="CounterDrawer" type="MeshInstance" parent="Scenary/furniture" index="12"]
 
+editor/display_folded = true
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -22.5786, 1, -27.2581 )
 layers = 1
 material_override = null
@@ -932,6 +948,7 @@ disabled = false
 
 [node name="Stove" type="MeshInstance" parent="Scenary/furniture" index="13"]
 
+editor/display_folded = true
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -33.2814, 1, -27.5527 )
 layers = 1
 material_override = null
@@ -970,6 +987,7 @@ disabled = false
 
 [node name="Stove2" type="MeshInstance" parent="Scenary/furniture" index="14"]
 
+editor/display_folded = true
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -26.7142, 1, -27.5527 )
 layers = 1
 material_override = null
@@ -1008,6 +1026,7 @@ disabled = false
 
 [node name="Sink" type="MeshInstance" parent="Scenary/furniture" index="15"]
 
+editor/display_folded = true
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -31.1639, 1, -27.551 )
 layers = 1
 material_override = null
@@ -1355,10 +1374,12 @@ disabled = false
 
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -46.9236, 1.5, -1.57321 )
 _sections_unfolded = [ "Transform" ]
+max_wait = 5
 
 [node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 19 )]
 
 transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, 21.1106, 1.64277, -2 )
+max_wait = 5
 
 [node name="Music" type="AudioStreamPlayer" parent="." index="10"]
 

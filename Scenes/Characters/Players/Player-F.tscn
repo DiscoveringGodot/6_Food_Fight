@@ -37,9 +37,9 @@ data = {
 "type": "blend2"
 }, {
 "filter": [  ],
-"from": "Punch",
-"id": "PunchAnim",
-"position": Vector2( 617, 53 ),
+"from": "PickUp",
+"id": "PickupAnim",
+"position": Vector2( 148, 376 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -48,11 +48,10 @@ data = {
 "position": Vector2( 150, 233 ),
 "type": "animation"
 }, {
-"filter": [  ],
-"from": "PickUp",
-"id": "PickupAnim",
-"position": Vector2( 148, 376 ),
-"type": "animation"
+"blend": -0.08,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
 }, {
 "filter": [  ],
 "from": "Idle",
@@ -60,10 +59,11 @@ data = {
 "position": Vector2( 120, 127 ),
 "type": "animation"
 }, {
-"blend": -0.08,
-"id": "State",
-"position": Vector2( 934, 288 ),
-"type": "blend3"
+"filter": [  ],
+"from": "Punch",
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
+"type": "animation"
 } ]
 }
 

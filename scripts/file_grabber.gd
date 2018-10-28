@@ -1,10 +1,10 @@
 extends Node
 
 func get_files(folder):
-	var gathered_files = {}
-	
+	var gathered_files = {} # lustify why not array. oh yeeeeeah
 	var file_count = 0
 	var dir = Directory.new()
+	
 	dir.open(folder)
 	dir.list_dir_begin()
 
@@ -13,7 +13,7 @@ func get_files(folder):
 		if file == "":
 			break
 		elif not file.begins_with("."):
-			gathered_files[file_count] = (folder+file)
+			gathered_files[file_count] = folder + file
 			file_count += 1
 
-	return gathered_files
+	return gathered_files #revist why indentation matters

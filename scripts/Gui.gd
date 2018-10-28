@@ -8,7 +8,6 @@ func refill(amount):
 
 func empty_GUI():
 	$refill.value = 0
-	
 
 func update_lives(lives):
 	var heart = preload("res://gfx/heart.png")

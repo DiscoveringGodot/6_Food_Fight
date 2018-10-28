@@ -1,27 +1,36 @@
 extends "res://scripts/Character.gd"
 
 # State variables
-var can_refill = false
-var can_move = true
+var can_refill = false # can you pick up ammo?
+var can_move = true #
 
 # Animation variables
-var movement_rate = 0 # how much you're moving, from 0 to 1
-var action_rate = 0 # -1 is shoot, 1 is search
+var movement_state = 0 # blend of how much you're moving: from 0 to 1
+var action_state = 0 # -blend of your state: 1 is shoot, 0 is move/idle, 1 is search
+
+const MIN_BLEND_SPEED = 0.125
+const BLEND_TO_RUN = 0.1
+const BLEND_TO_IDLE = 0.2
+const BLEND_TO_RELOAD = 0.25
 
 # Movement variables
-var facing_dir = 0
+var facing_dir = 0 # instance variable to make sure we stay facing the last direction we moved in
 var vel = Vector3()
 var dir = Vector3()
 
+# Ammo variables
+var ammo = 0 # how much ammo I have
+var max_ammo = 5 # how much ammo I can carry
+
 # Movement constants
-const ACCEL= 4.5
+const ACCEL= 5
 const DEACCEL= 16
 const JUMP_SPEED = 15
 
 
 func _ready():
-	player_id = 1
-	if Customisations.Player_materials != null:
+	character_type = CHARACTER_TYPES.Player
+	if Customisations.Player_materials != null: # error catching
 		$Armature/Mesh.set_surface_material(0, load(Customisations.Player_materials))
 	update_lives()
 
@@ -36,10 +45,22 @@ func _physics_process(delta):
 
 
 func move(delta):
+	var movement_dir = get_2D_movement_dir()
 	var dir = Vector3()
-	var movement_vector = Vector2()
 	var camera_xform = $Camera.get_global_transform()
 	
+	dir -= camera_xform.basis.z.normalized() * movement_dir.y
+	dir -= camera_xform.basis.x.normalized() * movement_dir.x
+
+	dir = move_vertically(dir, delta)
+	vel = accellerate(delta, dir) # must pass dir or we won't move (x * 0 = 0)
+	move_and_slide(vel,UP)
+	$Armature.rotation.y = facing_dir
+
+
+func get_2D_movement_dir():
+	var movement_vector = Vector2()
+
 	if Input.is_action_pressed("up") and not Input.is_action_pressed("down"):
 		movement_vector.y += 1
 		facing_dir = 0
@@ -52,37 +73,41 @@ func move(delta):
 	if Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
 		movement_vector.x -= 1
 		facing_dir = PI *1.5
-	
-	movement_vector = movement_vector.normalized()
-	
-	dir += -camera_xform.basis.z.normalized() * movement_vector.y
-	dir += -camera_xform.basis.x.normalized() * movement_vector.x
-	
+
+	return movement_vector.normalized()
+
+
+func move_vertically(dir, delta):
+	vel.y += delta  *  GRAVITY
+
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		vel.y = JUMP_SPEED
+	elif is_on_floor():
+		vel.y = 0
 
 	dir.y = 0
 	dir = dir.normalized()
-	
-	vel.y += delta*GRAVITY
-	var hvel = vel
-	hvel.y = 0
-	
+	return dir
+
+
+func accellerate(delta, dir):
+	var vel_2D = vel # make a new variable to work on horizontal velocity
+	vel_2D.y = 0 # seperate all vertical velocity
+
 	var target = dir
 	target *= MAX_SPEED
 	
 	var accel
-	if dir.dot(hvel) > 0:
-		 accel = ACCEL
+	if dir.dot(vel_2D) > 0:
+		accel = ACCEL
 	else:
 		accel = DEACCEL
 
-	hvel = hvel.linear_interpolate(target, accel*delta)
-	vel.x = hvel.x
-	vel.z = hvel.z
-	vel = move_and_slide(vel,UP)
-
-	$Armature.rotation.y = facing_dir
+	vel_2D = vel_2D.linear_interpolate(target, accel * delta)
+	vel.x = vel_2D.x
+	vel.z = vel_2D.z
+	
+	return vel
 
 
 func _input(event):
@@ -95,9 +120,9 @@ func try_to_fire():
 		fire()
 		can_fire = false
 		$CanFire.start()
-		ammo -=1
+		ammo -= 1
 		update_gui()
-		action_rate = -1
+		action_state = -1
 
 
 func _on_Timer_timeout():
@@ -138,7 +163,7 @@ func update_gui():
 
 
 func update_lives():
-	if player_id == 1:
+	if character_type == CHARACTER_TYPES.Player:
 		get_tree().call_group("GUI", "update_lives", lives)
 
 
@@ -147,22 +172,23 @@ func refresh_refill():
 
 
 func animate():
-	if vel.length() > 0.25:
-		movement_rate += 0.1
+	var horizontal_vel = Vector3(vel.x, 0, vel.z)
+	if vel.length() > MIN_BLEND_SPEED: # comment and define as a const
+		movement_state += BLEND_TO_RUN
 	else:
-		movement_rate -= 0.2
+		movement_state -= BLEND_TO_IDLE
 
-	movement_rate = clamp(movement_rate, 0, 1)
+	movement_state = clamp(movement_state, 0, 1)
 	var animation = $Armature/AnimationTreePlayer
 	if can_refill:
-		action_rate += 0.25
+		action_state += BLEND_TO_RELOAD
 	
-	action_rate = clamp(action_rate, -1, 1)
+	action_state = clamp(action_state, -1, 1)
 	
-	action_rate = lerp(action_rate, 0, 0.125)
+	action_state = lerp(action_state, 0, 0.125)
 	
-	animation.blend2_node_set_amount("Move", movement_rate)
-	animation.blend3_node_set_amount("State", action_rate)
+	animation.blend2_node_set_amount("Move", movement_state)
+	animation.blend3_node_set_amount("State", action_state)
 
 
 func die():

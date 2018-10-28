@@ -1,7 +1,7 @@
 extends Spatial
 
 export var speed = 10
-var max_wait = 5
+export var max_wait = 5
 
 var bystanders = {}
 
@@ -11,7 +11,7 @@ func _enter_tree():
 	randomize()
 
 func set_timer():
-	$Timer.wait_time = randi() % max_wait +1
+	$Timer.wait_time = randi() % max_wait + 1 
 	$Timer.start()
 
 
@@ -24,6 +24,6 @@ func spawn():
 	add_child(bullet)
 	bullet.set_as_toplevel(true)
 	bullet.set_transform(get_node("Forward").get_global_transform().orthonormalized())
-	bullet.set_linear_velocity(get_node("Forward").get_global_transform().basis[2].normalized()*speed)
+	bullet.set_linear_velocity(get_node("Forward").get_global_transform().basis[2].normalized() * speed) # put a var in here
 	
 	

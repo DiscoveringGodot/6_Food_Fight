@@ -1,13 +1,14 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Models/Furniture/wall.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Architecture/wall.mesh" type="ArrayMesh" id=1]
 [ext_resource path="res://Materials/MetalDark.material" type="Material" id=2]
-[ext_resource path="res://Models/Furniture/wallWindowSlide.mesh" type="ArrayMesh" id=3]
-[ext_resource path="res://Models/Furniture/wallDoorwayWide.mesh" type="ArrayMesh" id=4]
-[ext_resource path="res://Models/Furniture/wallWindow.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://Models/Architecture/wallWindowSlide.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/Architecture/wallDoorwayWide.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://Models/Architecture/wallWindow.mesh" type="ArrayMesh" id=5]
 [ext_resource path="res://Models/Furniture/kitchenBar.mesh" type="ArrayMesh" id=6]
-[ext_resource path="res://Models/Furniture/wallDoorway.mesh" type="ArrayMesh" id=7]
-[ext_resource path="res://Models/Furniture/doorway.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://Models/Architecture/wallDoorway.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://Models/Architecture/doorway.mesh" type="ArrayMesh" id=8]
+
 
 [sub_resource type="ConvexPolygonShape" id=1]
 

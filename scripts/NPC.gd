@@ -5,7 +5,7 @@ export var fire_delay = 0.1
 signal remove_enemy
 
 func _enter_tree():
-	player_id = 2
+	character_type = CHARACTER_TYPES.NPC
 	$Timer.wait_time = fire_delay
 	$Robot/RobotArmature/AnimationPlayer.get_animation("Robot_Running").set_loop(true)
 	$Robot/RobotArmature/AnimationPlayer.play("Robot_Running")
@@ -26,6 +26,6 @@ func die():
 
 func update_lives():
 	if lives > 0:
-		var life = $Lives.get_child(0).get_child(0)
+		var life = $Lives.get_child(0).get_child(0) # tidy this
 		life.play("LoseLife")
 		

@@ -30,4 +30,13 @@ Here are the lectures of the course for this section...
 2 Examine the features we'll need to create
 
 #### After watching (learning outcomes)…
-Plan out the central mechanics and feeling of our fast, silly local kickabout game
+Plan out the central mechanics and feeling of our frantic third person action game
+
+
+### 2 Installing Assets for Food Fight
+#### In this video (objectives)…
+1 Create the Food Fight project in Godot
+2 Download and install our assets
+
+#### After watching (learning outcomes)…
+Get our assets ready and have a quick look at what's included 

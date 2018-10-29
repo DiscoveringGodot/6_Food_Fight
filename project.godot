@@ -11,6 +11,7 @@ config_version=3
 [application]
 
 config/name="5_FOOD_FIGHT"
+run/main_scene="res://Scenes/Levels/LevelTemplate.tscn"
 config/icon="res://icon.png"
 
 [rendering]

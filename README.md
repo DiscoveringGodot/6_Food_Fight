@@ -39,4 +39,14 @@ Plan out the central mechanics and feeling of our frantic third person action ga
 2 Download and install our assets
 
 #### After watching (learning outcomes)…
-Get our assets ready and have a quick look at what's included 
+Get our assets ready and have a quick look at what's included
+
+
+### 3 Setting Up a Play Space
+#### In this video (objectives)…
+1 Set up a basic level
+2 Add a camera, some lighting and a simple piece of furniture
+
+
+#### After watching (learning outcomes)…
+How to fix center of gravity problems in a RigidBody

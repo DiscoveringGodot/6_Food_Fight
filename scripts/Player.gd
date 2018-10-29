@@ -12,6 +12,7 @@ const MIN_BLEND_SPEED = 0.125
 const BLEND_TO_RUN = 0.1
 const BLEND_TO_IDLE = 0.2
 const BLEND_TO_RELOAD = 0.25
+const LERP_RATE = 0.125
 
 # Movement variables
 var facing_dir = 0 # instance variable to make sure we stay facing the last direction we moved in
@@ -53,7 +54,7 @@ func move(delta):
 	dir -= camera_xform.basis.x.normalized() * movement_dir.x
 
 	dir = move_vertically(dir, delta)
-	vel = accellerate(delta, dir) # must pass dir or we won't move (x * 0 = 0)
+	vel = h_accellerate(delta, dir) # must pass dir or we won't move (x * 0 = 0)
 	move_and_slide(vel,UP)
 	$Armature.rotation.y = facing_dir
 
@@ -90,7 +91,7 @@ func move_vertically(dir, delta):
 	return dir
 
 
-func accellerate(delta, dir):
+func h_accellerate(delta, dir):
 	var vel_2D = vel # make a new variable to work on horizontal velocity
 	vel_2D.y = 0 # seperate all vertical velocity
 
@@ -185,7 +186,7 @@ func animate():
 	
 	action_state = clamp(action_state, -1, 1)
 	
-	action_state = lerp(action_state, 0, 0.125)
+	action_state = lerp(action_state, 0, LERP_RATE) # rename lerp rate with a const
 	
 	animation.blend2_node_set_amount("Move", movement_state)
 	animation.blend3_node_set_amount("State", action_state)

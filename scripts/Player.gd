@@ -186,7 +186,7 @@ func animate():
 	
 	action_state = clamp(action_state, -1, 1)
 	
-	action_state = lerp(action_state, 0, LERP_RATE) # rename lerp rate with a const
+	action_state = lerp(action_state, 0, LERP_RATE)
 	
 	animation.blend2_node_set_amount("Move", movement_state)
 	animation.blend3_node_set_amount("State", action_state)

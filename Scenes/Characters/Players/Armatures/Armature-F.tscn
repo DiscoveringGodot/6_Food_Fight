@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Customisation/PlayerMaterials/1..material" type="Material" id=1]
-[ext_resource path="res://Scenes/Characters/Animations-Female/Idle.anim" type="Animation" id=2]
-[ext_resource path="res://Scenes/Characters/Animations-Female/Pickup.anim" type="Animation" id=3]
-[ext_resource path="res://Scenes/Characters/Animations-Female/Punch.anim" type="Animation" id=4]
-[ext_resource path="res://Scenes/Characters/Animations-Female/Run.anim" type="Animation" id=5]
-[ext_resource path="res://Scenes/Characters/AnimationTreePlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Characters/Animations-Female/Death.anim" type="Animation" id=2]
+[ext_resource path="res://Scenes/Characters/Animations-Female/Idle.anim" type="Animation" id=3]
+[ext_resource path="res://Scenes/Characters/Animations-Female/Pickup.anim" type="Animation" id=4]
+[ext_resource path="res://Scenes/Characters/Animations-Female/Punch.anim" type="Animation" id=5]
+[ext_resource path="res://Scenes/Characters/Animations-Female/Run.anim" type="Animation" id=6]
+[ext_resource path="res://Scenes/Characters/AnimationTreePlayer.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -270,7 +271,7 @@ tracks/33/imported = false
 tracks/33/enabled = true
 tracks/33/keys = PoolRealArray( 0, 1, 3.62396e-005, 2.71797e-005, -9.53674e-006, 0.0241634, 0.00121355, 0.000461235, 0.999707, 1, 1, 1, 0.0416667, 1, 3.91006e-005, 2.68817e-005, -9.53674e-006, 0.0230879, 0.00115926, 0.000440892, 0.999733, 1, 1, 1, 0.0833333, 1, 3.5286e-005, 2.69413e-005, -7.62941e-006, 0.020918, 0.00105031, 0.000399375, 0.999781, 1, 1, 1, 0.125, 1, 3.71933e-005, 2.68221e-005, -7.15257e-006, 0.0214933, 0.00107939, 0.00041035, 0.999768, 1, 1, 1, 0.166667, 1, 3.8147e-005, 2.71797e-005, -7.62939e-006, 0.0262631, 0.00131893, 0.00050152, 0.999654, 1, 1, 1, 0.208333, 1, 3.76701e-005, 2.74181e-005, -1.33514e-005, 0.048677, 0.00234559, 0.00233068, 0.998809, 1, 1, 0.999999, 0.25, 1, 3.71933e-005, 2.86102e-005, -1.71661e-005, 0.0897866, 0.00421885, 0.00428267, 0.995943, 1, 0.999992, 0.999994, 0.291667, 1, 3.67165e-005, 3.01599e-005, -2.52724e-005, 0.141372, 0.00597757, 0.0122859, 0.989862, 1, 0.999982, 0.999991, 0.333333, 1, 3.8147e-005, 3.52859e-005, -3.43323e-005, 0.227171, 0.0116542, 0.00848289, 0.973748, 1, 0.999985, 1.00001, 0.375, 1, 4.19617e-005, 3.95776e-005, -3.95776e-005, 0.250996, 0.0106246, 0.0411812, 0.967053, 0.999988, 0.999531, 0.99958, 0.416667, 1, 3.91006e-005, 2.96831e-005, -1.90734e-005, 0.0927452, 0.00360019, 0.0203578, 0.995475, 0.999997, 0.999927, 0.999935, 0.458333, 1, 3.76701e-005, 2.65837e-005, -5.72209e-006, 0.01084, 0.000544274, 0.000206983, 0.999941, 1, 1, 1, 0.5, 1, 3.8147e-005, 2.67029e-005, -5.72205e-006, 0.00860393, 0.000431736, 0.000164281, 0.999963, 1, 1, 1, 0.541667, 1, 3.67165e-005, 2.66433e-005, -8.58305e-006, 0.00896933, 0.00045024, 0.000171413, 0.99996, 1, 1, 1, 0.583333, 1, 3.71933e-005, 2.65241e-005, -4.76838e-006, 0.00340563, 0.000170634, 6.50142e-005, 0.999994, 1, 1, 1, 0.625, 1, 3.76701e-005, 2.64943e-005, -5.24522e-006, -0.000586343, 8.75191e-006, -0.00230537, 0.999997, 1, 1, 1, 0.666667, 1, 4.00543e-005, 2.68221e-005, -5.72205e-006, 0.00729267, 0.000372859, -0.000537851, 0.999973, 1, 1, 1, 0.708333, 1, 3.86238e-005, 2.67625e-005, -5.72205e-006, 0.0129014, 0.000647676, 0.000246323, 0.999917, 1, 1, 1, 0.75, 1, 3.91006e-005, 2.70605e-005, -8.58307e-006, 0.0268579, 0.00134873, 0.000512787, 0.999638, 1, 1, 1, 0.791667, 1, 3.95775e-005, 2.75373e-005, -1.14441e-005, 0.0498062, 0.00250137, 0.000950943, 0.998755, 1, 1, 1, 0.833333, 1, 3.8147e-005, 2.67029e-005, -1.33514e-005, 0.0501532, 0.00251897, 0.000957656, 0.998738, 1, 1, 1, 0.875, 1, 3.76701e-005, 2.77758e-005, -1.57356e-005, 0.0673549, 0.00338324, 0.00128612, 0.997723, 1, 0.999999, 0.999999, 0.916667, 1, 3.71933e-005, 2.7895e-005, -1.90735e-005, 0.093828, 0.00471293, 0.00179171, 0.995576, 1, 0.999998, 1, 0.958333, 1, 3.5286e-005, 2.80142e-005, -1.81198e-005, 0.0931767, 0.0046802, 0.00177915, 0.995637, 1, 0.999998, 1, 1, 1, 3.8147e-005, 2.71797e-005, -1.33514e-005, 0.0463389, 0.00232729, 0.000884873, 0.998923, 1, 1, 1, 1.04167, 1, 3.62396e-005, 2.71797e-005, -1.04904e-005, 0.0328674, 0.0016506, 0.000627543, 0.999458, 1, 1, 1, 1.08333, 1, 3.71933e-005, 2.71797e-005, -1.23978e-005, 0.0301828, 0.00151591, 0.000576289, 0.999543, 1, 1, 1, 1.125, 1, 3.8147e-005, 2.73585e-005, -1.00136e-005, 0.0311653, 0.00156519, 0.000595018, 0.999513, 1, 1, 1, 1.16667, 1, 3.8147e-005, 2.71797e-005, -9.53674e-006, 0.0311114, 0.00156222, 0.000594124, 0.999515, 1, 1, 1 )
 
-[node name="Armature" type="Skeleton"]
+[node name="Armature" type="Skeleton" index="0"]
 
 transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
 bones/0/name = "Hips"
@@ -504,14 +505,15 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Idle = ExtResource( 2 )
-anims/PickUp = ExtResource( 3 )
-anims/Punch = ExtResource( 4 )
-anims/Running = ExtResource( 5 )
+anims/Death = ExtResource( 2 )
+anims/Idle = ExtResource( 3 )
+anims/PickUp = ExtResource( 4 )
+anims/Punch = ExtResource( 5 )
+anims/Running = ExtResource( 6 )
 anims/Walking = SubResource( 2 )
 blend_times = [  ]
 
-[node name="AnimationTreePlayer" parent="." index="2" instance=ExtResource( 6 )]
+[node name="AnimationTreePlayer" parent="." index="2" instance=ExtResource( 7 )]
 
 master_player = NodePath("../AnimationPlayer")
 data = {

@@ -1,18 +1,35 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MyTheme.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/SplashScreen.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Ammo/models/doughnut.mesh" type="ArrayMesh" id=3]
-[ext_resource path="res://Scenes/Ammo/models/Burger.mesh" type="ArrayMesh" id=4]
-[ext_resource path="res://Scenes/Ammo/models/Hotdog.mesh" type="ArrayMesh" id=5]
-[ext_resource path="res://Scenes/Ammo/models/Icecream.mesh" type="ArrayMesh" id=6]
-[ext_resource path="res://Scenes/Ammo/models/Soda.mesh" type="ArrayMesh" id=7]
-[ext_resource path="res://Scenes/Ammo/models/Cookie.mesh" type="ArrayMesh" id=8]
-[ext_resource path="res://Scenes/Ammo/models/Cupcake.mesh" type="ArrayMesh" id=9]
-[ext_resource path="res://Scenes/Ammo/models/Milkshake.mesh" type="ArrayMesh" id=10]
-[ext_resource path="res://SFX/interlude.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Fonts/Kenney Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Ammo/models/doughnut.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://Scenes/Ammo/models/Burger.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://Scenes/Ammo/models/Hotdog.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://Scenes/Ammo/models/Icecream.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://Scenes/Ammo/models/Soda.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://Scenes/Ammo/models/Cookie.mesh" type="ArrayMesh" id=9]
+[ext_resource path="res://Scenes/Ammo/models/Cupcake.mesh" type="ArrayMesh" id=10]
+[ext_resource path="res://Scenes/Ammo/models/Milkshake.mesh" type="ArrayMesh" id=11]
+[ext_resource path="res://SFX/interlude.ogg" type="AudioStream" id=12]
 
-[sub_resource type="Environment" id=1]
+[sub_resource type="DynamicFont" id=1]
+
+size = 24
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 10
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font" ]
+
+[sub_resource type="Environment" id=2]
 
 background_mode = 1
 background_sky_custom_fov = 0.0
@@ -91,7 +108,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "Background", "SS Reflections" ]
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -129,7 +146,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Scale", "Trail" ]
 
-[node name="SplashScreen" type="Control"]
+[node name="SplashScreen" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -180,9 +197,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 312.0
-margin_top = 48.0
+margin_top = 32.0
 margin_right = 712.0
-margin_bottom = 551.0
+margin_bottom = 568.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -198,29 +215,54 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 400.0
-margin_bottom = 23.0
+margin_bottom = 36.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
 text = "Food Fight!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="ViewportContainer" type="ViewportContainer" parent="CenterContainer/VBoxContainer" index="1"]
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 400.0
+margin_bottom = 56.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "Music by Metaruka"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="CenterContainer/VBoxContainer" index="2"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 27.0
+margin_top = 60.0
 margin_right = 400.0
-margin_bottom = 427.0
+margin_bottom = 460.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -263,7 +305,7 @@ _sections_unfolded = [ "Rendering" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203752, 2.80318, 4 )
 keep_aspect = 1
 cull_mask = 1048575
-environment = SubResource( 1 )
+environment = SubResource( 2 )
 h_offset = 0.0
 v_offset = 0.0
 doppler_tracking = 0
@@ -373,9 +415,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 3 )
+draw_pass_1 = ExtResource( 4 )
 _sections_unfolded = [ "Draw Passes", "Process Material", "Time" ]
 
 [node name="Hamburgers" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="1"]
@@ -402,9 +444,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 4 )
+draw_pass_1 = ExtResource( 5 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
 [node name="Hotdogs" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="2"]
@@ -431,9 +473,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 5 )
+draw_pass_1 = ExtResource( 6 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
 [node name="IceCreams" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="3"]
@@ -460,9 +502,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 6 )
+draw_pass_1 = ExtResource( 7 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
 [node name="Sodas" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="4"]
@@ -489,9 +531,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 7 )
+draw_pass_1 = ExtResource( 8 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
 [node name="Cookies" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="5"]
@@ -518,9 +560,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 8 )
+draw_pass_1 = ExtResource( 9 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
 [node name="Cupcakes" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="6"]
@@ -547,9 +589,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 9 )
+draw_pass_1 = ExtResource( 10 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
 [node name="Milkshakes" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles" index="7"]
@@ -576,20 +618,20 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 3 )
 draw_passes = 1
-draw_pass_1 = ExtResource( 10 )
+draw_pass_1 = ExtResource( 11 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="2"]
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 431.0
+margin_top = 464.0
 margin_right = 400.0
-margin_bottom = 503.0
+margin_bottom = 536.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -713,7 +755,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 12 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = true

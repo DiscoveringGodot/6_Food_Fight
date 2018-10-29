@@ -129,7 +129,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Scale", "Trail" ]
 
-[node name="SplashScreen" type="Control" index="0"]
+[node name="SplashScreen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -180,9 +180,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 312.0
-margin_top = 59.0
+margin_top = 48.0
 margin_right = 712.0
-margin_bottom = 540.0
+margin_bottom = 551.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -213,6 +213,7 @@ max_lines_visible = -1
 
 [node name="ViewportContainer" type="ViewportContainer" parent="CenterContainer/VBoxContainer" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -580,7 +581,7 @@ draw_passes = 1
 draw_pass_1 = ExtResource( 10 )
 _sections_unfolded = [ "Draw Passes", "Process Material" ]
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" index="2"]
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -588,31 +589,66 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 431.0
 margin_right = 400.0
-margin_bottom = 454.0
+margin_bottom = 503.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Begin!"
-flat = false
-align = 1
+use_top_left = false
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" index="3"]
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer/CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 458.0
-margin_right = 400.0
-margin_bottom = 481.0
+margin_left = 63.0
+margin_right = 337.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/vseparation = 8
+custom_constants/hseparation = 8
+columns = 2
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/GridContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 4.0
+margin_right = 234.0
+margin_bottom = 27.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Begin!"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 242.0
+margin_right = 274.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -624,9 +660,56 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Get me out of here!"
 flat = false
 align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/GridContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 234.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Get me out of here!"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/GridContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 242.0
+margin_top = 40.0
+margin_right = 274.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 32, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
@@ -637,8 +720,8 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/GridContainer/Button" to="." method="_on_Button_pressed"]
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/GridContainer/Button2" to="." method="_on_Button2_pressed"]
 
 

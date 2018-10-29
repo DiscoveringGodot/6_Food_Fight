@@ -39,7 +39,7 @@ func next_material(materials_count, direction):
 func _on_ButtonBegin_pressed():
 	Customisations.Player_materials = $MaterialsList.materials[current_material]
 	Customisations.Player_character = player_character
-	get_tree().change_scene("res://Scenes/Game.tscn")
+	get_tree().change_scene("res://Scenes/Levels/Level1/Game.tscn")
 
 
 func Character_selection(ID):

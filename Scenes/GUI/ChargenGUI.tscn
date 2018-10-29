@@ -20,10 +20,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -130.0
-margin_top = -85.0
-margin_right = 130.0
-margin_bottom = -10.0
+margin_left = -180.0
+margin_top = -120.0
+margin_right = 180.0
+rect_min_size = Vector2( 360, 120 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -34,14 +34,47 @@ theme = ExtResource( 1 )
 alignment = 1
 _sections_unfolded = [ "Margin", "Rect", "Theme" ]
 
-[node name="CheckButton" type="OptionButton" parent="Controls" index="0"]
+[node name="ColorRect" type="ColorRect" parent="Controls" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 260.0
-margin_bottom = 23.0
+margin_right = 360.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 360, 120 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.674039 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/ColorRect" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="CheckButton" type="OptionButton" parent="Controls/ColorRect/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 13.0
+margin_right = 360.0
+margin_bottom = 35.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -55,22 +88,22 @@ action_mode = 0
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Select Character"
+text = "Frey"
 flat = true
 align = 1
 items = [ "Frey", null, false, 0, null, "Freya", null, false, 1, null ]
 selected = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_icons", "custom_styles" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Controls" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Controls/ColorRect/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 260.0
-margin_bottom = 75.0
+margin_top = 39.0
+margin_right = 360.0
+margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -78,20 +111,20 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 1
-_sections_unfolded = [ "Margin" ]
+_sections_unfolded = [ "Margin", "Rect" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ButtonLeft" type="TextureButton" parent="Controls/HBoxContainer" index="0"]
+[node name="ButtonLeft" type="TextureButton" parent="Controls/ColorRect/VBoxContainer/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 88.0
-margin_bottom = 48.0
-rect_min_size = Vector2( 48, 48 )
+margin_right = 54.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -105,45 +138,39 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
-expand = true
-_sections_unfolded = [ "Size Flags", "Textures" ]
+_sections_unfolded = [ "Rect", "Size Flags", "Textures" ]
 
-[node name="ButtonBegin" type="Button" parent="Controls/HBoxContainer" index="1"]
+[node name="Label" type="Label" parent="Controls/ColorRect/VBoxContainer/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 92.0
-margin_right = 168.0
-margin_bottom = 48.0
+margin_left = 58.0
+margin_top = 4.0
+margin_right = 302.0
+margin_bottom = 27.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Begin!"
-flat = false
-align = 1
-_sections_unfolded = [ "Margin", "Rect", "Textures", "Theme" ]
+size_flags_vertical = 4
+text = "Change Appearance"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
-[node name="ButtonRight" type="TextureButton" parent="Controls/HBoxContainer" index="2"]
+[node name="ButtonRight" type="TextureButton" parent="Controls/ColorRect/VBoxContainer/HBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 172.0
-margin_right = 260.0
-margin_bottom = 48.0
-rect_min_size = Vector2( 48, 48 )
+margin_left = 306.0
+margin_right = 360.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -157,7 +184,70 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
-expand = true
-_sections_unfolded = [ "Size Flags", "Textures" ]
+_sections_unfolded = [ "Rect", "Size Flags", "Textures" ]
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Controls/ColorRect/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 75.0
+margin_right = 360.0
+margin_bottom = 107.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="Label" type="Label" parent="Controls/ColorRect/VBoxContainer/HBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 128.0
+margin_top = 4.0
+margin_right = 196.0
+margin_bottom = 27.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Begin"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ButtonBegin" type="Button" parent="Controls/ColorRect/VBoxContainer/HBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_right = 232.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Margin", "Rect", "Textures", "Theme" ]
 
 

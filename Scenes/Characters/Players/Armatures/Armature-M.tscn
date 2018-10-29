@@ -1237,9 +1237,15 @@ data = {
 "type": "blend2"
 }, {
 "filter": [  ],
-"from": "Working",
-"id": "PickupAnim",
-"position": Vector2( 148, 376 ),
+"from": "Punch",
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 209, 50 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -1254,15 +1260,9 @@ data = {
 "type": "blend3"
 }, {
 "filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 209, 50 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Punch",
-"id": "PunchAnim",
-"position": Vector2( 617, 53 ),
+"from": "Working",
+"id": "PickupAnim",
+"position": Vector2( 148, 376 ),
 "type": "animation"
 } ]
 }

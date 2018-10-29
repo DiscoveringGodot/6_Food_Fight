@@ -1,8 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/PauseController.gd" type="Script" id=1]
 [ext_resource path="res://MyTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Fonts/Kenney Bold.ttf" type="DynamicFontData" id=3]
 
+[sub_resource type="DynamicFont" id=1]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="PauseMenu" type="CanvasLayer"]
 
@@ -43,7 +51,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -150.0
 margin_top = -200.0
-margin_right = 150.0
+margin_right = 210.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 300, 400 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -52,7 +60,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.155396, 0.470463, 0.59375, 0.629843 )
+color = Color( 0, 0, 0, 0.629843 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Popup/Background" index="0"]
@@ -65,10 +73,11 @@ rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 0
+size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_constants/separation = 48
 alignment = 1
-_sections_unfolded = [ "Margin", "Size Flags" ]
+_sections_unfolded = [ "custom_constants" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="Popup/Background/VBoxContainer" index="0"]
 
@@ -76,9 +85,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 134.0
-margin_right = 300.0
-margin_bottom = 157.0
+margin_top = 80.0
+margin_right = 360.0
+margin_bottom = 128.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -93,20 +102,23 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 80.0
-margin_right = 219.0
-margin_bottom = 23.0
+margin_left = 32.0
+margin_right = 328.0
+margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 0
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
 text = "Pause Menu"
+align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
 [node name="CenterContainer2" type="CenterContainer" parent="Popup/Background/VBoxContainer" index="1"]
 
@@ -114,9 +126,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 161.0
-margin_right = 300.0
-margin_bottom = 184.0
+margin_top = 176.0
+margin_right = 360.0
+margin_bottom = 320.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -125,15 +137,56 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
 
-[node name="Button1" type="Button" parent="Popup/Background/VBoxContainer/CenterContainer2" index="0"]
+[node name="GridContainer" type="GridContainer" parent="Popup/Background/VBoxContainer/CenterContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 28.0
-margin_right = 272.0
-margin_bottom = 23.0
+margin_left = 35.0
+margin_right = 325.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 2
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="Label" type="Label" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 6.0
+margin_right = 248.0
+margin_bottom = 29.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Toggle Full Screen"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button1" type="CheckButton" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 252.0
+margin_right = 290.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 32, 32 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -141,82 +194,47 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 0
 size_flags_vertical = 1
-toggle_mode = false
+toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Toggle FullScreen"
 flat = false
 align = 1
-_sections_unfolded = [ "Theme" ]
+_sections_unfolded = [ "Rect", "Theme" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Popup/Background/VBoxContainer" index="2"]
+[node name="Label2" type="Label" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 188.0
-margin_right = 300.0
-margin_bottom = 211.0
+margin_top = 44.0
+margin_right = 248.0
+margin_bottom = 67.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 0
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="CustomiseButton" type="Button" parent="Popup/Background/VBoxContainer/CenterContainer3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 39.0
-margin_right = 261.0
-margin_bottom = 23.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 0
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
+size_flags_vertical = 4
 text = "Customise Player"
-flat = false
-align = 1
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
-[node name="CenterContainer4" type="CenterContainer" parent="Popup/Background/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 215.0
-margin_right = 300.0
-margin_bottom = 238.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="Button3" type="Button" parent="Popup/Background/VBoxContainer/CenterContainer4" index="0"]
+[node name="CustomiseButton" type="Button" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 63.0
-margin_right = 237.0
-margin_bottom = 23.0
+margin_left = 252.0
+margin_top = 40.0
+margin_right = 284.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 32, 32 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -228,36 +246,43 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label3" type="Label" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 80.0
+margin_right = 248.0
+margin_bottom = 103.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
 text = "Ooh, a button!"
-flat = false
-align = 1
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
-[node name="CenterContainer5" type="CenterContainer" parent="Popup/Background/VBoxContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 242.0
-margin_right = 300.0
-margin_bottom = 265.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="QuitButton" type="Button" parent="Popup/Background/VBoxContainer/CenterContainer5" index="0"]
+[node name="Button3" type="Button" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 123.0
-margin_right = 176.0
-margin_bottom = 23.0
+margin_left = 252.0
+margin_top = 76.0
+margin_right = 284.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 32, 32 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -269,14 +294,61 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Quit"
 flat = false
 align = 1
+_sections_unfolded = [ "Rect" ]
 
-[connection signal="pressed" from="Popup/Background/VBoxContainer/CenterContainer2/Button1" to="." method="_on_Button1_pressed"]
+[node name="Label4" type="Label" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="6"]
 
-[connection signal="pressed" from="Popup/Background/VBoxContainer/CenterContainer3/CustomiseButton" to="." method="_on_CustomiseButton_pressed"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 116.0
+margin_right = 248.0
+margin_bottom = 139.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Quit"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
-[connection signal="pressed" from="Popup/Background/VBoxContainer/CenterContainer5/QuitButton" to="." method="_on_QuitButton_pressed"]
+[node name="QuitButton" type="Button" parent="Popup/Background/VBoxContainer/CenterContainer2/GridContainer" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 252.0
+margin_top = 112.0
+margin_right = 284.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 32, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[connection signal="pressed" from="Popup/Background/VBoxContainer/CenterContainer2/GridContainer/Button1" to="." method="_on_Button1_pressed"]
+
+[connection signal="pressed" from="Popup/Background/VBoxContainer/CenterContainer2/GridContainer/CustomiseButton" to="." method="_on_CustomiseButton_pressed"]
+
+[connection signal="pressed" from="Popup/Background/VBoxContainer/CenterContainer2/GridContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 
 

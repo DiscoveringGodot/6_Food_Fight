@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Furniture/Walls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Levels/Level1/Walls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=3]
 [ext_resource path="res://Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=4]
 [ext_resource path="res://Models/Furniture/computerScreen.mesh" type="ArrayMesh" id=5]
@@ -16,11 +16,14 @@
 [ext_resource path="res://Scenes/Furniture/Chair.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Furniture/Sofa.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scripts/Refill.gd" type="Script" id=16]
-[ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/GUI/Gui.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/GUI/PauseMenu.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=19]
 [ext_resource path="res://SFX/finalbattle.ogg" type="AudioStream" id=20]
 [ext_resource path="res://Scenes/Characters/Players/RobotNPC.tscn" type="PackedScene" id=21]
+
+
+
 
 [sub_resource type="ConvexPolygonShape" id=1]
 

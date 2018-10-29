@@ -7,7 +7,6 @@
 [ext_resource path="res://Scenes/GUI/ChargenGUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SFX/intro.ogg" type="AudioStream" id=6]
 
-
 [sub_resource type="SpatialMaterial" id=1]
 
 render_priority = 0
@@ -192,7 +191,7 @@ height = 10.0
 radial_segments = 64
 rings = 4
 
-[node name="CharacterCustomiser" type="Spatial" index="0"]
+[node name="CharacterCustomiser" type="Spatial"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -204,6 +203,59 @@ _sections_unfolded = [ "Pause" ]
 
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0, 0, 0 )
 
+[node name="AnimationTreePlayer" parent="ArmatureM" index="2"]
+
+data = {
+"active": true,
+"connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"id": "scale",
+"position": Vector2( 773, 112 ),
+"scale": 1.5,
+"type": "timescale"
+}, {
+"id": "out",
+"position": Vector2( 1136, 307 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 513, 136 ),
+"type": "blend2"
+}, {
+"filter": [  ],
+"from": "Punch",
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 209, 50 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 214, 166 ),
+"type": "animation"
+}, {
+"blend": 0.04,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "Working",
+"id": "PickupAnim",
+"position": Vector2( 148, 376 ),
+"type": "animation"
+} ]
+}
+
 [node name="ArmatureF" parent="." index="1" groups=[
 "characters",
 ] instance=ExtResource( 3 )]
@@ -211,9 +263,62 @@ transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008,
 transform = Transform( 0.0075, 0, 1.31134e-009, 0, 0.0075, 0, -1.31134e-009, 0, 0.0075, 0, 0, 0 )
 visible = false
 
-[node name="AnimationPlayer" parent="ArmatureF" index="0"]
+[node name="AnimationPlayer" parent="ArmatureF" index="1"]
 
 _sections_unfolded = [ "Playback Options" ]
+
+[node name="AnimationTreePlayer" parent="ArmatureF" index="2"]
+
+data = {
+"active": true,
+"connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"id": "scale",
+"position": Vector2( 773, 112 ),
+"scale": 1.5,
+"type": "timescale"
+}, {
+"id": "out",
+"position": Vector2( 1136, 307 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 449, 231 ),
+"type": "blend2"
+}, {
+"filter": [  ],
+"from": "Punch",
+"id": "PunchAnim",
+"position": Vector2( 617, 53 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 289, 52 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Running",
+"id": "RunAnim",
+"position": Vector2( 259, 258 ),
+"type": "animation"
+}, {
+"blend": 0.06,
+"id": "State",
+"position": Vector2( 934, 288 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "PickUp",
+"id": "PickupAnim",
+"position": Vector2( 148, 376 ),
+"type": "animation"
+} ]
+}
 
 [node name="MaterialsList" type="Node" parent="." index="2"]
 
@@ -408,11 +513,6 @@ _sections_unfolded = [ "Light", "Transform" ]
 
 [node name="ChargenGUI" parent="." index="5" instance=ExtResource( 5 )]
 
-[node name="CheckButton" parent="ChargenGUI/Controls" index="0"]
-
-text = "Frey"
-items = [ "Frey", null, false, 0, null, "Freya", null, false, 1, null ]
-
 [node name="Music" type="AudioStreamPlayer" parent="." index="6"]
 
 stream = ExtResource( 6 )
@@ -422,13 +522,13 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 
-[connection signal="item_selected" from="ChargenGUI/Controls/CheckButton" to="." method="Character_selection"]
+[connection signal="item_selected" from="ChargenGUI/Controls/ColorRect/VBoxContainer/CheckButton" to="." method="Character_selection"]
 
-[connection signal="pressed" from="ChargenGUI/Controls/HBoxContainer/ButtonLeft" to="." method="change_material" binds= [ "Left" ]]
+[connection signal="pressed" from="ChargenGUI/Controls/ColorRect/VBoxContainer/HBoxContainer/ButtonLeft" to="." method="change_material" binds= [ "Left" ]]
 
-[connection signal="pressed" from="ChargenGUI/Controls/HBoxContainer/ButtonBegin" to="." method="_on_ButtonBegin_pressed"]
+[connection signal="pressed" from="ChargenGUI/Controls/ColorRect/VBoxContainer/HBoxContainer/ButtonRight" to="." method="change_material" binds= [ "Right" ]]
 
-[connection signal="pressed" from="ChargenGUI/Controls/HBoxContainer/ButtonRight" to="." method="change_material" binds= [ "Right" ]]
+[connection signal="pressed" from="ChargenGUI/Controls/ColorRect/VBoxContainer/HBoxContainer2/ButtonBegin" to="." method="_on_ButtonBegin_pressed"]
 
 
 [editable path="ArmatureM"]

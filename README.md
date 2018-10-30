@@ -47,6 +47,15 @@ Get our assets ready and have a quick look at what's included
 1 Set up a basic level
 2 Add a camera, some lighting and a simple piece of furniture
 
-
 #### After watching (learning outcomes)…
 How to fix center of gravity problems in a RigidBody
+
+
+### 4 Character and Player Scenes
+#### In this video (objectives)…
+1 Create a Character Scene
+2 Create a Player Scene
+3 Basic Player movement and rotation
+
+#### After watching (learning outcomes)…
+How to set up a character with a Skeleton, Mesh and AnimationPlayer

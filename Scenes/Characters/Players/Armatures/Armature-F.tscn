@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Customisation/PlayerMaterials/1..material" type="Material" id=1]
 [ext_resource path="res://Scenes/Characters/Animations-Female/Death.anim" type="Animation" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Scenes/Characters/Animations-Female/Pickup.anim" type="Animation" id=4]
 [ext_resource path="res://Scenes/Characters/Animations-Female/Punch.anim" type="Animation" id=5]
 [ext_resource path="res://Scenes/Characters/Animations-Female/Run.anim" type="Animation" id=6]
-[ext_resource path="res://Scenes/Characters/AnimationTreePlayer.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -512,59 +511,5 @@ anims/Punch = ExtResource( 5 )
 anims/Running = ExtResource( 6 )
 anims/Walking = SubResource( 2 )
 blend_times = [  ]
-
-[node name="AnimationTreePlayer" parent="." index="2" instance=ExtResource( 7 )]
-
-master_player = NodePath("../AnimationPlayer")
-data = {
-"active": true,
-"connections": [ "PunchAnim", "scale", 0, "State", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "scale", "State", 0, "Move", "State", 1, "PickupAnim", "State", 2 ],
-"master": NodePath("../AnimationPlayer"),
-"nodes": [ {
-"id": "scale",
-"position": Vector2( 773, 112 ),
-"scale": 1.5,
-"type": "timescale"
-}, {
-"id": "out",
-"position": Vector2( 1136, 307 ),
-"type": "output"
-}, {
-"blend": 0.0,
-"filter": [  ],
-"id": "Move",
-"position": Vector2( 449, 231 ),
-"type": "blend2"
-}, {
-"filter": [  ],
-"from": "Punch",
-"id": "PunchAnim",
-"position": Vector2( 617, 53 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 289, 52 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Running",
-"id": "RunAnim",
-"position": Vector2( 259, 258 ),
-"type": "animation"
-}, {
-"blend": 0.06,
-"id": "State",
-"position": Vector2( 934, 288 ),
-"type": "blend3"
-}, {
-"filter": [  ],
-"from": "PickUp",
-"id": "PickupAnim",
-"position": Vector2( 148, 376 ),
-"type": "animation"
-} ]
-}
 
 

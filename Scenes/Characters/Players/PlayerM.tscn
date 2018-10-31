@@ -15,6 +15,38 @@ visible = false
 [node name="Armature" parent="." index="2" instance=ExtResource( 3 )]
 
 transform = Transform( 0.25, 0, 0, 0, -1.09278e-008, -0.25, 0, 0.25, -1.09278e-008, 0, 0, 0 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationTreePlayer" parent="Armature" index="2"]
+
+data = {
+"active": true,
+"connections": [ "Move", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"id": "out",
+"position": Vector2( 586, 51 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 342, 55 ),
+"type": "blend2"
+}, {
+"filter": [  ],
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 57, 182 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 37, 44 ),
+"type": "animation"
+} ]
+}
 
 
 [editable path="Armature"]

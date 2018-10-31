@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
-[ext_resource path="res://default_env.tres" type="Environment" id=2]
-[ext_resource path="res://Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=3]
-[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=3]
+[ext_resource path="res://default_env.tres" type="Environment" id=4]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
@@ -49,23 +49,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 shape = SubResource( 1 )
 disabled = false
 
-[node name="Camera" type="Camera" parent="." index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 10 )
-keep_aspect = 1
-cull_mask = 1048575
-environment = ExtResource( 2 )
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
-current = false
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
-
-[node name="Furniture" type="Node" parent="." index="2"]
+[node name="Furniture" type="Node" parent="." index="1"]
 
 [node name="Desk" type="RigidBody" parent="Furniture" index="0"]
 
@@ -108,7 +92,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 3 )
+mesh = ExtResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -121,7 +105,7 @@ transform = Transform( 1, 0, -8.9407e-008, 0, 1, 0, 8.9407e-008, 0, 1, 4.3771, -
 shape = SubResource( 2 )
 disabled = false
 
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="3"]
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="2"]
 
 transform = Transform( 0.837162, -0.07899, -0.541221, 0.519837, 0.422618, 0.742404, 0.170088, -0.902859, 0.394862, -31, 13, 0 )
 layers = 1
@@ -149,8 +133,24 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Shadow" ]
 
-[node name="Player" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Player" parent="." index="3" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5456 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.329968, 4.5456 )
+
+[node name="Camera" type="Camera" parent="Player" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67003, 5.4544 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = ExtResource( 4 )
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
 
 

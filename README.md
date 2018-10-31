@@ -59,3 +59,12 @@ How to fix center of gravity problems in a RigidBody
 
 #### After watching (learning outcomes)…
 How to set up a character with a Skeleton, Mesh and AnimationPlayer
+
+
+### 5 AnimationTreePlayer
+#### In this video (objectives)…
+1 Animate the PC when the player moves
+2 Have the PC move from one animation to another smoothly
+
+#### After watching (learning outcomes)…
+How to blend animations with AnimationTreePlayer

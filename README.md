@@ -68,3 +68,12 @@ How to set up a character with a Skeleton, Mesh and AnimationPlayer
 
 #### After watching (learning outcomes)…
 How to blend animations with AnimationTreePlayer
+
+
+### 6 Mouselook
+#### In this video (objectives)…
+1 Capture and free the mouse
+2 Implement Mouselook
+
+#### After watching (learning outcomes)…
+How to rotate the camera and player with the mouse

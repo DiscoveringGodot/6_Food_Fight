@@ -77,3 +77,12 @@ How to blend animations with AnimationTreePlayer
 
 #### After watching (learning outcomes)…
 How to rotate the camera and player with the mouse
+
+
+### 7 Transforms, Basis and Matrices
+#### In this video (objectives)…
+1 Introduce Matrices, Basis and Transforms
+2 Identify how these concepts will apply to Player Movement
+
+#### After watching (learning outcomes)…
+Identify how to move the Player Character relative to the Camera on the Horizontal axis

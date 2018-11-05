@@ -86,3 +86,13 @@ How to rotate the camera and player with the mouse
 
 #### After watching (learning outcomes)…
 Identify how to move the Player Character relative to the Camera on the Horizontal axis
+
+
+### 8 Moving with Mouselook
+#### In this video (objectives)…
+1 Add Jumping
+2 Change movement so that it works relative to the Camera's horizontal axis
+3 Add acceleration and deceleration
+
+#### After watching (learning outcomes)…
+Use Transforms and basis to create 3D movement with Mouselook

@@ -36,15 +36,15 @@ data = {
 "type": "blend2"
 }, {
 "filter": [  ],
-"from": "Run",
-"id": "RunAnim",
-"position": Vector2( 57, 182 ),
-"type": "animation"
-}, {
-"filter": [  ],
 "from": "Idle",
 "id": "IdleAnim",
 "position": Vector2( 37, 44 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 57, 182 ),
 "type": "animation"
 } ]
 }

@@ -96,3 +96,13 @@ Identify how to move the Player Character relative to the Camera on the Horizont
 
 #### After watching (learning outcomes)…
 Use Transforms and basis to create 3D movement with Mouselook
+
+
+### 9 To GridMap or Not To GridMap?
+#### In this video (objectives)…
+1 Figure out if GridMaps are right for Food Fight
+2 Create some architecture
+3 Map out a simple level
+
+#### After watching (learning outcomes)…
+Determine if GridMaps are the right choice for your assets

@@ -29,7 +29,7 @@ collision/safe_margin = 0.001
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05305, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1

@@ -106,3 +106,13 @@ Use Transforms and basis to create 3D movement with Mouselook
 
 #### After watching (learning outcomes)…
 Determine if GridMaps are the right choice for your assets
+
+
+### 10 Food To Fling - Firing Projectiles in 3D
+#### In this video (objectives)…
+1 Create a template for projectiles
+2 Spawn a projectile
+3 Have a projectile move whichever way the character is facing
+
+#### After watching (learning outcomes)…
+Be able to spawn and fire a projectile in a 3D environment

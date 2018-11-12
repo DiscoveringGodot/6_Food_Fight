@@ -7,11 +7,15 @@
 [ext_resource path="res://Scenes/Architecture/Doorway.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Architecture/DoorwayWide.tscn" type="PackedScene" id=6]
 
-[node name="Level1" index="0" instance=ExtResource( 1 )]
+[node name="Level1" instance=ExtResource( 1 )]
 
 [node name="Floor" parent="." index="0"]
 
 editor/display_folded = false
+
+[node name="Walls" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="WindowSill" parent="Walls" index="0" instance=ExtResource( 2 )]
 
@@ -212,6 +216,10 @@ transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008,
 [node name="DoorwayWide4" parent="Walls" index="49" instance=ExtResource( 6 )]
 
 transform = Transform( 6.55671e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, 6.55671e-008, 9, 0.2, 0 )
+
+[node name="DirectionalLight" parent="." index="3"]
+
+light_cull_mask = -1
 
 
 [editable path="Player"]

@@ -1,4 +1,4 @@
-extends KinematicBody
+extends "res://Scripts/Character.gd"
 
 # movement variables
 var vel = Vector3()
@@ -111,4 +111,6 @@ func animate():
 	animate.blend2_node_set_amount("Move", move_state)
 
 
-
+func _input(event):
+	if Input.is_action_just_pressed("fire"):
+		fire()

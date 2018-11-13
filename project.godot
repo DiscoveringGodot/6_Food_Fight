@@ -14,6 +14,10 @@ config/name="5_FOOD_FIGHT"
 run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+file_grabber="*res://Scripts/file_grabber.gd"
+
 [input]
 
 forward=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)

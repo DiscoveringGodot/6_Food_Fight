@@ -116,3 +116,13 @@ Determine if GridMaps are the right choice for your assets
 
 #### After watching (learning outcomes)…
 Be able to spawn and fire a projectile in a 3D environment
+
+
+### 11 A Varied Diet - Adding More Food
+#### In this video (objectives)…
+1 Add food types as ammunition
+2 Create a script to scan a directory for files
+3 Fire food!
+
+#### After watching (learning outcomes)…
+How to scan a directory for files and return the contents as a dictionary

@@ -126,3 +126,13 @@ Be able to spawn and fire a projectile in a 3D environment
 
 #### After watching (learning outcomes)…
 How to scan a directory for files and return the contents as a dictionary
+
+
+### 12 Finishing Our Food
+#### In this video (objectives)…
+1 Make sure we can only fire once every x seconds
+2 Give food a wooshing sound
+3 Enable the Doppler effect
+
+#### After watching (learning outcomes)…
+How top use the Doppler effect in 3D

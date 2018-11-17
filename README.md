@@ -135,4 +135,14 @@ How to scan a directory for files and return the contents as a dictionary
 3 Enable the Doppler effect
 
 #### After watching (learning outcomes)…
-How top use the Doppler effect in 3D
+How to use the Doppler effect in 3D
+
+
+### 13 Making Bystanders
+#### In this video (objectives)…
+1 Create bystanders
+2 Create a spawner to fire bystanders across the level
+3 Have bystanders vanish when hit by food
+
+#### After watching (learning outcomes)…
+How to use ``has_method()`` and VisibilityNotifier nodes

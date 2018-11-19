@@ -146,3 +146,13 @@ How to use the Doppler effect in 3D
 
 #### After watching (learning outcomes)…
 How to use ``has_method()`` and VisibilityNotifier nodes
+
+
+### 14 Creating Robot NPCs
+#### In this video (objectives)…
+1 Create Robot NPCs
+2 Detect the PC with a Raycast
+3 Limit how many times Robots fire each second
+
+#### After watching (learning outcomes)…
+Adding Adversaries!

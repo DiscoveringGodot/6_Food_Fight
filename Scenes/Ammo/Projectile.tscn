@@ -20,8 +20,8 @@ radius = 0.5
 
 input_ray_pickable = true
 input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 8
+collision_mask = 15
 mode = 0
 mass = 0.5
 friction = 1.0
@@ -44,6 +44,7 @@ linear_damp = -1.0
 angular_velocity = Vector3( 0, 0, 0 )
 angular_damp = -1.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

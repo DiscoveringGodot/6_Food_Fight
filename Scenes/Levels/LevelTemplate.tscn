@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
 [ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
 points = PoolVector3Array( 0, 0.25, 0, 0, 0, 0, 0, 0.25, 5, 0, 0, 5, 0, 0.25, 0, 0, 0.25, 5, -5, 0.25, 0, -5, 0.25, 5, 0, 0, 5, 0, 0, 0, -5, 0, 5, -5, 0, 0, 0, 0, 5, -5, 0, 5, 0, 0.25, 5, -5, 0.25, 5, -5, 0, 0, 0, 0, 0, -5, 0.25, 0, 0, 0.25, 0, -5, 0, 0, -5, 0.25, 0, -5, 0, 5, -5, 0.25, 5 )
 
-[node name="LevelTemplate" type="Spatial"]
+[node name="LevelTemplate" type="Spatial" index="0"]
 
 [node name="Floor" type="MeshInstance" parent="." index="0"]
 
@@ -79,11 +80,16 @@ _sections_unfolded = [ "Shadow" ]
 
 editor/display_folded = true
 transform = Transform( -0.999582, 0, -0.0289033, 0, 1, 0, 0.0289033, 0, -0.999582, 0, 0.329968, 4.5456 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="MeshInstance" parent="Player" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="PauseMenu" parent="." index="5" instance=ExtResource( 3 )]
+
+pause_mode = 2
+_sections_unfolded = [ "Pause" ]
 
 
 [editable path="Player"]

@@ -262,10 +262,6 @@ transform = Transform( 6.55671e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, 6.55671e-008, 9
 
 light_cull_mask = -1
 
-[node name="Player" parent="." index="4"]
-
-_sections_unfolded = [ "Collision", "Transform" ]
-
 [node name="CanFire" parent="Player" index="5"]
 
 wait_time = 0.25
@@ -288,6 +284,21 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.06177, 0.151799, -14.5769 )
 _sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="RobotArmature" parent="Robots/Robot" index="4"]
+
+bones/1/bound_children = [ NodePath("BoneAttachment002") ]
+bones/2/bound_children = [ NodePath("BoneAttachment011") ]
+bones/7/bound_children = [ NodePath("BoneAttachment004") ]
+bones/8/bound_children = [ NodePath("BoneAttachment009") ]
+bones/9/bound_children = [ NodePath("BoneAttachment") ]
+bones/22/bound_children = [ NodePath("BoneAttachment010") ]
+bones/23/bound_children = [ NodePath("BoneAttachment001") ]
+bones/37/bound_children = [ NodePath("BoneAttachment005") ]
+bones/38/bound_children = [ NodePath("BoneAttachment007") ]
+bones/39/bound_children = [ NodePath("BoneAttachment003") ]
+bones/41/bound_children = [ NodePath("BoneAttachment006") ]
+bones/42/bound_children = [ NodePath("BoneAttachment008") ]
 
 [node name="PositionAnimation" parent="Robots/Robot" index="6"]
 

@@ -156,3 +156,14 @@ How to use ``has_method()`` and VisibilityNotifier nodes
 
 #### After watching (learning outcomes)…
 Adding Adversaries!
+
+
+### 15 Pausing the Game
+#### In this video (objectives)…
+1 Create a Pause menu
+2 Pause the game
+3 Unpause the game!
+4 Toggle Fullscreen
+
+#### After watching (learning outcomes)…
+Learn how to pause and unpause a game in Godot and a cool way to toggle boolean values

@@ -176,3 +176,12 @@ Learn how to pause and unpause a game in Godot and a cool way to toggle boolean 
 
 #### After watching (learning outcomes)…
 Start filling our level with static furniture
+
+
+### 17 Fun with Furniture 2: RigidBodies
+#### In this video (objectives)…
+1 Create movable furniture
+2 Add one-way transparency to the walls so that the camera can see through them
+
+#### After watching (learning outcomes)…
+Fill our level with moveable furniture!

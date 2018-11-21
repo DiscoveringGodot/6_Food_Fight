@@ -167,3 +167,12 @@ Adding Adversaries!
 
 #### After watching (learning outcomes)…
 Learn how to pause and unpause a game in Godot and a cool way to toggle boolean values
+
+
+### 16 Fun with Furniture 1: StaticBodies
+#### In this video (objectives)…
+1 Create Static furniture
+2 Make invisible walls to contain the player
+
+#### After watching (learning outcomes)…
+Start filling our level with static furniture

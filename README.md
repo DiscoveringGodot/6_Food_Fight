@@ -185,3 +185,12 @@ Start filling our level with static furniture
 
 #### After watching (learning outcomes)…
 Fill our level with moveable furniture!
+
+
+### 18 Limiting Ammo: Refilling the Food Fuel
+#### In this video (objectives)…
+1 Limit Player Ammo
+2 Create an ammo refill system
+
+#### After watching (learning outcomes)…
+Limit player ammo

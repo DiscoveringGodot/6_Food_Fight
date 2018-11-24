@@ -194,3 +194,13 @@ Fill our level with moveable furniture!
 
 #### After watching (learning outcomes)…
 Limit player ammo
+
+
+### 19 Better Animation Blending
+#### In this video (objectives)…
+1 Add animations for throwing food and reloading
+2 Add a Blend3 node in our AnimationTreePlayer
+3 layer blending nodes
+
+#### After watching (learning outcomes)…
+Layer multiple blend nodes in AnimationTreePlayer

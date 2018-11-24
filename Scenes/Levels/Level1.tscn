@@ -65,7 +65,7 @@ tracks/0/keys = {
 
 extents = Vector3( 8.14824, 6.44579, 0.243496 )
 
-[node name="Level1" index="0" instance=ExtResource( 1 )]
+[node name="Level1" instance=ExtResource( 1 )]
 
 [node name="Floor" parent="." index="0"]
 
@@ -284,21 +284,6 @@ editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.06177, 0.151799, -14.5769 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="RobotArmature" parent="Robots/Robot" index="4"]
-
-bones/1/bound_children = [ NodePath("BoneAttachment002") ]
-bones/2/bound_children = [ NodePath("BoneAttachment011") ]
-bones/7/bound_children = [ NodePath("BoneAttachment004") ]
-bones/8/bound_children = [ NodePath("BoneAttachment009") ]
-bones/9/bound_children = [ NodePath("BoneAttachment") ]
-bones/22/bound_children = [ NodePath("BoneAttachment010") ]
-bones/23/bound_children = [ NodePath("BoneAttachment001") ]
-bones/37/bound_children = [ NodePath("BoneAttachment005") ]
-bones/38/bound_children = [ NodePath("BoneAttachment007") ]
-bones/39/bound_children = [ NodePath("BoneAttachment003") ]
-bones/41/bound_children = [ NodePath("BoneAttachment006") ]
-bones/42/bound_children = [ NodePath("BoneAttachment008") ]
-
 [node name="PositionAnimation" parent="Robots/Robot" index="6"]
 
 autoplay = "Movement"
@@ -308,21 +293,6 @@ anims/Movement = SubResource( 1 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04524, 0.27539, -9.40156 )
 _sections_unfolded = [ "Collision", "Transform" ]
-
-[node name="RobotArmature" parent="Robots/Robot2" index="4"]
-
-bones/1/bound_children = [ NodePath("BoneAttachment002") ]
-bones/2/bound_children = [ NodePath("BoneAttachment011") ]
-bones/7/bound_children = [ NodePath("BoneAttachment004") ]
-bones/8/bound_children = [ NodePath("BoneAttachment009") ]
-bones/9/bound_children = [ NodePath("BoneAttachment") ]
-bones/22/bound_children = [ NodePath("BoneAttachment010") ]
-bones/23/bound_children = [ NodePath("BoneAttachment001") ]
-bones/37/bound_children = [ NodePath("BoneAttachment005") ]
-bones/38/bound_children = [ NodePath("BoneAttachment007") ]
-bones/39/bound_children = [ NodePath("BoneAttachment003") ]
-bones/41/bound_children = [ NodePath("BoneAttachment006") ]
-bones/42/bound_children = [ NodePath("BoneAttachment008") ]
 
 [node name="PositionAnimation" parent="Robots/Robot2" index="6"]
 

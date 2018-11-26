@@ -32,12 +32,14 @@ var action_state = 0 # -1 is throw, 0 is idle/move, +1 is reload
 
 func _ready():
 	character_type = CHARACTER_TYPES.player
+	update_lives()
 
 
 func _process(delta):
 	move(delta)
 	face_forward()
 	animate()
+	refresh_refill_counter()
 
 
 func move(delta):
@@ -172,5 +174,21 @@ func RefillArea_exited():
 	$Harp.stop()
 
 
-func update_GUI(): # move to group call when you make a GUI
-	get_node("../GUI/Label").text = str(ammo)
+func update_GUI(): 
+	get_tree().call_group("GUI", "refresh_AmmoCount", ammo)
+
+
+func refresh_refill_counter():
+	if can_refill:
+		var refill_time_left = $RefillTimer.wait_time - $RefillTimer.time_left
+		get_tree().call_group("GUI", "Refill", refill_time_left)
+	else:
+		get_tree().call_group("GUI", "Refill", 0)
+
+
+func update_lives():
+	if character_type == CHARACTER_TYPES.player:
+		get_tree().call_group("GUI", "update_lives", lives)
+
+
+

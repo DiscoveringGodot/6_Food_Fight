@@ -9,6 +9,6 @@ func _on_Timer_timeout():
 	queue_free()
 
 
-func hurt():
+func hurt(hurt_by):
 	$Timer.start()
 	$AudioStreamPlayer3D.play()

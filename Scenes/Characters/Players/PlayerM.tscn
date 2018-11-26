@@ -6,7 +6,7 @@
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=4]
 [ext_resource path="res://SFX/harp-glissando-up.wav" type="AudioStream" id=5]
 
-[node name="Player" index="0" instance=ExtResource( 1 )]
+[node name="Player" instance=ExtResource( 1 )]
 
 collision_layer = 2
 collision_mask = 13
@@ -46,6 +46,11 @@ data = {
 "position": Vector2( 43, 255 ),
 "type": "animation"
 }, {
+"blend": -0.08,
+"id": "Action",
+"position": Vector2( 685, 135 ),
+"type": "blend3"
+}, {
 "filter": [  ],
 "from": "Idle",
 "id": "IdleAnim",
@@ -57,11 +62,6 @@ data = {
 "id": "ThrowAnim",
 "position": Vector2( 384, 5 ),
 "type": "animation"
-}, {
-"blend": -0.08,
-"id": "Action",
-"position": Vector2( 685, 135 ),
-"type": "blend3"
 }, {
 "filter": [  ],
 "from": "Working",

@@ -214,3 +214,13 @@ Layer multiple blend nodes in AnimationTreePlayer
 
 #### After watching (learning outcomes)…
 Making and using enums
+
+
+### 21 Adding Lives - The GUI
+#### In this video (objectives)…
+1 Create a GUI
+2 Display player lives
+3 Show how long before the next piece of ammo is collected
+
+#### After watching (learning outcomes)…
+Displaying how long we have left to wait in a TextureProgress node

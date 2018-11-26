@@ -21,7 +21,7 @@
 [ext_resource path="res://Scenes/Furniture/RigidBody/PlantSmall.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Furniture/RigidBody/PlantSmall2.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/RefillArea.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/DefaultTheme.tres" type="Theme" id=22]
+[ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Animation" id=1]
 
@@ -607,35 +607,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17526, 0.77103, 5.17173 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.40124, 0.77103, 5.17173 )
 
-[node name="GUI" type="CanvasLayer" parent="." index="12"]
-
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="Label" type="Label" parent="GUI" index="0"]
-
-anchor_left = 1.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 0.0
-margin_left = -40.0
-margin_top = 10.0
-margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-theme = ExtResource( 22 )
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Margin", "Theme" ]
+[node name="GUI" parent="." index="12" instance=ExtResource( 22 )]
 
 
 [editable path="Robots/Robot"]

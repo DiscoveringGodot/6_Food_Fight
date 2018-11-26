@@ -16,7 +16,7 @@ is_hemisphere = false
 
 radius = 0.5
 
-[node name="Projectile" type="RigidBody"]
+[node name="Projectile" type="RigidBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false

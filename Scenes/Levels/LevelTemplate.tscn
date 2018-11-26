@@ -53,7 +53,7 @@ disabled = false
 transform = Transform( 0.837162, -0.07899, -0.541221, 0.519837, 0.422618, 0.742404, 0.170088, -0.902859, 0.394862, -31, 13, 0 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 1.0
+light_energy = 1.5
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -74,7 +74,7 @@ directional_shadow_normal_bias = 0.8
 directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
-_sections_unfolded = [ "Shadow" ]
+_sections_unfolded = [ "Light", "Shadow" ]
 
 [node name="Player" parent="." index="4" instance=ExtResource( 2 )]
 

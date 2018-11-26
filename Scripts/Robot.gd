@@ -2,6 +2,7 @@ extends "res://Scripts/Character.gd"
 
 func _ready():
 	$RobotArmature/AnimationPlayer.get_animation("Robot_Running").set_loop(true)
+	character_type = CHARACTER_TYPES.npc
 
 
 func _physics_process(delta):
@@ -9,6 +10,3 @@ func _physics_process(delta):
 		fire()
 		can_fire = false
 		$CanFire.start()
-
-func hurt():
-	pass

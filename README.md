@@ -204,3 +204,13 @@ Limit player ammo
 
 #### After watching (learning outcomes)…
 Layer multiple blend nodes in AnimationTreePlayer
+
+
+### 20 Adding Lives - Robot NPCs
+#### In this video (objectives)…
+1 Add lives to all characters
+2 Have characters remove themselves when they run out of lives
+3 disable friendly fire
+
+#### After watching (learning outcomes)…
+Making and using enums

@@ -29,6 +29,11 @@ const ACTION_RESET_RATE = 0.05
 var move_state = 0 # 0 is idle, 1 is run
 var action_state = 0 # -1 is throw, 0 is idle/move, +1 is reload 
 
+
+func _ready():
+	character_type = CHARACTER_TYPES.player
+
+
 func _process(delta):
 	move(delta)
 	face_forward()
@@ -139,9 +144,6 @@ func try_to_fire():
 		ammo -= 1
 		update_GUI()
 		action_state = -1
-
-func hurt():
-	pass
 
 
 func _on_RefillTimer_timeout():

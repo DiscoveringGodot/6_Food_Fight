@@ -224,3 +224,12 @@ Making and using enums
 
 #### After watching (learning outcomes)…
 Displaying how long we have left to wait in a TextureProgress node
+
+
+### 22 ViewportContainer Nodes - 3D in 2D
+#### In this video (objectives)…
+1 Create Game Over and Victory Scenes
+2 Display an animated 3D Robot npc within a 2D scene
+
+#### After watching (learning outcomes)…
+How to use ViewportContainer nodes to have multiple Viewports in a single scene

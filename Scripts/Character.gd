@@ -42,7 +42,5 @@ func check_lives():
 		die()
 	
 	
-func die():
-	queue_free()
 	
 	

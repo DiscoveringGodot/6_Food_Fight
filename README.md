@@ -233,3 +233,12 @@ Displaying how long we have left to wait in a TextureProgress node
 
 #### After watching (learning outcomes)…
 How to use ViewportContainer nodes to have multiple Viewports in a single scene
+
+
+### 23 Sprite3D Nodes - 2D as 3D
+#### In this video (objectives)…
+1 Display Robot lives in 3D space
+2 Allow the game to load the Victory and Game Over screens
+
+#### After watching (learning outcomes)…
+Counting lives as objects in the scene and using Sprite3D nodes

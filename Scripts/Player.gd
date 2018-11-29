@@ -191,4 +191,5 @@ func update_lives():
 		get_tree().call_group("GUI", "update_lives", lives)
 
 
-
+func die():
+	get_tree().change_scene("res://Scenes/GUI/GameOver/GameOver.tscn")

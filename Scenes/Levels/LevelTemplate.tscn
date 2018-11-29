@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
-[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/gamestate.gd" type="Script" id=1]
+[ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
 points = PoolVector3Array( 0, 0.25, 0, 0, 0, 0, 0, 0.25, 5, 0, 0, 5, 0, 0.25, 0, 0, 0.25, 5, -5, 0.25, 0, -5, 0.25, 5, 0, 0, 5, 0, 0, 0, -5, 0, 5, -5, 0, 0, 0, 0, 5, -5, 0, 5, 0, 0.25, 5, -5, 0.25, 5, -5, 0, 0, 0, 0, 0, -5, 0.25, 0, 0, 0.25, 0, -5, 0, 0, -5, 0.25, 0, -5, 0, 5, -5, 0.25, 5 )
 
 [node name="LevelTemplate" type="Spatial"]
+
+script = ExtResource( 1 )
 
 [node name="Floor" type="MeshInstance" parent="." index="0"]
 
@@ -23,7 +26,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 1 )
+mesh = ExtResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform" ]
@@ -76,7 +79,7 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Light", "Shadow" ]
 
-[node name="Player" parent="." index="4" instance=ExtResource( 2 )]
+[node name="Player" parent="." index="4" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 transform = Transform( -0.999582, 0, -0.0289033, 0, 1, 0, 0.0289033, 0, -0.999582, 0, 0.329968, 4.5456 )
@@ -86,9 +89,11 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
-[node name="PauseMenu" parent="." index="5" instance=ExtResource( 3 )]
+[node name="PauseMenu" parent="." index="5" instance=ExtResource( 4 )]
 
 [node name="CollisionWalls" type="Node" parent="." index="6"]
+
+[node name="Robots" type="Node" parent="." index="7"]
 
 
 [editable path="Player"]

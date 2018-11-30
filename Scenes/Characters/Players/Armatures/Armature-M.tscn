@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Customisation/PlayerMaterials/1..material" type="Material" id=1]
 [ext_resource path="res://Scenes/Characters/Animations-Male/death.anim" type="Animation" id=2]
+[ext_resource path="res://Scenes/Characters/Players/AnimationTreePlayer.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -996,7 +997,7 @@ tracks/33/imported = false
 tracks/33/enabled = true
 tracks/33/keys = PoolRealArray( 0, 1, 1.85333e-007, 0, 2.98023e-008, 0.0409781, -0.00313212, -0.000852907, 0.999155, 1, 0.999999, 1, 0.4, 1, 1.85333e-007, 0, 2.98023e-008, 0.0406866, -0.00310984, -0.00084689, 0.999167, 1, 0.999999, 0.999999, 0.533333, 1, 1.85333e-007, 0, 2.98023e-008, 0.040305, -0.00308073, -0.000838937, 0.999182, 1, 1, 1, 5.93333, 1, 1.85333e-007, 0, 2.98023e-008, 0.0407482, -0.00311448, -0.000848146, 0.999164, 1, 1, 1, 6.13333, 1, 1.85333e-007, 0, 2.98023e-008, 0.0410453, -0.00313719, -0.000854022, 0.999152, 1, 0.999999, 0.999999, 6.2, 1, 1.85333e-007, 0, 2.98023e-008, 0.0410597, -0.00313838, -0.000854665, 0.999151, 1, 0.999999, 0.999999, 6.39167, 1, 1.85333e-007, 0, 2.98023e-008, 0.0409699, -0.00313157, -0.000852782, 0.999155, 1, 0.999999, 0.999999 )
 
-[node name="Armature" type="Skeleton"]
+[node name="Armature" type="Skeleton" index="0"]
 
 transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0 )
 bones/0/name = "Bone 0"
@@ -1237,37 +1238,50 @@ anims/Working = SubResource( 5 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
-[node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="." index="2"]
+[node name="AnimationTreePlayer" parent="." index="2" instance=ExtResource( 3 )]
 
-playback_process_mode = 1
-master_player = NodePath("../AnimationPlayer")
-base_path = NodePath("..")
-active = true
 data = {
 "active": true,
-"connections": [ "Move", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1 ],
+"connections": [ "Action", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "ThrowAnim", "Action", 0, "Move", "Action", 1, "ReloadAnim", "Action", 2 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "out",
-"position": Vector2( 586, 51 ),
+"position": Vector2( 893, 144 ),
 "type": "output"
 }, {
 "blend": 0.0,
 "filter": [  ],
 "id": "Move",
-"position": Vector2( 342, 55 ),
+"position": Vector2( 307, 166 ),
 "type": "blend2"
 }, {
 "filter": [  ],
 "from": "Run",
 "id": "RunAnim",
-"position": Vector2( 57, 182 ),
+"position": Vector2( 43, 255 ),
 "type": "animation"
 }, {
 "filter": [  ],
 "from": "Idle",
 "id": "IdleAnim",
-"position": Vector2( 37, 44 ),
+"position": Vector2( 52, 85 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Working",
+"id": "ReloadAnim",
+"position": Vector2( 434, 318 ),
+"type": "animation"
+}, {
+"blend": 0.05,
+"id": "Action",
+"position": Vector2( 685, 135 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "Punch",
+"id": "ThrowAnim",
+"position": Vector2( 384, 5 ),
 "type": "animation"
 } ]
 }

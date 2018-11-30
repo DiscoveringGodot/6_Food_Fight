@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=3]
+[ext_resource path="res://SFX/harp-glissando-up.wav" type="AudioStream" id=4]
+
+[node name="Player" index="0" instance=ExtResource( 1 )]
+
+collision_layer = 2
+collision_mask = 13
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision" ]
+max_ammo = 5
+
+[node name="MeshInstance" parent="." index="0"]
+
+visible = false
+
+[node name="Camera" type="Camera" parent="." index="2"]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 2.66139, -5 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 2
+projection = 0
+current = true
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+script = ExtResource( 3 )
+mouse_sensitivity = 1200
+
+[node name="RefillTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="Harp" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 4 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="timeout" from="RefillTimer" to="." method="_on_RefillTimer_timeout"]
+
+

@@ -242,3 +242,12 @@ How to use ViewportContainer nodes to have multiple Viewports in a single scene
 
 #### After watching (learning outcomes)…
 Counting lives as objects in the scene and using Sprite3D nodes
+
+
+### 24 Preparing for Player Customisation
+#### In this video (objectives)…
+1 Create a PlayerTemplate Scene
+2 Create a second Player Character
+
+#### After watching (learning outcomes)…
+Creating templates from existing scenes

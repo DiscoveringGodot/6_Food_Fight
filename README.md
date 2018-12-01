@@ -251,3 +251,11 @@ Counting lives as objects in the scene and using Sprite3D nodes
 
 #### After watching (learning outcomes)…
 Creating templates from existing scenes
+
+
+### 25 Player Customisation Part 1
+#### In this video (objectives)…
+1 Creating a Player Customisation Scene
+
+#### After watching (learning outcomes)…
+Better Lighting Techniques

@@ -23,13 +23,12 @@
 [ext_resource path="res://Scenes/RefillArea.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=22]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 8.14824, 6.44579, 0.243496 )
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=2]
 
-resource_name = "Movement"
 length = 4.0
 loop = true
 step = 1.0
@@ -46,9 +45,8 @@ tracks/0/keys = {
 "values": [ Vector3( -4.06177, 0.151799, -14.5769 ), Vector3( 7, 0.151799, -14.5769 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "Movement"
 length = 4.0
 loop = true
 step = 1.0
@@ -521,7 +519,11 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 15, 0.5, -0.7 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="CanFire" parent="Player" index="5"]
+[node name="DirectionalLight" parent="." index="4"]
+
+light_cull_mask = -1
+
+[node name="CanFire" parent="Player" index="4"]
 
 wait_time = 0.25
 
@@ -545,7 +547,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape" type="CollisionShape" parent="CollisionWalls/FrontWall" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
 
 [node name="BackWall" type="StaticBody" parent="CollisionWalls" index="1"]
@@ -564,8 +566,12 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape" type="CollisionShape" parent="CollisionWalls/BackWall" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
+
+[node name="Robots" parent="." index="8"]
+
+editor/display_folded = true
 
 [node name="Robot" parent="Robots" index="0" instance=ExtResource( 20 )]
 
@@ -575,7 +581,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="PositionAnimation" parent="Robots/Robot" index="6"]
 
 autoplay = "Movement"
-anims/Movement = SubResource( 1 )
+anims/Movement = SubResource( 2 )
 
 [node name="Robot2" parent="Robots" index="1" instance=ExtResource( 20 )]
 
@@ -585,7 +591,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="PositionAnimation" parent="Robots/Robot2" index="6"]
 
 autoplay = "Movement"
-anims/Movement = SubResource( 2 )
+anims/Movement = SubResource( 3 )
 
 [node name="RefillArea" parent="." index="9" instance=ExtResource( 21 )]
 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Characters/Players/PlayerF.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Materials/DarkWood.material" type="Material" id=3]
-[ext_resource path="res://Materials/MetalDark.material" type="Material" id=4]
+[ext_resource path="res://Scripts/CharacterCustomisation.gd" type="Script" id=1]
+[ext_resource path="res://Materials/DarkWood.material" type="Material" id=2]
+[ext_resource path="res://Materials/MetalDark.material" type="Material" id=3]
+[ext_resource path="res://Scenes/Customisation/CustomisationUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -84,14 +86,11 @@ _sections_unfolded = [ "Albedo", "Roughness" ]
 
 [node name="CharacterCustomisation" type="Spatial" index="0"]
 
-[node name="ArmatureM" parent="." index="0" instance=ExtResource( 1 )]
+script = ExtResource( 1 )
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0226171, 0 )
-visible = false
+[node name="Scenary" type="Node" parent="." index="0"]
 
-[node name="ArmatureF" parent="." index="1" instance=ExtResource( 2 )]
-
-[node name="Scenary" type="Node" parent="." index="2"]
+editor/display_folded = true
 
 [node name="Podium" type="MeshInstance" parent="Scenary" index="0"]
 
@@ -107,7 +106,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 3 )
+material/0 = ExtResource( 2 )
 _sections_unfolded = [ "material" ]
 
 [node name="Floor" type="MeshInstance" parent="Scenary" index="1"]
@@ -124,7 +123,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 2 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 4 )
+material/0 = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "material" ]
 
 [node name="Wall" type="MeshInstance" parent="Scenary" index="2"]
@@ -144,7 +143,9 @@ skeleton = NodePath("..")
 material/0 = SubResource( 4 )
 _sections_unfolded = [ "Transform", "material" ]
 
-[node name="Lights" type="Node" parent="." index="3"]
+[node name="Lights" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="FillLight" type="SpotLight" parent="Lights" index="0"]
 
@@ -330,9 +331,9 @@ directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 
-[node name="Camera" type="Camera" parent="." index="4"]
+[node name="Camera" type="Camera" parent="." index="2"]
 
-transform = Transform( 1, 0, 0, 0, 0.992125, -0.125249, 0, 0.125249, 0.992125, 0, 1.03908, 3.22713 )
+transform = Transform( 1, 0, 0, 0, 0.992125, -0.125249, 0, 0.125249, 0.992125, 0, 0.650144, 2.70015 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -345,5 +346,127 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CustomisationUI" parent="." index="3" instance=ExtResource( 4 )]
+
+[node name="CharacterSelect" parent="CustomisationUI/Controls" index="1"]
+
+text = "Freya"
+
+[node name="ArmatureM" parent="." index="4" instance=ExtResource( 5 )]
+
+transform = Transform( 0.25, 0, 0, 0, -1.09278e-008, -0.25, 0, 0.25, -1.09278e-008, 0, 0.1, 0 )
+
+[node name="AnimationTreePlayer" parent="ArmatureM" index="2"]
+
+data = {
+"active": true,
+"connections": [ "Action", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "ThrowAnim", "Action", 0, "Move", "Action", 1, "ReloadAnim", "Action", 2 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"id": "out",
+"position": Vector2( 893, 144 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 307, 166 ),
+"type": "blend2"
+}, {
+"filter": [  ],
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 43, 255 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Punch",
+"id": "ThrowAnim",
+"position": Vector2( 384, 5 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 52, 85 ),
+"type": "animation"
+}, {
+"blend": 0.05,
+"id": "Action",
+"position": Vector2( 685, 135 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "Working",
+"id": "ReloadAnim",
+"position": Vector2( 434, 318 ),
+"type": "animation"
+} ]
+}
+
+[node name="ArmatureF" parent="." index="5" instance=ExtResource( 6 )]
+
+transform = Transform( 0.004, 0, 0, 0, 0.004, 0, 0, 0, 0.004, 0, 0.1, 0 )
+
+[node name="AnimationTreePlayer" parent="ArmatureF" index="2"]
+
+data = {
+"active": true,
+"connections": [ "Action", "out", 0, "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "ThrowAnim", "Action", 0, "Move", "Action", 1, "ReloadAnim", "Action", 2 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"id": "out",
+"position": Vector2( 893, 144 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 307, 166 ),
+"type": "blend2"
+}, {
+"filter": [  ],
+"from": "Running",
+"id": "RunAnim",
+"position": Vector2( 43, 255 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Punch",
+"id": "ThrowAnim",
+"position": Vector2( 384, 5 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 52, 85 ),
+"type": "animation"
+}, {
+"blend": 0.05,
+"id": "Action",
+"position": Vector2( 685, 135 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "PickUp",
+"id": "ReloadAnim",
+"position": Vector2( 434, 318 ),
+"type": "animation"
+} ]
+}
+
+[connection signal="item_selected" from="CustomisationUI/Controls/CharacterSelect" to="." method="_on_CharacterSelect_item_selected"]
+
+[connection signal="pressed" from="CustomisationUI/Controls/HBoxContainer/LeftButton" to="." method="change_material" binds= [ "Left" ]]
+
+[connection signal="pressed" from="CustomisationUI/Controls/HBoxContainer/RightButton" to="." method="change_material" binds= [ "Right" ]]
+
+[connection signal="pressed" from="CustomisationUI/Controls/HBoxContainer2/StartButton" to="." method="_on_StartButton_pressed"]
 
 
+[editable path="CustomisationUI"]
+[editable path="ArmatureM"]
+[editable path="ArmatureF"]

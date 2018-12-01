@@ -259,3 +259,13 @@ Creating templates from existing scenes
 
 #### After watching (learning outcomes)…
 Better Lighting Techniques
+
+
+### 26 Player Customisation Part 2
+#### In this video (objectives)…
+1 Creating a Player Customisation guide
+2 Applying textures to meshes at runtime
+3 Cycling through lists
+
+#### After watching (learning outcomes)…
+How to apply a texture to a mesh at runtime

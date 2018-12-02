@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 file_grabber="*res://Scripts/file_grabber.gd"
+customisation="*res://Scripts/customisation.gd"
 
 [input]
 

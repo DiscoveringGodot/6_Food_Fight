@@ -32,6 +32,8 @@ var action_state = 0 # -1 is throw, 0 is idle/move, +1 is reload
 
 func _ready():
 	character_type = CHARACTER_TYPES.player
+	if customisation.Player_materials != null:
+		$Armature/Mesh.set_surface_material(0, customisation.Player_materials)
 	update_lives()
 
 

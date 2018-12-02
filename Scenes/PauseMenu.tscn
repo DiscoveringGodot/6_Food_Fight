@@ -275,6 +275,8 @@ align = 0
 
 [connection signal="pressed" from="Popup/CenterContainer/VBoxContainer/GridContainer/Fullscreen" to="." method="_on_Fullscreen_pressed"]
 
+[connection signal="pressed" from="Popup/CenterContainer/VBoxContainer/GridContainer/Customise" to="." method="_on_Customise_pressed"]
+
 [connection signal="pressed" from="Popup/CenterContainer/VBoxContainer/GridContainer/Quit" to="." method="_on_Quit_pressed"]
 
 

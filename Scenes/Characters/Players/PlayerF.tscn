@@ -35,9 +35,9 @@ data = {
 "type": "animation"
 }, {
 "filter": [  ],
-"from": "Punch",
-"id": "ThrowAnim",
-"position": Vector2( 384, 5 ),
+"from": "PickUp",
+"id": "ReloadAnim",
+"position": Vector2( 434, 318 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -52,9 +52,9 @@ data = {
 "type": "blend3"
 }, {
 "filter": [  ],
-"from": "PickUp",
-"id": "ReloadAnim",
-"position": Vector2( 434, 318 ),
+"from": "Punch",
+"id": "ThrowAnim",
+"position": Vector2( 384, 5 ),
 "type": "animation"
 } ]
 }

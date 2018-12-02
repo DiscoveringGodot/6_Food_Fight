@@ -519,15 +519,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 15, 0.5, -0.7 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="DirectionalLight" parent="." index="4"]
-
-light_cull_mask = -1
-
-[node name="CanFire" parent="Player" index="4"]
-
-wait_time = 0.25
-
-[node name="CollisionWalls" parent="." index="7"]
+[node name="CollisionWalls" parent="." index="6"]
 
 editor/display_folded = true
 
@@ -569,7 +561,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
 shape = SubResource( 1 )
 disabled = false
 
-[node name="Robots" parent="." index="8"]
+[node name="Robots" parent="." index="7"]
 
 editor/display_folded = true
 
@@ -593,6 +585,11 @@ _sections_unfolded = [ "Collision", "Transform" ]
 autoplay = "Movement"
 anims/Movement = SubResource( 3 )
 
+[node name="PlayerStartPosition" parent="." index="8"]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 1.65351, 4.94164 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="RefillArea" parent="." index="9" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.77103, 2.5 )
@@ -608,6 +605,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.40124, 0.77103, 5.17173 )
 [node name="GUI" parent="." index="12" instance=ExtResource( 22 )]
 
 
-[editable path="Player"]
 [editable path="Robots/Robot"]
 [editable path="Robots/Robot2"]

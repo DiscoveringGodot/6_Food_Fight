@@ -269,3 +269,13 @@ Better Lighting Techniques
 
 #### After watching (learning outcomes)…
 How to apply a texture to a mesh at runtime
+
+
+### 27 Player Customisation Part 3
+#### In this video (objectives)…
+1 Apply PC customisation to other scenes
+2 Have a default setting if the player skips customisation
+3 Make sure we don't load a scene in a paused state
+
+#### After watching (learning outcomes)…
+Storing and applying player customisation

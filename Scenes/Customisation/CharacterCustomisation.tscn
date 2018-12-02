@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/CharacterCustomisation.gd" type="Script" id=1]
 [ext_resource path="res://Materials/DarkWood.material" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Customisation/CustomisationUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SFX/intro.ogg" type="AudioStream" id=7]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -377,9 +378,9 @@ data = {
 "type": "blend2"
 }, {
 "filter": [  ],
-"from": "Run",
-"id": "RunAnim",
-"position": Vector2( 43, 255 ),
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 52, 85 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -389,21 +390,21 @@ data = {
 "type": "animation"
 }, {
 "filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 52, 85 ),
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 43, 255 ),
 "type": "animation"
-}, {
-"blend": 0.05,
-"id": "Action",
-"position": Vector2( 685, 135 ),
-"type": "blend3"
 }, {
 "filter": [  ],
 "from": "Punch",
 "id": "ThrowAnim",
 "position": Vector2( 384, 5 ),
 "type": "animation"
+}, {
+"blend": 0.05,
+"id": "Action",
+"position": Vector2( 685, 135 ),
+"type": "blend3"
 } ]
 }
 
@@ -429,9 +430,9 @@ data = {
 "type": "blend2"
 }, {
 "filter": [  ],
-"from": "Running",
-"id": "RunAnim",
-"position": Vector2( 43, 255 ),
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 52, 85 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -441,23 +442,32 @@ data = {
 "type": "animation"
 }, {
 "filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 52, 85 ),
+"from": "Running",
+"id": "RunAnim",
+"position": Vector2( 43, 255 ),
 "type": "animation"
-}, {
-"blend": 0.05,
-"id": "Action",
-"position": Vector2( 685, 135 ),
-"type": "blend3"
 }, {
 "filter": [  ],
 "from": "Punch",
 "id": "ThrowAnim",
 "position": Vector2( 384, 5 ),
 "type": "animation"
+}, {
+"blend": 0.05,
+"id": "Action",
+"position": Vector2( 685, 135 ),
+"type": "blend3"
 } ]
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 7 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="item_selected" from="CustomisationUI/Controls/CharacterSelect" to="." method="_on_CharacterSelect_item_selected"]
 

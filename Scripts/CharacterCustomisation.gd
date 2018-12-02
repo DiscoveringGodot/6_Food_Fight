@@ -50,8 +50,7 @@ func select_material(direction, materials_count):
 			current_material = materials_count
 		else:
 			current_material -= 1
-	
-	print (current_material)
+
 
 
 func _on_StartButton_pressed():
